@@ -1,0 +1,1438 @@
+[INFO] [2016-12-28 16:25:14] ?.?(?) | using logger: com.alibaba.dubbo.common.logger.log4j.Log4jLoggerAdapter
+[INFO] [2016-12-28 16:25:14] com.alibaba.dubbo.container.Main.main(58) |  [DUBBO] Use container type([spring]) to run dubbo serivce., dubbo version: service, current host: 127.0.0.1
+[INFO] [2016-12-28 16:25:14] org.springframework.context.support.AbstractApplicationContext.prepareRefresh(510) | Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@1175e2db: startup date [Wed Dec 28 16:25:14 CST 2016]; root of context hierarchy
+[INFO] [2016-12-28 16:25:14] org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(317) | Loading XML bean definitions from URL [jar:file:/Users/magang/Documents/citicIdea/myDubboDemo/demo-service/target/demo-service.jar!/META-INF/spring/spring-context.xml]
+[INFO] [2016-12-28 16:25:16] org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(317) | Loading XML bean definitions from class path resource [spring-registry.xml]
+[INFO] [2016-12-28 16:25:17] com.alibaba.dubbo.config.ServiceConfig.exportLocal(510) |  [DUBBO] Export dubbo service com.mg.demo.api.UserService to local registry, dubbo version: service, current host: 127.0.0.1
+[INFO] [2016-12-28 16:25:17] com.alibaba.dubbo.config.ServiceConfig.doExportUrlsFor1Protocol(470) |  [DUBBO] Export dubbo service com.mg.demo.api.UserService to url dubbo://10.14.133.162:20880/com.mg.demo.api.UserService?anyhost=true&application=ivan-dubbo-server&dubbo=service&interface=com.mg.demo.api.UserService&methods=getUserByPrimaryKey,getUsers&pid=13683&revision=service&side=provider&timestamp=1482913517470, dubbo version: service, current host: 127.0.0.1
+[INFO] [2016-12-28 16:25:17] com.alibaba.dubbo.config.ServiceConfig.doExportUrlsFor1Protocol(481) |  [DUBBO] Register dubbo service com.mg.demo.api.UserService url dubbo://10.14.133.162:20880/com.mg.demo.api.UserService?anyhost=true&application=ivan-dubbo-server&dubbo=service&interface=com.mg.demo.api.UserService&methods=getUserByPrimaryKey,getUsers&pid=13683&revision=service&side=provider&timestamp=1482913517470 to registry registry://172.16.155.201:2181/com.alibaba.dubbo.registry.RegistryService?application=ivan-dubbo-server&dubbo=service&pid=13683&registry=zookeeper&timestamp=1482913517458, dubbo version: service, current host: 127.0.0.1
+[INFO] [2016-12-28 16:25:17] com.alibaba.dubbo.remoting.transport.AbstractServer.<init>(69) |  [DUBBO] Start NettyServer bind /0.0.0.0:20880, export /10.14.133.162:20880, dubbo version: service, current host: 127.0.0.1
+[INFO] [2016-12-28 16:25:17] com.alibaba.dubbo.registry.support.AbstractRegistry.loadProperties(232) |  [DUBBO] Load registry store file /Users/magang/.dubbo/dubbo-registry-172.16.155.201.cache, data: {com.mg.service.MyService=empty://10.14.133.162:20880/com.mg.service.MyService?anyhost=true&application=hello-world-app&category=configurators&check=false&dubbo=myService&interface=com.mg.service.MyService&methods=viewMessage&pid=10799&revision=myService&side=provider&timestamp=1482909964734}, dubbo version: service, current host: 127.0.0.1
+[INFO] [2016-12-28 16:25:17] org.I0Itec.zkclient.ZkEventThread.run(64) | Starting ZkClient event thread.
+[INFO] [2016-12-28 16:25:17] org.apache.zookeeper.Environment.logEnv(100) | Client environment:zookeeper.version=3.4.6-1569965, built on 02/20/2014 09:09 GMT
+[INFO] [2016-12-28 16:25:17] org.apache.zookeeper.Environment.logEnv(100) | Client environment:host.name=10.14.133.162
+[INFO] [2016-12-28 16:25:17] org.apache.zookeeper.Environment.logEnv(100) | Client environment:java.version=1.8.0_51
+[INFO] [2016-12-28 16:25:17] org.apache.zookeeper.Environment.logEnv(100) | Client environment:java.vendor=Oracle Corporation
+[INFO] [2016-12-28 16:25:17] org.apache.zookeeper.Environment.logEnv(100) | Client environment:java.home=/Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home/jre
+[INFO] [2016-12-28 16:25:17] org.apache.zookeeper.Environment.logEnv(100) | Client environment:java.class.path=demo-service.jar
+[INFO] [2016-12-28 16:25:17] org.apache.zookeeper.Environment.logEnv(100) | Client environment:java.library.path=/Users/magang/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.
+[INFO] [2016-12-28 16:25:17] org.apache.zookeeper.Environment.logEnv(100) | Client environment:java.io.tmpdir=/var/folders/k2/rs0gcf691b96b1j2qg92dqbm0000gn/T/
+[INFO] [2016-12-28 16:25:17] org.apache.zookeeper.Environment.logEnv(100) | Client environment:java.compiler=<NA>
+[INFO] [2016-12-28 16:25:17] org.apache.zookeeper.Environment.logEnv(100) | Client environment:os.name=Mac OS X
+[INFO] [2016-12-28 16:25:17] org.apache.zookeeper.Environment.logEnv(100) | Client environment:os.arch=x86_64
+[INFO] [2016-12-28 16:25:17] org.apache.zookeeper.Environment.logEnv(100) | Client environment:os.version=10.12.1
+[INFO] [2016-12-28 16:25:17] org.apache.zookeeper.Environment.logEnv(100) | Client environment:user.name=magang
+[INFO] [2016-12-28 16:25:17] org.apache.zookeeper.Environment.logEnv(100) | Client environment:user.home=/Users/magang
+[INFO] [2016-12-28 16:25:17] org.apache.zookeeper.Environment.logEnv(100) | Client environment:user.dir=/Users/magang/Documents/citicIdea/myDubboDemo/demo-service/target
+[INFO] [2016-12-28 16:25:17] org.apache.zookeeper.ZooKeeper.<init>(438) | Initiating client connection, connectString=172.16.155.201:2181 sessionTimeout=30000 watcher=org.I0Itec.zkclient.ZkClient@59262a90
+[INFO] [2016-12-28 16:25:17] org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(975) | Opening socket connection to server 172.16.155.201/172.16.155.201:2181. Will not attempt to authenticate using SASL (unknown error)
+[INFO] [2016-12-28 16:25:17] org.apache.zookeeper.ClientCnxn$SendThread.primeConnection(852) | Socket connection established to 172.16.155.201/172.16.155.201:2181, initiating session
+[INFO] [2016-12-28 16:25:17] org.apache.zookeeper.ClientCnxn$SendThread.onConnected(1235) | Session establishment complete on server 172.16.155.201/172.16.155.201:2181, sessionid = 0x1594356ae120008, negotiated timeout = 30000
+[INFO] [2016-12-28 16:25:17] org.I0Itec.zkclient.ZkClient.processStateChanged(704) | zookeeper state changed (SyncConnected)
+[INFO] [2016-12-28 16:25:17] com.alibaba.dubbo.registry.support.AbstractRegistry.register(302) |  [DUBBO] Register: dubbo://10.14.133.162:20880/com.mg.demo.api.UserService?anyhost=true&application=ivan-dubbo-server&dubbo=service&interface=com.mg.demo.api.UserService&methods=getUserByPrimaryKey,getUsers&pid=13683&revision=service&side=provider&timestamp=1482913517470, dubbo version: service, current host: 127.0.0.1
+[INFO] [2016-12-28 16:25:17] com.alibaba.dubbo.registry.support.AbstractRegistry.subscribe(325) |  [DUBBO] Subscribe: provider://10.14.133.162:20880/com.mg.demo.api.UserService?anyhost=true&application=ivan-dubbo-server&category=configurators&check=false&dubbo=service&interface=com.mg.demo.api.UserService&methods=getUserByPrimaryKey,getUsers&pid=13683&revision=service&side=provider&timestamp=1482913517470, dubbo version: service, current host: 127.0.0.1
+[INFO] [2016-12-28 16:25:17] com.alibaba.dubbo.registry.support.AbstractRegistry.notify(422) |  [DUBBO] Notify urls for subscribe url provider://10.14.133.162:20880/com.mg.demo.api.UserService?anyhost=true&application=ivan-dubbo-server&category=configurators&check=false&dubbo=service&interface=com.mg.demo.api.UserService&methods=getUserByPrimaryKey,getUsers&pid=13683&revision=service&side=provider&timestamp=1482913517470, urls: [empty://10.14.133.162:20880/com.mg.demo.api.UserService?anyhost=true&application=ivan-dubbo-server&category=configurators&check=false&dubbo=service&interface=com.mg.demo.api.UserService&methods=getUserByPrimaryKey,getUsers&pid=13683&revision=service&side=provider&timestamp=1482913517470], dubbo version: service, current host: 127.0.0.1
+[INFO] [2016-12-28 16:25:17] com.alibaba.dubbo.container.Main.main(81) |  [DUBBO] Dubbo SpringContainer started!, dubbo version: service, current host: 127.0.0.1
+[INFO] [2016-12-28 16:38:59] com.mg.demo.service.UserServiceImpl.getUsers(23) | 开始查询所有用户信息
+[INFO] [2016-12-28 16:38:59] com.mg.demo.service.UserServiceImpl.getUsers(32) | 查询结果：[{"nickyName":"ivan","id":"1","pwd":"123456"},{"nickyName":"jack","id":"2","pwd":"123456"}]
+[INFO] [2016-12-28 16:38:59] com.mg.demo.service.UserServiceImpl.getUsers(36) | 查询结束
+[INFO] [2016-12-28 16:39:28] com.mg.demo.service.UserServiceImpl.getUsers(23) | 开始查询所有用户信息
+[INFO] [2016-12-28 16:39:28] com.mg.demo.service.UserServiceImpl.getUsers(32) | 查询结果：[{"nickyName":"ivan","id":"1","pwd":"123456"},{"nickyName":"jack","id":"2","pwd":"123456"}]
+[INFO] [2016-12-28 16:39:28] com.mg.demo.service.UserServiceImpl.getUsers(36) | 查询结束
+[INFO] [2016-12-28 16:39:30] com.mg.demo.service.UserServiceImpl.getUserByPrimaryKey(42) | 开始查询用户信息，查询条件ID为:1
+[INFO] [2016-12-28 16:39:30] com.mg.demo.service.UserServiceImpl.getUserByPrimaryKey(43) | 查询结果：User [id=1, nickyName=ivan, pwd=123456]
+[INFO] [2016-12-28 17:13:01] com.alibaba.dubbo.config.AbstractConfig$1.run(450) |  [DUBBO] Run shutdown hook now., dubbo version: service, current host: 127.0.0.1
+[INFO] [2016-12-28 17:13:01] com.alibaba.dubbo.registry.support.AbstractRegistryFactory.destroyAll(63) |  [DUBBO] Close all registries [zookeeper://172.16.155.201:2181/com.alibaba.dubbo.registry.RegistryService?application=ivan-dubbo-server&dubbo=service&interface=com.alibaba.dubbo.registry.RegistryService&pid=13683&timestamp=1482913517458], dubbo version: service, current host: 127.0.0.1
+[INFO] [2016-12-28 17:13:01] com.alibaba.dubbo.registry.support.AbstractRegistry.destroy(485) |  [DUBBO] Destroy registry:zookeeper://172.16.155.201:2181/com.alibaba.dubbo.registry.RegistryService?application=ivan-dubbo-server&dubbo=service&interface=com.alibaba.dubbo.registry.RegistryService&pid=13683&timestamp=1482913517458, dubbo version: service, current host: 127.0.0.1
+[INFO] [2016-12-28 17:13:01] com.alibaba.dubbo.registry.support.AbstractRegistry.unregister(312) |  [DUBBO] Unregister: dubbo://10.14.133.162:20880/com.mg.demo.api.UserService?anyhost=true&application=ivan-dubbo-server&dubbo=service&interface=com.mg.demo.api.UserService&methods=getUserByPrimaryKey,getUsers&pid=13683&revision=service&side=provider&timestamp=1482913517470, dubbo version: service, current host: 127.0.0.1
+[INFO] [2016-12-28 17:13:01] com.alibaba.dubbo.registry.support.AbstractRegistry.destroy(494) |  [DUBBO] Destroy unregister url dubbo://10.14.133.162:20880/com.mg.demo.api.UserService?anyhost=true&application=ivan-dubbo-server&dubbo=service&interface=com.mg.demo.api.UserService&methods=getUserByPrimaryKey,getUsers&pid=13683&revision=service&side=provider&timestamp=1482913517470, dubbo version: service, current host: 127.0.0.1
+[INFO] [2016-12-28 17:13:01] com.alibaba.dubbo.registry.support.AbstractRegistry.unsubscribe(343) |  [DUBBO] Unsubscribe: provider://10.14.133.162:20880/com.mg.demo.api.UserService?anyhost=true&application=ivan-dubbo-server&category=configurators&check=false&dubbo=service&interface=com.mg.demo.api.UserService&methods=getUserByPrimaryKey,getUsers&pid=13683&revision=service&side=provider&timestamp=1482913517470, dubbo version: service, current host: 127.0.0.1
+[INFO] [2016-12-28 17:13:01] com.alibaba.dubbo.registry.support.AbstractRegistry.destroy(510) |  [DUBBO] Destroy unsubscribe url provider://10.14.133.162:20880/com.mg.demo.api.UserService?anyhost=true&application=ivan-dubbo-server&category=configurators&check=false&dubbo=service&interface=com.mg.demo.api.UserService&methods=getUserByPrimaryKey,getUsers&pid=13683&revision=service&side=provider&timestamp=1482913517470, dubbo version: service, current host: 127.0.0.1
+[INFO] [2016-12-28 17:13:01] org.I0Itec.zkclient.ZkEventThread.run(82) | Terminate ZkClient event thread.
+[INFO] [2016-12-28 17:13:01] org.apache.zookeeper.ZooKeeper.close(684) | Session: 0x1594356ae120008 closed
+[INFO] [2016-12-28 17:13:01] org.apache.zookeeper.ClientCnxn$EventThread.run(512) | EventThread shut down
+[INFO] [2016-12-28 17:13:01] com.alibaba.dubbo.rpc.protocol.dubbo.DubboProtocol.destroy(393) |  [DUBBO] Close dubbo server: /10.14.133.162:20880, dubbo version: service, current host: 127.0.0.1
+[INFO] [2016-12-28 17:13:01] com.alibaba.dubbo.remoting.transport.AbstractServer.close(146) |  [DUBBO] Close NettyServer bind /0.0.0.0:20880, export /10.14.133.162:20880, dubbo version: service, current host: 127.0.0.1
+[INFO] [2016-12-28 17:13:01] com.alibaba.dubbo.remoting.transport.netty.NettyChannel.close(135) |  [DUBBO] Close netty channel [id: 0x15dfc24e, /10.14.133.162:54550 => /10.14.133.162:20880], dubbo version: service, current host: 127.0.0.1
+[WARN] [2016-12-28 17:13:01] com.alibaba.dubbo.remoting.transport.AbstractServer.disconnected(197) |  [DUBBO] All clients has discontected from /10.14.133.162:20880. You can graceful shutdown now., dubbo version: service, current host: 127.0.0.1
+[INFO] [2016-12-28 17:13:01] com.alibaba.dubbo.rpc.protocol.dubbo.DubboProtocol$1.disconnected(130) |  [DUBBO] disconected from /10.14.133.162:54550,url:dubbo://10.14.133.162:20880/com.mg.demo.api.UserService?anyhost=true&application=ivan-dubbo-server&channel.readonly.sent=true&codec=dubbo&dubbo=service&heartbeat=60000&interface=com.mg.demo.api.UserService&methods=getUserByPrimaryKey,getUsers&pid=13683&revision=service&side=provider&timestamp=1482913517470, dubbo version: service, current host: 127.0.0.1
+[INFO] [2016-12-28 17:13:01] com.alibaba.dubbo.rpc.protocol.AbstractProtocol.destroy(76) |  [DUBBO] Unexport service: dubbo://10.14.133.162:20880/com.mg.demo.api.UserService?anyhost=true&application=ivan-dubbo-server&dubbo=service&interface=com.mg.demo.api.UserService&methods=getUserByPrimaryKey,getUsers&pid=13683&revision=service&side=provider&timestamp=1482913517470, dubbo version: service, current host: 127.0.0.1
+[INFO] [2016-12-28 17:13:01] com.alibaba.dubbo.rpc.protocol.AbstractProtocol.destroy(76) |  [DUBBO] Unexport service: injvm://127.0.0.1/com.mg.demo.api.UserService?anyhost=true&application=ivan-dubbo-server&dubbo=service&interface=com.mg.demo.api.UserService&methods=getUserByPrimaryKey,getUsers&pid=13683&revision=service&side=provider&timestamp=1482913517470, dubbo version: service, current host: 127.0.0.1
+[INFO] [2016-12-28 17:13:55] ?.?(?) | using logger: com.alibaba.dubbo.common.logger.log4j.Log4jLoggerAdapter
+[INFO] [2016-12-28 17:13:55] com.alibaba.dubbo.container.Main.main(58) |  [DUBBO] Use container type([spring]) to run dubbo serivce., dubbo version: service, current host: 127.0.0.1
+[INFO] [2016-12-28 17:13:55] org.springframework.context.support.AbstractApplicationContext.prepareRefresh(510) | Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@1175e2db: startup date [Wed Dec 28 17:13:55 CST 2016]; root of context hierarchy
+[INFO] [2016-12-28 17:13:55] org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(317) | Loading XML bean definitions from URL [jar:file:/Users/magang/Documents/citicIdea/myDubboDemo/demo-service/target/demo-service.jar!/META-INF/spring/spring-context.xml]
+[INFO] [2016-12-28 17:14:01] org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(317) | Loading XML bean definitions from class path resource [spring-registry.xml]
+[INFO] [2016-12-28 17:14:01] org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(317) | Loading XML bean definitions from class path resource [spring-mybatis.xml]
+[WARN] [2016-12-28 17:14:01] org.mybatis.spring.mapper.ClassPathMapperScanner.doScan(158) | No MyBatis mapper was found in '[com.mg.*.dao]' package. Please check your configuration.
+[INFO] [2016-12-28 17:14:01] org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(172) | Loading properties file from class path resource [zookeeper.properties]
+[WARN] [2016-12-28 17:14:01] org.springframework.context.support.AbstractApplicationContext.refresh(487) | Exception encountered during context initialization - cancelling refresh attempt
+org.springframework.beans.factory.BeanDefinitionStoreException: Invalid bean definition with name 'dataSource' defined in class path resource [spring-mybatis.xml]: Could not resolve placeholder 'jdbc.url' in string value "${jdbc.url}"; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'jdbc.url' in string value "${jdbc.url}"
+	at org.springframework.beans.factory.config.PlaceholderConfigurerSupport.doProcessProperties(PlaceholderConfigurerSupport.java:211)
+	at org.springframework.beans.factory.config.PropertyPlaceholderConfigurer.processProperties(PropertyPlaceholderConfigurer.java:222)
+	at org.springframework.beans.factory.config.PropertyResourceConfigurer.postProcessBeanFactory(PropertyResourceConfigurer.java:86)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:265)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:162)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:606)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:462)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:139)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:93)
+	at com.alibaba.dubbo.container.spring.SpringContainer.start(SpringContainer.java:50)
+	at com.alibaba.dubbo.container.Main.main(Main.java:80)
+Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'jdbc.url' in string value "${jdbc.url}"
+	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:174)
+	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:126)
+	at org.springframework.beans.factory.config.PropertyPlaceholderConfigurer$PlaceholderResolvingStringValueResolver.resolveStringValue(PropertyPlaceholderConfigurer.java:258)
+	at org.springframework.beans.factory.config.BeanDefinitionVisitor.resolveStringValue(BeanDefinitionVisitor.java:282)
+	at org.springframework.beans.factory.config.BeanDefinitionVisitor.resolveValue(BeanDefinitionVisitor.java:204)
+	at org.springframework.beans.factory.config.BeanDefinitionVisitor.visitPropertyValues(BeanDefinitionVisitor.java:141)
+	at org.springframework.beans.factory.config.BeanDefinitionVisitor.visitBeanDefinition(BeanDefinitionVisitor.java:82)
+	at org.springframework.beans.factory.config.PlaceholderConfigurerSupport.doProcessProperties(PlaceholderConfigurerSupport.java:208)
+	... 10 more
+[ERROR] [2016-12-28 17:14:01] com.alibaba.dubbo.container.Main.main(86) |  [DUBBO] Invalid bean definition with name 'dataSource' defined in class path resource [spring-mybatis.xml]: Could not resolve placeholder 'jdbc.url' in string value "${jdbc.url}"; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'jdbc.url' in string value "${jdbc.url}", dubbo version: service, current host: 127.0.0.1
+org.springframework.beans.factory.BeanDefinitionStoreException: Invalid bean definition with name 'dataSource' defined in class path resource [spring-mybatis.xml]: Could not resolve placeholder 'jdbc.url' in string value "${jdbc.url}"; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'jdbc.url' in string value "${jdbc.url}"
+	at org.springframework.beans.factory.config.PlaceholderConfigurerSupport.doProcessProperties(PlaceholderConfigurerSupport.java:211)
+	at org.springframework.beans.factory.config.PropertyPlaceholderConfigurer.processProperties(PropertyPlaceholderConfigurer.java:222)
+	at org.springframework.beans.factory.config.PropertyResourceConfigurer.postProcessBeanFactory(PropertyResourceConfigurer.java:86)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:265)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:162)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:606)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:462)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:139)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:93)
+	at com.alibaba.dubbo.container.spring.SpringContainer.start(SpringContainer.java:50)
+	at com.alibaba.dubbo.container.Main.main(Main.java:80)
+Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'jdbc.url' in string value "${jdbc.url}"
+	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:174)
+	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:126)
+	at org.springframework.beans.factory.config.PropertyPlaceholderConfigurer$PlaceholderResolvingStringValueResolver.resolveStringValue(PropertyPlaceholderConfigurer.java:258)
+	at org.springframework.beans.factory.config.BeanDefinitionVisitor.resolveStringValue(BeanDefinitionVisitor.java:282)
+	at org.springframework.beans.factory.config.BeanDefinitionVisitor.resolveValue(BeanDefinitionVisitor.java:204)
+	at org.springframework.beans.factory.config.BeanDefinitionVisitor.visitPropertyValues(BeanDefinitionVisitor.java:141)
+	at org.springframework.beans.factory.config.BeanDefinitionVisitor.visitBeanDefinition(BeanDefinitionVisitor.java:82)
+	at org.springframework.beans.factory.config.PlaceholderConfigurerSupport.doProcessProperties(PlaceholderConfigurerSupport.java:208)
+	... 10 more
+[INFO] [2016-12-28 17:17:31] ?.?(?) | using logger: com.alibaba.dubbo.common.logger.log4j.Log4jLoggerAdapter
+[INFO] [2016-12-28 17:17:31] com.alibaba.dubbo.container.Main.main(58) |  [DUBBO] Use container type([spring]) to run dubbo serivce., dubbo version: service, current host: 127.0.0.1
+[INFO] [2016-12-28 17:17:32] org.springframework.context.support.AbstractApplicationContext.prepareRefresh(510) | Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@1175e2db: startup date [Wed Dec 28 17:17:32 CST 2016]; root of context hierarchy
+[INFO] [2016-12-28 17:17:32] org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(317) | Loading XML bean definitions from URL [jar:file:/Users/magang/Documents/citicIdea/myDubboDemo/demo-service/target/demo-service.jar!/META-INF/spring/spring-context.xml]
+[INFO] [2016-12-28 17:17:34] org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(317) | Loading XML bean definitions from class path resource [spring-registry.xml]
+[INFO] [2016-12-28 17:17:34] org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(317) | Loading XML bean definitions from class path resource [spring-mybatis.xml]
+[WARN] [2016-12-28 17:17:34] org.mybatis.spring.mapper.ClassPathMapperScanner.doScan(158) | No MyBatis mapper was found in '[com.mg.*.dao]' package. Please check your configuration.
+[INFO] [2016-12-28 17:17:34] org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(172) | Loading properties file from class path resource [zookeeper.properties]
+[WARN] [2016-12-28 17:17:34] org.springframework.context.support.AbstractApplicationContext.refresh(487) | Exception encountered during context initialization - cancelling refresh attempt
+org.springframework.beans.factory.BeanDefinitionStoreException: Invalid bean definition with name 'dataSource' defined in class path resource [spring-mybatis.xml]: Could not resolve placeholder 'jdbc.url' in string value "${jdbc.url}"; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'jdbc.url' in string value "${jdbc.url}"
+	at org.springframework.beans.factory.config.PlaceholderConfigurerSupport.doProcessProperties(PlaceholderConfigurerSupport.java:211)
+	at org.springframework.beans.factory.config.PropertyPlaceholderConfigurer.processProperties(PropertyPlaceholderConfigurer.java:222)
+	at org.springframework.beans.factory.config.PropertyResourceConfigurer.postProcessBeanFactory(PropertyResourceConfigurer.java:86)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:265)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:162)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:606)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:462)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:139)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:93)
+	at com.alibaba.dubbo.container.spring.SpringContainer.start(SpringContainer.java:50)
+	at com.alibaba.dubbo.container.Main.main(Main.java:80)
+Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'jdbc.url' in string value "${jdbc.url}"
+	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:174)
+	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:126)
+	at org.springframework.beans.factory.config.PropertyPlaceholderConfigurer$PlaceholderResolvingStringValueResolver.resolveStringValue(PropertyPlaceholderConfigurer.java:258)
+	at org.springframework.beans.factory.config.BeanDefinitionVisitor.resolveStringValue(BeanDefinitionVisitor.java:282)
+	at org.springframework.beans.factory.config.BeanDefinitionVisitor.resolveValue(BeanDefinitionVisitor.java:204)
+	at org.springframework.beans.factory.config.BeanDefinitionVisitor.visitPropertyValues(BeanDefinitionVisitor.java:141)
+	at org.springframework.beans.factory.config.BeanDefinitionVisitor.visitBeanDefinition(BeanDefinitionVisitor.java:82)
+	at org.springframework.beans.factory.config.PlaceholderConfigurerSupport.doProcessProperties(PlaceholderConfigurerSupport.java:208)
+	... 10 more
+[ERROR] [2016-12-28 17:17:34] com.alibaba.dubbo.container.Main.main(86) |  [DUBBO] Invalid bean definition with name 'dataSource' defined in class path resource [spring-mybatis.xml]: Could not resolve placeholder 'jdbc.url' in string value "${jdbc.url}"; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'jdbc.url' in string value "${jdbc.url}", dubbo version: service, current host: 127.0.0.1
+org.springframework.beans.factory.BeanDefinitionStoreException: Invalid bean definition with name 'dataSource' defined in class path resource [spring-mybatis.xml]: Could not resolve placeholder 'jdbc.url' in string value "${jdbc.url}"; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'jdbc.url' in string value "${jdbc.url}"
+	at org.springframework.beans.factory.config.PlaceholderConfigurerSupport.doProcessProperties(PlaceholderConfigurerSupport.java:211)
+	at org.springframework.beans.factory.config.PropertyPlaceholderConfigurer.processProperties(PropertyPlaceholderConfigurer.java:222)
+	at org.springframework.beans.factory.config.PropertyResourceConfigurer.postProcessBeanFactory(PropertyResourceConfigurer.java:86)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:265)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:162)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:606)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:462)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:139)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:93)
+	at com.alibaba.dubbo.container.spring.SpringContainer.start(SpringContainer.java:50)
+	at com.alibaba.dubbo.container.Main.main(Main.java:80)
+Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'jdbc.url' in string value "${jdbc.url}"
+	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:174)
+	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:126)
+	at org.springframework.beans.factory.config.PropertyPlaceholderConfigurer$PlaceholderResolvingStringValueResolver.resolveStringValue(PropertyPlaceholderConfigurer.java:258)
+	at org.springframework.beans.factory.config.BeanDefinitionVisitor.resolveStringValue(BeanDefinitionVisitor.java:282)
+	at org.springframework.beans.factory.config.BeanDefinitionVisitor.resolveValue(BeanDefinitionVisitor.java:204)
+	at org.springframework.beans.factory.config.BeanDefinitionVisitor.visitPropertyValues(BeanDefinitionVisitor.java:141)
+	at org.springframework.beans.factory.config.BeanDefinitionVisitor.visitBeanDefinition(BeanDefinitionVisitor.java:82)
+	at org.springframework.beans.factory.config.PlaceholderConfigurerSupport.doProcessProperties(PlaceholderConfigurerSupport.java:208)
+	... 10 more
+[INFO] [2016-12-28 17:18:21] ?.?(?) | using logger: com.alibaba.dubbo.common.logger.log4j.Log4jLoggerAdapter
+[INFO] [2016-12-28 17:18:21] com.alibaba.dubbo.container.Main.main(58) |  [DUBBO] Use container type([spring]) to run dubbo serivce., dubbo version: service, current host: 127.0.0.1
+[INFO] [2016-12-28 17:18:21] org.springframework.context.support.AbstractApplicationContext.prepareRefresh(510) | Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@1175e2db: startup date [Wed Dec 28 17:18:21 CST 2016]; root of context hierarchy
+[INFO] [2016-12-28 17:18:21] org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(317) | Loading XML bean definitions from URL [jar:file:/Users/magang/Documents/citicIdea/myDubboDemo/demo-service/target/demo-service.jar!/META-INF/spring/spring-context.xml]
+[INFO] [2016-12-28 17:18:22] org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(317) | Loading XML bean definitions from class path resource [spring-registry.xml]
+[INFO] [2016-12-28 17:18:22] org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(317) | Loading XML bean definitions from class path resource [spring-mybatis.xml]
+[WARN] [2016-12-28 17:18:22] org.mybatis.spring.mapper.ClassPathMapperScanner.doScan(158) | No MyBatis mapper was found in '[com.mg.*.dao]' package. Please check your configuration.
+[INFO] [2016-12-28 17:18:22] org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(172) | Loading properties file from class path resource [zookeeper.properties]
+[WARN] [2016-12-28 17:18:22] org.springframework.context.support.AbstractApplicationContext.refresh(487) | Exception encountered during context initialization - cancelling refresh attempt
+org.springframework.beans.factory.BeanDefinitionStoreException: Invalid bean definition with name 'dataSource' defined in class path resource [spring-mybatis.xml]: Could not resolve placeholder 'validationQuery' in string value "${validationQuery}"; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'validationQuery' in string value "${validationQuery}"
+	at org.springframework.beans.factory.config.PlaceholderConfigurerSupport.doProcessProperties(PlaceholderConfigurerSupport.java:211)
+	at org.springframework.beans.factory.config.PropertyPlaceholderConfigurer.processProperties(PropertyPlaceholderConfigurer.java:222)
+	at org.springframework.beans.factory.config.PropertyResourceConfigurer.postProcessBeanFactory(PropertyResourceConfigurer.java:86)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:265)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:162)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:606)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:462)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:139)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:93)
+	at com.alibaba.dubbo.container.spring.SpringContainer.start(SpringContainer.java:50)
+	at com.alibaba.dubbo.container.Main.main(Main.java:80)
+Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'validationQuery' in string value "${validationQuery}"
+	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:174)
+	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:126)
+	at org.springframework.beans.factory.config.PropertyPlaceholderConfigurer$PlaceholderResolvingStringValueResolver.resolveStringValue(PropertyPlaceholderConfigurer.java:258)
+	at org.springframework.beans.factory.config.BeanDefinitionVisitor.resolveStringValue(BeanDefinitionVisitor.java:282)
+	at org.springframework.beans.factory.config.BeanDefinitionVisitor.resolveValue(BeanDefinitionVisitor.java:204)
+	at org.springframework.beans.factory.config.BeanDefinitionVisitor.visitPropertyValues(BeanDefinitionVisitor.java:141)
+	at org.springframework.beans.factory.config.BeanDefinitionVisitor.visitBeanDefinition(BeanDefinitionVisitor.java:82)
+	at org.springframework.beans.factory.config.PlaceholderConfigurerSupport.doProcessProperties(PlaceholderConfigurerSupport.java:208)
+	... 10 more
+[ERROR] [2016-12-28 17:18:22] com.alibaba.dubbo.container.Main.main(86) |  [DUBBO] Invalid bean definition with name 'dataSource' defined in class path resource [spring-mybatis.xml]: Could not resolve placeholder 'validationQuery' in string value "${validationQuery}"; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'validationQuery' in string value "${validationQuery}", dubbo version: service, current host: 127.0.0.1
+org.springframework.beans.factory.BeanDefinitionStoreException: Invalid bean definition with name 'dataSource' defined in class path resource [spring-mybatis.xml]: Could not resolve placeholder 'validationQuery' in string value "${validationQuery}"; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'validationQuery' in string value "${validationQuery}"
+	at org.springframework.beans.factory.config.PlaceholderConfigurerSupport.doProcessProperties(PlaceholderConfigurerSupport.java:211)
+	at org.springframework.beans.factory.config.PropertyPlaceholderConfigurer.processProperties(PropertyPlaceholderConfigurer.java:222)
+	at org.springframework.beans.factory.config.PropertyResourceConfigurer.postProcessBeanFactory(PropertyResourceConfigurer.java:86)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:265)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:162)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:606)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:462)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:139)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:93)
+	at com.alibaba.dubbo.container.spring.SpringContainer.start(SpringContainer.java:50)
+	at com.alibaba.dubbo.container.Main.main(Main.java:80)
+Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'validationQuery' in string value "${validationQuery}"
+	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:174)
+	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:126)
+	at org.springframework.beans.factory.config.PropertyPlaceholderConfigurer$PlaceholderResolvingStringValueResolver.resolveStringValue(PropertyPlaceholderConfigurer.java:258)
+	at org.springframework.beans.factory.config.BeanDefinitionVisitor.resolveStringValue(BeanDefinitionVisitor.java:282)
+	at org.springframework.beans.factory.config.BeanDefinitionVisitor.resolveValue(BeanDefinitionVisitor.java:204)
+	at org.springframework.beans.factory.config.BeanDefinitionVisitor.visitPropertyValues(BeanDefinitionVisitor.java:141)
+	at org.springframework.beans.factory.config.BeanDefinitionVisitor.visitBeanDefinition(BeanDefinitionVisitor.java:82)
+	at org.springframework.beans.factory.config.PlaceholderConfigurerSupport.doProcessProperties(PlaceholderConfigurerSupport.java:208)
+	... 10 more
+[INFO] [2016-12-28 17:19:17] ?.?(?) | using logger: com.alibaba.dubbo.common.logger.log4j.Log4jLoggerAdapter
+[INFO] [2016-12-28 17:19:17] com.alibaba.dubbo.container.Main.main(58) |  [DUBBO] Use container type([spring]) to run dubbo serivce., dubbo version: service, current host: 127.0.0.1
+[INFO] [2016-12-28 17:19:17] org.springframework.context.support.AbstractApplicationContext.prepareRefresh(510) | Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@1175e2db: startup date [Wed Dec 28 17:19:17 CST 2016]; root of context hierarchy
+[INFO] [2016-12-28 17:19:17] org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(317) | Loading XML bean definitions from URL [jar:file:/Users/magang/Documents/citicIdea/myDubboDemo/demo-service/target/demo-service.jar!/META-INF/spring/spring-context.xml]
+[INFO] [2016-12-28 17:19:22] org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(317) | Loading XML bean definitions from class path resource [spring-registry.xml]
+[INFO] [2016-12-28 17:19:22] org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(317) | Loading XML bean definitions from class path resource [spring-mybatis.xml]
+[WARN] [2016-12-28 17:19:22] org.mybatis.spring.mapper.ClassPathMapperScanner.doScan(158) | No MyBatis mapper was found in '[com.mg.*.dao]' package. Please check your configuration.
+[INFO] [2016-12-28 17:19:22] org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(172) | Loading properties file from class path resource [zookeeper.properties]
+[WARN] [2016-12-28 17:19:22] org.springframework.context.support.AbstractApplicationContext.refresh(487) | Exception encountered during context initialization - cancelling refresh attempt
+org.springframework.beans.factory.BeanDefinitionStoreException: Invalid bean definition with name 'dataSource' defined in class path resource [spring-mybatis.xml]: Could not resolve placeholder 'validationQuery' in string value "${validationQuery}"; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'validationQuery' in string value "${validationQuery}"
+	at org.springframework.beans.factory.config.PlaceholderConfigurerSupport.doProcessProperties(PlaceholderConfigurerSupport.java:211)
+	at org.springframework.beans.factory.config.PropertyPlaceholderConfigurer.processProperties(PropertyPlaceholderConfigurer.java:222)
+	at org.springframework.beans.factory.config.PropertyResourceConfigurer.postProcessBeanFactory(PropertyResourceConfigurer.java:86)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:265)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:162)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:606)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:462)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:139)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:93)
+	at com.alibaba.dubbo.container.spring.SpringContainer.start(SpringContainer.java:50)
+	at com.alibaba.dubbo.container.Main.main(Main.java:80)
+Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'validationQuery' in string value "${validationQuery}"
+	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:174)
+	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:126)
+	at org.springframework.beans.factory.config.PropertyPlaceholderConfigurer$PlaceholderResolvingStringValueResolver.resolveStringValue(PropertyPlaceholderConfigurer.java:258)
+	at org.springframework.beans.factory.config.BeanDefinitionVisitor.resolveStringValue(BeanDefinitionVisitor.java:282)
+	at org.springframework.beans.factory.config.BeanDefinitionVisitor.resolveValue(BeanDefinitionVisitor.java:204)
+	at org.springframework.beans.factory.config.BeanDefinitionVisitor.visitPropertyValues(BeanDefinitionVisitor.java:141)
+	at org.springframework.beans.factory.config.BeanDefinitionVisitor.visitBeanDefinition(BeanDefinitionVisitor.java:82)
+	at org.springframework.beans.factory.config.PlaceholderConfigurerSupport.doProcessProperties(PlaceholderConfigurerSupport.java:208)
+	... 10 more
+[ERROR] [2016-12-28 17:19:22] com.alibaba.dubbo.container.Main.main(86) |  [DUBBO] Invalid bean definition with name 'dataSource' defined in class path resource [spring-mybatis.xml]: Could not resolve placeholder 'validationQuery' in string value "${validationQuery}"; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'validationQuery' in string value "${validationQuery}", dubbo version: service, current host: 127.0.0.1
+org.springframework.beans.factory.BeanDefinitionStoreException: Invalid bean definition with name 'dataSource' defined in class path resource [spring-mybatis.xml]: Could not resolve placeholder 'validationQuery' in string value "${validationQuery}"; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'validationQuery' in string value "${validationQuery}"
+	at org.springframework.beans.factory.config.PlaceholderConfigurerSupport.doProcessProperties(PlaceholderConfigurerSupport.java:211)
+	at org.springframework.beans.factory.config.PropertyPlaceholderConfigurer.processProperties(PropertyPlaceholderConfigurer.java:222)
+	at org.springframework.beans.factory.config.PropertyResourceConfigurer.postProcessBeanFactory(PropertyResourceConfigurer.java:86)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:265)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:162)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:606)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:462)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:139)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:93)
+	at com.alibaba.dubbo.container.spring.SpringContainer.start(SpringContainer.java:50)
+	at com.alibaba.dubbo.container.Main.main(Main.java:80)
+Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'validationQuery' in string value "${validationQuery}"
+	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:174)
+	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:126)
+	at org.springframework.beans.factory.config.PropertyPlaceholderConfigurer$PlaceholderResolvingStringValueResolver.resolveStringValue(PropertyPlaceholderConfigurer.java:258)
+	at org.springframework.beans.factory.config.BeanDefinitionVisitor.resolveStringValue(BeanDefinitionVisitor.java:282)
+	at org.springframework.beans.factory.config.BeanDefinitionVisitor.resolveValue(BeanDefinitionVisitor.java:204)
+	at org.springframework.beans.factory.config.BeanDefinitionVisitor.visitPropertyValues(BeanDefinitionVisitor.java:141)
+	at org.springframework.beans.factory.config.BeanDefinitionVisitor.visitBeanDefinition(BeanDefinitionVisitor.java:82)
+	at org.springframework.beans.factory.config.PlaceholderConfigurerSupport.doProcessProperties(PlaceholderConfigurerSupport.java:208)
+	... 10 more
+[INFO] [2016-12-28 17:20:56] ?.?(?) | using logger: com.alibaba.dubbo.common.logger.log4j.Log4jLoggerAdapter
+[INFO] [2016-12-28 17:20:56] com.alibaba.dubbo.container.Main.main(58) |  [DUBBO] Use container type([spring]) to run dubbo serivce., dubbo version: service, current host: 127.0.0.1
+[INFO] [2016-12-28 17:20:56] org.springframework.context.support.AbstractApplicationContext.prepareRefresh(510) | Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@1175e2db: startup date [Wed Dec 28 17:20:56 CST 2016]; root of context hierarchy
+[INFO] [2016-12-28 17:20:57] org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(317) | Loading XML bean definitions from URL [jar:file:/Users/magang/Documents/citicIdea/myDubboDemo/demo-service/target/demo-service.jar!/META-INF/spring/spring-context.xml]
+[INFO] [2016-12-28 17:20:59] org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(317) | Loading XML bean definitions from class path resource [spring-registry.xml]
+[INFO] [2016-12-28 17:20:59] org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(317) | Loading XML bean definitions from class path resource [spring-mybatis.xml]
+[WARN] [2016-12-28 17:20:59] org.mybatis.spring.mapper.ClassPathMapperScanner.doScan(158) | No MyBatis mapper was found in '[com.mg.*.dao]' package. Please check your configuration.
+[INFO] [2016-12-28 17:20:59] org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(172) | Loading properties file from class path resource [zookeeper.properties]
+[INFO] [2016-12-28 17:20:59] org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(172) | Loading properties file from class path resource [jdbc.properties]
+[INFO] [2016-12-28 17:21:00] com.alibaba.druid.pool.DruidDataSource.init(669) | {dataSource-1} inited
+[WARN] [2016-12-28 17:21:01] org.springframework.context.support.AbstractApplicationContext.refresh(487) | Exception encountered during context initialization - cancelling refresh attempt
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [spring-mybatis.xml]: Invocation of init method failed; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'class path resource [mybatis/mapper/UserMapping.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.ivan.entity.User'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.ivan.entity.User
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1574)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:539)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:303)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:299)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:194)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:736)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:757)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:480)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:139)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:93)
+	at com.alibaba.dubbo.container.spring.SpringContainer.start(SpringContainer.java:50)
+	at com.alibaba.dubbo.container.Main.main(Main.java:80)
+Caused by: org.springframework.core.NestedIOException: Failed to parse mapping resource: 'class path resource [mybatis/mapper/UserMapping.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.ivan.entity.User'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.ivan.entity.User
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:466)
+	at org.mybatis.spring.SqlSessionFactoryBean.afterPropertiesSet(SqlSessionFactoryBean.java:340)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1633)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1570)
+	... 13 more
+Caused by: org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.ivan.entity.User'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.ivan.entity.User
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:120)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.parse(XMLMapperBuilder.java:92)
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:464)
+	... 16 more
+Caused by: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.ivan.entity.User'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.ivan.entity.User
+	at org.apache.ibatis.builder.BaseBuilder.resolveClass(BaseBuilder.java:103)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.resultMapElement(XMLMapperBuilder.java:264)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.resultMapElement(XMLMapperBuilder.java:251)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.resultMapElements(XMLMapperBuilder.java:243)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:116)
+	... 18 more
+Caused by: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.ivan.entity.User'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.ivan.entity.User
+	at org.apache.ibatis.type.TypeAliasRegistry.resolveAlias(TypeAliasRegistry.java:117)
+	at org.apache.ibatis.builder.BaseBuilder.resolveAlias(BaseBuilder.java:130)
+	at org.apache.ibatis.builder.BaseBuilder.resolveClass(BaseBuilder.java:101)
+	... 22 more
+Caused by: java.lang.ClassNotFoundException: Cannot find class: com.ivan.entity.User
+	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:190)
+	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:89)
+	at org.apache.ibatis.io.Resources.classForName(Resources.java:256)
+	at org.apache.ibatis.type.TypeAliasRegistry.resolveAlias(TypeAliasRegistry.java:113)
+	... 24 more
+[INFO] [2016-12-28 17:21:01] com.alibaba.druid.pool.DruidDataSource.close(1385) | {dataSource-1} closed
+[ERROR] [2016-12-28 17:21:01] com.alibaba.dubbo.container.Main.main(86) |  [DUBBO] Error creating bean with name 'sqlSessionFactory' defined in class path resource [spring-mybatis.xml]: Invocation of init method failed; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'class path resource [mybatis/mapper/UserMapping.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.ivan.entity.User'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.ivan.entity.User, dubbo version: service, current host: 127.0.0.1
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [spring-mybatis.xml]: Invocation of init method failed; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'class path resource [mybatis/mapper/UserMapping.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.ivan.entity.User'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.ivan.entity.User
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1574)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:539)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:303)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:299)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:194)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:736)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:757)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:480)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:139)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:93)
+	at com.alibaba.dubbo.container.spring.SpringContainer.start(SpringContainer.java:50)
+	at com.alibaba.dubbo.container.Main.main(Main.java:80)
+Caused by: org.springframework.core.NestedIOException: Failed to parse mapping resource: 'class path resource [mybatis/mapper/UserMapping.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.ivan.entity.User'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.ivan.entity.User
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:466)
+	at org.mybatis.spring.SqlSessionFactoryBean.afterPropertiesSet(SqlSessionFactoryBean.java:340)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1633)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1570)
+	... 13 more
+Caused by: org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.ivan.entity.User'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.ivan.entity.User
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:120)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.parse(XMLMapperBuilder.java:92)
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:464)
+	... 16 more
+Caused by: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.ivan.entity.User'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.ivan.entity.User
+	at org.apache.ibatis.builder.BaseBuilder.resolveClass(BaseBuilder.java:103)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.resultMapElement(XMLMapperBuilder.java:264)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.resultMapElement(XMLMapperBuilder.java:251)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.resultMapElements(XMLMapperBuilder.java:243)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:116)
+	... 18 more
+Caused by: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.ivan.entity.User'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.ivan.entity.User
+	at org.apache.ibatis.type.TypeAliasRegistry.resolveAlias(TypeAliasRegistry.java:117)
+	at org.apache.ibatis.builder.BaseBuilder.resolveAlias(BaseBuilder.java:130)
+	at org.apache.ibatis.builder.BaseBuilder.resolveClass(BaseBuilder.java:101)
+	... 22 more
+Caused by: java.lang.ClassNotFoundException: Cannot find class: com.ivan.entity.User
+	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:190)
+	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:89)
+	at org.apache.ibatis.io.Resources.classForName(Resources.java:256)
+	at org.apache.ibatis.type.TypeAliasRegistry.resolveAlias(TypeAliasRegistry.java:113)
+	... 24 more
+[INFO] [2016-12-28 17:21:01] com.alibaba.dubbo.config.AbstractConfig$1.run(450) |  [DUBBO] Run shutdown hook now., dubbo version: service, current host: 127.0.0.1
+[INFO] [2016-12-28 17:21:01] com.alibaba.dubbo.registry.support.AbstractRegistryFactory.destroyAll(63) |  [DUBBO] Close all registries [], dubbo version: service, current host: 127.0.0.1
+[INFO] [2016-12-28 17:27:23] ?.?(?) | using logger: com.alibaba.dubbo.common.logger.log4j.Log4jLoggerAdapter
+[INFO] [2016-12-28 17:27:23] com.alibaba.dubbo.container.Main.main(58) |  [DUBBO] Use container type([spring]) to run dubbo serivce., dubbo version: service, current host: 127.0.0.1
+[INFO] [2016-12-28 17:27:23] org.springframework.context.support.AbstractApplicationContext.prepareRefresh(510) | Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@1175e2db: startup date [Wed Dec 28 17:27:23 CST 2016]; root of context hierarchy
+[INFO] [2016-12-28 17:27:24] org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(317) | Loading XML bean definitions from URL [jar:file:/Users/magang/Documents/citicIdea/myDubboDemo/demo-service/target/demo-service.jar!/META-INF/spring/spring-context.xml]
+[INFO] [2016-12-28 17:27:33] org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(317) | Loading XML bean definitions from class path resource [spring-registry.xml]
+[INFO] [2016-12-28 17:27:33] org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(317) | Loading XML bean definitions from class path resource [spring-mybatis.xml]
+[WARN] [2016-12-28 17:27:33] org.mybatis.spring.mapper.ClassPathMapperScanner.doScan(158) | No MyBatis mapper was found in '[com.mg.*.dao]' package. Please check your configuration.
+[INFO] [2016-12-28 17:27:33] org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(172) | Loading properties file from class path resource [zookeeper.properties]
+[INFO] [2016-12-28 17:27:33] org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(172) | Loading properties file from class path resource [jdbc.properties]
+[INFO] [2016-12-28 17:27:34] com.alibaba.druid.pool.DruidDataSource.init(669) | {dataSource-1} inited
+[WARN] [2016-12-28 17:27:34] org.springframework.context.support.AbstractApplicationContext.refresh(487) | Exception encountered during context initialization - cancelling refresh attempt
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userServiceImpl': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private com.mg.demo.model.UserMapper com.mg.demo.service.UserServiceImpl.userMapper; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [com.mg.demo.model.UserMapper] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:334)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1210)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:537)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:303)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:299)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:194)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:755)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:757)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:480)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:139)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:93)
+	at com.alibaba.dubbo.container.spring.SpringContainer.start(SpringContainer.java:50)
+	at com.alibaba.dubbo.container.Main.main(Main.java:80)
+Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: private com.mg.demo.model.UserMapper com.mg.demo.service.UserServiceImpl.userMapper; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [com.mg.demo.model.UserMapper] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:561)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:331)
+	... 14 more
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [com.mg.demo.model.UserMapper] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoSuchBeanDefinitionException(DefaultListableBeanFactory.java:1301)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1047)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:942)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:533)
+	... 16 more
+[INFO] [2016-12-28 17:27:34] com.alibaba.druid.pool.DruidDataSource.close(1385) | {dataSource-1} closed
+[ERROR] [2016-12-28 17:27:34] com.alibaba.dubbo.container.Main.main(86) |  [DUBBO] Error creating bean with name 'userServiceImpl': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private com.mg.demo.model.UserMapper com.mg.demo.service.UserServiceImpl.userMapper; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [com.mg.demo.model.UserMapper] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}, dubbo version: service, current host: 127.0.0.1
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userServiceImpl': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private com.mg.demo.model.UserMapper com.mg.demo.service.UserServiceImpl.userMapper; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [com.mg.demo.model.UserMapper] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:334)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1210)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:537)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:303)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:299)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:194)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:755)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:757)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:480)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:139)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:93)
+	at com.alibaba.dubbo.container.spring.SpringContainer.start(SpringContainer.java:50)
+	at com.alibaba.dubbo.container.Main.main(Main.java:80)
+Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: private com.mg.demo.model.UserMapper com.mg.demo.service.UserServiceImpl.userMapper; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [com.mg.demo.model.UserMapper] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:561)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:331)
+	... 14 more
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [com.mg.demo.model.UserMapper] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoSuchBeanDefinitionException(DefaultListableBeanFactory.java:1301)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1047)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:942)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:533)
+	... 16 more
+[INFO] [2016-12-28 17:27:34] com.alibaba.dubbo.config.AbstractConfig$1.run(450) |  [DUBBO] Run shutdown hook now., dubbo version: service, current host: 127.0.0.1
+[INFO] [2016-12-28 17:27:34] com.alibaba.dubbo.registry.support.AbstractRegistryFactory.destroyAll(63) |  [DUBBO] Close all registries [], dubbo version: service, current host: 127.0.0.1
+[INFO] [2016-12-28 17:30:35] ?.?(?) | using logger: com.alibaba.dubbo.common.logger.log4j.Log4jLoggerAdapter
+[INFO] [2016-12-28 17:30:35] com.alibaba.dubbo.container.Main.main(58) |  [DUBBO] Use container type([spring]) to run dubbo serivce., dubbo version: service, current host: 127.0.0.1
+[INFO] [2016-12-28 17:30:35] org.springframework.context.support.AbstractApplicationContext.prepareRefresh(510) | Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@1175e2db: startup date [Wed Dec 28 17:30:35 CST 2016]; root of context hierarchy
+[INFO] [2016-12-28 17:30:35] org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(317) | Loading XML bean definitions from URL [jar:file:/Users/magang/Documents/citicIdea/myDubboDemo/demo-service/target/demo-service.jar!/META-INF/spring/spring-context.xml]
+[INFO] [2016-12-28 17:30:38] org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(317) | Loading XML bean definitions from class path resource [spring-registry.xml]
+[INFO] [2016-12-28 17:30:38] org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(317) | Loading XML bean definitions from class path resource [spring-mybatis.xml]
+[WARN] [2016-12-28 17:30:38] org.mybatis.spring.mapper.ClassPathMapperScanner.doScan(158) | No MyBatis mapper was found in '[com.mg.*.dao]' package. Please check your configuration.
+[INFO] [2016-12-28 17:30:38] org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(172) | Loading properties file from class path resource [zookeeper.properties]
+[INFO] [2016-12-28 17:30:38] org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(172) | Loading properties file from class path resource [jdbc.properties]
+[INFO] [2016-12-28 17:30:39] com.alibaba.druid.pool.DruidDataSource.init(669) | {dataSource-1} inited
+[WARN] [2016-12-28 17:30:39] org.springframework.context.support.AbstractApplicationContext.refresh(487) | Exception encountered during context initialization - cancelling refresh attempt
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userServiceImpl': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private com.mg.demo.model.UserMapper com.mg.demo.service.UserServiceImpl.userMapper; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [com.mg.demo.model.UserMapper] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:334)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1210)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:537)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:303)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:299)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:194)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:755)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:757)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:480)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:139)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:93)
+	at com.alibaba.dubbo.container.spring.SpringContainer.start(SpringContainer.java:50)
+	at com.alibaba.dubbo.container.Main.main(Main.java:80)
+Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: private com.mg.demo.model.UserMapper com.mg.demo.service.UserServiceImpl.userMapper; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [com.mg.demo.model.UserMapper] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:561)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:331)
+	... 14 more
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [com.mg.demo.model.UserMapper] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoSuchBeanDefinitionException(DefaultListableBeanFactory.java:1301)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1047)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:942)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:533)
+	... 16 more
+[INFO] [2016-12-28 17:30:39] com.alibaba.druid.pool.DruidDataSource.close(1385) | {dataSource-1} closed
+[ERROR] [2016-12-28 17:30:39] com.alibaba.dubbo.container.Main.main(86) |  [DUBBO] Error creating bean with name 'userServiceImpl': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private com.mg.demo.model.UserMapper com.mg.demo.service.UserServiceImpl.userMapper; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [com.mg.demo.model.UserMapper] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}, dubbo version: service, current host: 127.0.0.1
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userServiceImpl': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private com.mg.demo.model.UserMapper com.mg.demo.service.UserServiceImpl.userMapper; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [com.mg.demo.model.UserMapper] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:334)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1210)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:537)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:303)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:299)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:194)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:755)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:757)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:480)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:139)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:93)
+	at com.alibaba.dubbo.container.spring.SpringContainer.start(SpringContainer.java:50)
+	at com.alibaba.dubbo.container.Main.main(Main.java:80)
+Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: private com.mg.demo.model.UserMapper com.mg.demo.service.UserServiceImpl.userMapper; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [com.mg.demo.model.UserMapper] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:561)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:331)
+	... 14 more
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [com.mg.demo.model.UserMapper] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoSuchBeanDefinitionException(DefaultListableBeanFactory.java:1301)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1047)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:942)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:533)
+	... 16 more
+[INFO] [2016-12-28 17:30:39] com.alibaba.dubbo.config.AbstractConfig$1.run(450) |  [DUBBO] Run shutdown hook now., dubbo version: service, current host: 127.0.0.1
+[INFO] [2016-12-28 17:30:39] com.alibaba.dubbo.registry.support.AbstractRegistryFactory.destroyAll(63) |  [DUBBO] Close all registries [], dubbo version: service, current host: 127.0.0.1
+[INFO] [2016-12-28 17:38:51] ?.?(?) | using logger: com.alibaba.dubbo.common.logger.log4j.Log4jLoggerAdapter
+[INFO] [2016-12-28 17:38:52] com.alibaba.dubbo.container.Main.main(58) |  [DUBBO] Use container type([spring]) to run dubbo serivce., dubbo version: service, current host: 127.0.0.1
+[INFO] [2016-12-28 17:38:52] org.springframework.context.support.AbstractApplicationContext.prepareRefresh(510) | Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@1175e2db: startup date [Wed Dec 28 17:38:52 CST 2016]; root of context hierarchy
+[INFO] [2016-12-28 17:38:52] org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(317) | Loading XML bean definitions from URL [jar:file:/Users/magang/Documents/citicIdea/myDubboDemo/demo-service/target/demo-service.jar!/META-INF/spring/spring-context.xml]
+[INFO] [2016-12-28 17:38:54] org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(317) | Loading XML bean definitions from class path resource [spring-registry.xml]
+[INFO] [2016-12-28 17:38:54] org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(317) | Loading XML bean definitions from class path resource [spring-mybatis.xml]
+[INFO] [2016-12-28 17:38:54] org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(172) | Loading properties file from class path resource [zookeeper.properties]
+[INFO] [2016-12-28 17:38:54] org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(172) | Loading properties file from class path resource [jdbc.properties]
+[INFO] [2016-12-28 17:38:55] com.alibaba.druid.pool.DruidDataSource.init(669) | {dataSource-1} inited
+[INFO] [2016-12-28 17:38:56] com.alibaba.dubbo.config.ServiceConfig.exportLocal(510) |  [DUBBO] Export dubbo service com.mg.demo.api.UserService to local registry, dubbo version: service, current host: 127.0.0.1
+[INFO] [2016-12-28 17:38:56] com.alibaba.dubbo.config.ServiceConfig.doExportUrlsFor1Protocol(470) |  [DUBBO] Export dubbo service com.mg.demo.api.UserService to url dubbo://10.14.133.162:20880/com.mg.demo.api.UserService?anyhost=true&application=ivan-dubbo-server&dubbo=service&interface=com.mg.demo.api.UserService&methods=selectAll,selectByPrimaryKey,insertSelective,updateByPrimaryKeySelective,updateByPrimaryKey,insert,deleteByPrimaryKey&pid=17267&revision=service&side=provider&timestamp=1482917936053, dubbo version: service, current host: 127.0.0.1
+[INFO] [2016-12-28 17:38:56] com.alibaba.dubbo.config.ServiceConfig.doExportUrlsFor1Protocol(481) |  [DUBBO] Register dubbo service com.mg.demo.api.UserService url dubbo://10.14.133.162:20880/com.mg.demo.api.UserService?anyhost=true&application=ivan-dubbo-server&dubbo=service&interface=com.mg.demo.api.UserService&methods=selectAll,selectByPrimaryKey,insertSelective,updateByPrimaryKeySelective,updateByPrimaryKey,insert,deleteByPrimaryKey&pid=17267&revision=service&side=provider&timestamp=1482917936053 to registry registry://172.16.155.201:2181/com.alibaba.dubbo.registry.RegistryService?application=ivan-dubbo-server&dubbo=service&pid=17267&registry=zookeeper&timestamp=1482917936048, dubbo version: service, current host: 127.0.0.1
+[INFO] [2016-12-28 17:38:56] com.alibaba.dubbo.remoting.transport.AbstractServer.<init>(69) |  [DUBBO] Start NettyServer bind /0.0.0.0:20880, export /10.14.133.162:20880, dubbo version: service, current host: 127.0.0.1
+[INFO] [2016-12-28 17:38:56] com.alibaba.dubbo.registry.support.AbstractRegistry.loadProperties(232) |  [DUBBO] Load registry store file /Users/magang/.dubbo/dubbo-registry-172.16.155.201.cache, data: {com.mg.demo.api.UserService=empty://10.14.133.162/com.mg.demo.api.UserService?application=ivan-dubbo-web&category=configurators&dubbo=2.5.3&interface=com.mg.demo.api.UserService&methods=selectAll,selectByPrimaryKey,insertSelective,updateByPrimaryKeySelective,updateByPrimaryKey,insert,deleteByPrimaryKey&pid=14289&revision=1.0-SNAPSHOT&side=consumer&timestamp=1482917234504 empty://10.14.133.162/com.mg.demo.api.UserService?application=ivan-dubbo-web&category=routers&dubbo=2.5.3&interface=com.mg.demo.api.UserService&methods=selectAll,selectByPrimaryKey,insertSelective,updateByPrimaryKeySelective,updateByPrimaryKey,insert,deleteByPrimaryKey&pid=14289&revision=1.0-SNAPSHOT&side=consumer&timestamp=1482917234504 empty://10.14.133.162/com.mg.demo.api.UserService?application=ivan-dubbo-web&category=providers&dubbo=2.5.3&interface=com.mg.demo.api.UserService&methods=selectAll,selectByPrimaryKey,insertSelective,updateByPrimaryKeySelective,updateByPrimaryKey,insert,deleteByPrimaryKey&pid=14289&revision=1.0-SNAPSHOT&side=consumer&timestamp=1482917234504, com.mg.service.MyService=empty://10.14.133.162:20880/com.mg.service.MyService?anyhost=true&application=hello-world-app&category=configurators&check=false&dubbo=myService&interface=com.mg.service.MyService&methods=viewMessage&pid=10799&revision=myService&side=provider&timestamp=1482909964734}, dubbo version: service, current host: 127.0.0.1
+[INFO] [2016-12-28 17:38:56] org.I0Itec.zkclient.ZkEventThread.run(64) | Starting ZkClient event thread.
+[INFO] [2016-12-28 17:38:56] org.apache.zookeeper.Environment.logEnv(100) | Client environment:zookeeper.version=3.4.6-1569965, built on 02/20/2014 09:09 GMT
+[INFO] [2016-12-28 17:38:56] org.apache.zookeeper.Environment.logEnv(100) | Client environment:host.name=10.14.133.162
+[INFO] [2016-12-28 17:38:56] org.apache.zookeeper.Environment.logEnv(100) | Client environment:java.version=1.8.0_51
+[INFO] [2016-12-28 17:38:56] org.apache.zookeeper.Environment.logEnv(100) | Client environment:java.vendor=Oracle Corporation
+[INFO] [2016-12-28 17:38:56] org.apache.zookeeper.Environment.logEnv(100) | Client environment:java.home=/Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home/jre
+[INFO] [2016-12-28 17:38:56] org.apache.zookeeper.Environment.logEnv(100) | Client environment:java.class.path=demo-service.jar
+[INFO] [2016-12-28 17:38:56] org.apache.zookeeper.Environment.logEnv(100) | Client environment:java.library.path=/Users/magang/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.
+[INFO] [2016-12-28 17:38:56] org.apache.zookeeper.Environment.logEnv(100) | Client environment:java.io.tmpdir=/var/folders/k2/rs0gcf691b96b1j2qg92dqbm0000gn/T/
+[INFO] [2016-12-28 17:38:56] org.apache.zookeeper.Environment.logEnv(100) | Client environment:java.compiler=<NA>
+[INFO] [2016-12-28 17:38:56] org.apache.zookeeper.Environment.logEnv(100) | Client environment:os.name=Mac OS X
+[INFO] [2016-12-28 17:38:56] org.apache.zookeeper.Environment.logEnv(100) | Client environment:os.arch=x86_64
+[INFO] [2016-12-28 17:38:56] org.apache.zookeeper.Environment.logEnv(100) | Client environment:os.version=10.12.1
+[INFO] [2016-12-28 17:38:56] org.apache.zookeeper.Environment.logEnv(100) | Client environment:user.name=magang
+[INFO] [2016-12-28 17:38:56] org.apache.zookeeper.Environment.logEnv(100) | Client environment:user.home=/Users/magang
+[INFO] [2016-12-28 17:38:56] org.apache.zookeeper.Environment.logEnv(100) | Client environment:user.dir=/Users/magang/Documents/citicIdea/myDubboDemo/demo-service/target
+[INFO] [2016-12-28 17:38:56] org.apache.zookeeper.ZooKeeper.<init>(438) | Initiating client connection, connectString=172.16.155.201:2181 sessionTimeout=30000 watcher=org.I0Itec.zkclient.ZkClient@5fd18419
+[INFO] [2016-12-28 17:38:56] org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(975) | Opening socket connection to server 172.16.155.201/172.16.155.201:2181. Will not attempt to authenticate using SASL (unknown error)
+[INFO] [2016-12-28 17:38:56] org.apache.zookeeper.ClientCnxn$SendThread.primeConnection(852) | Socket connection established to 172.16.155.201/172.16.155.201:2181, initiating session
+[INFO] [2016-12-28 17:38:56] org.apache.zookeeper.ClientCnxn$SendThread.onConnected(1235) | Session establishment complete on server 172.16.155.201/172.16.155.201:2181, sessionid = 0x1594356ae12000b, negotiated timeout = 30000
+[INFO] [2016-12-28 17:38:56] org.I0Itec.zkclient.ZkClient.processStateChanged(704) | zookeeper state changed (SyncConnected)
+[INFO] [2016-12-28 17:38:56] com.alibaba.dubbo.registry.support.AbstractRegistry.register(302) |  [DUBBO] Register: dubbo://10.14.133.162:20880/com.mg.demo.api.UserService?anyhost=true&application=ivan-dubbo-server&dubbo=service&interface=com.mg.demo.api.UserService&methods=selectAll,selectByPrimaryKey,insertSelective,updateByPrimaryKeySelective,updateByPrimaryKey,insert,deleteByPrimaryKey&pid=17267&revision=service&side=provider&timestamp=1482917936053, dubbo version: service, current host: 127.0.0.1
+[INFO] [2016-12-28 17:38:56] com.alibaba.dubbo.registry.support.AbstractRegistry.subscribe(325) |  [DUBBO] Subscribe: provider://10.14.133.162:20880/com.mg.demo.api.UserService?anyhost=true&application=ivan-dubbo-server&category=configurators&check=false&dubbo=service&interface=com.mg.demo.api.UserService&methods=selectAll,selectByPrimaryKey,insertSelective,updateByPrimaryKeySelective,updateByPrimaryKey,insert,deleteByPrimaryKey&pid=17267&revision=service&side=provider&timestamp=1482917936053, dubbo version: service, current host: 127.0.0.1
+[INFO] [2016-12-28 17:38:56] com.alibaba.dubbo.registry.support.AbstractRegistry.notify(422) |  [DUBBO] Notify urls for subscribe url provider://10.14.133.162:20880/com.mg.demo.api.UserService?anyhost=true&application=ivan-dubbo-server&category=configurators&check=false&dubbo=service&interface=com.mg.demo.api.UserService&methods=selectAll,selectByPrimaryKey,insertSelective,updateByPrimaryKeySelective,updateByPrimaryKey,insert,deleteByPrimaryKey&pid=17267&revision=service&side=provider&timestamp=1482917936053, urls: [empty://10.14.133.162:20880/com.mg.demo.api.UserService?anyhost=true&application=ivan-dubbo-server&category=configurators&check=false&dubbo=service&interface=com.mg.demo.api.UserService&methods=selectAll,selectByPrimaryKey,insertSelective,updateByPrimaryKeySelective,updateByPrimaryKey,insert,deleteByPrimaryKey&pid=17267&revision=service&side=provider&timestamp=1482917936053], dubbo version: service, current host: 127.0.0.1
+[INFO] [2016-12-28 17:38:56] com.alibaba.dubbo.container.Main.main(81) |  [DUBBO] Dubbo SpringContainer started!, dubbo version: service, current host: 127.0.0.1
+[ERROR] [2016-12-28 17:42:01] com.alibaba.druid.pool.DruidDataSource.handleConnectionException(1190) | discard connection
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 38,877 milliseconds ago.  The last packet sent successfully to the server was 10 milliseconds ago.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:377)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1036)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3427)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3327)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3814)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2435)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2582)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2530)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1907)
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1199)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:2931)
+	at com.alibaba.druid.filter.FilterEventAdapter.preparedStatement_execute(FilterEventAdapter.java:440)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:2929)
+	at com.alibaba.druid.proxy.jdbc.PreparedStatementProxyImpl.execute(PreparedStatementProxyImpl.java:118)
+	at com.alibaba.druid.pool.DruidPooledPreparedStatement.execute(DruidPooledPreparedStatement.java:493)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:59)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:73)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:60)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:267)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:137)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:96)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:77)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:108)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:102)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:358)
+	at com.sun.proxy.$Proxy16.selectList(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:198)
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:119)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:63)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:52)
+	at com.sun.proxy.$Proxy18.selectAll(Unknown Source)
+	at com.mg.demo.service.UserServiceImpl.selectAll(UserServiceImpl.java:56)
+	at com.alibaba.dubbo.common.bytecode.Wrapper1.invokeMethod(Wrapper1.java)
+	at com.alibaba.dubbo.rpc.proxy.javassist.JavassistProxyFactory$1.doInvoke(JavassistProxyFactory.java:46)
+	at com.alibaba.dubbo.rpc.proxy.AbstractProxyInvoker.invoke(AbstractProxyInvoker.java:72)
+	at com.alibaba.dubbo.rpc.protocol.InvokerWrapper.invoke(InvokerWrapper.java:53)
+	at com.alibaba.dubbo.rpc.filter.ExceptionFilter.invoke(ExceptionFilter.java:64)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.monitor.support.MonitorFilter.invoke(MonitorFilter.java:75)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.TimeoutFilter.invoke(TimeoutFilter.java:42)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.protocol.dubbo.filter.TraceFilter.invoke(TraceFilter.java:78)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.ContextFilter.invoke(ContextFilter.java:60)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.GenericFilter.invoke(GenericFilter.java:112)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.ClassLoaderFilter.invoke(ClassLoaderFilter.java:38)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.EchoFilter.invoke(EchoFilter.java:38)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.protocol.dubbo.DubboProtocol$1.reply(DubboProtocol.java:108)
+	at com.alibaba.dubbo.remoting.exchange.support.header.HeaderExchangeHandler.handleRequest(HeaderExchangeHandler.java:84)
+	at com.alibaba.dubbo.remoting.exchange.support.header.HeaderExchangeHandler.received(HeaderExchangeHandler.java:170)
+	at com.alibaba.dubbo.remoting.transport.DecodeHandler.received(DecodeHandler.java:52)
+	at com.alibaba.dubbo.remoting.transport.dispatcher.ChannelEventRunnable.run(ChannelEventRunnable.java:82)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.io.EOFException: Can not read response from server. Expected to read 4 bytes, read 0 bytes before connection was unexpectedly lost.
+	at com.mysql.jdbc.MysqlIO.readFully(MysqlIO.java:2914)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3337)
+	... 61 more
+[INFO] [2016-12-28 17:42:01] org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(317) | Loading XML bean definitions from class path resource [org/springframework/jdbc/support/sql-error-codes.xml]
+[INFO] [2016-12-28 17:42:01] org.springframework.jdbc.support.SQLErrorCodesFactory.<init>(126) | SQLErrorCodes loaded: [DB2, Derby, H2, HSQL, Informix, MS-SQL, MySQL, Oracle, PostgreSQL, Sybase, Hana]
+[ERROR] [2016-12-28 17:42:01] com.alibaba.dubbo.rpc.filter.ExceptionFilter.invoke(87) |  [DUBBO] Got unchecked and undeclared exception which called by 10.14.133.162. service: com.mg.demo.api.UserService, method: selectAll, exception: org.springframework.dao.RecoverableDataAccessException: 
+### Error querying database.  Cause: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 38,877 milliseconds ago.  The last packet sent successfully to the server was 10 milliseconds ago.
+### The error may exist in class path resource [mybatis/mapper/UserMapping.xml]
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: select                   id, name, age               from user
+### Cause: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 38,877 milliseconds ago.  The last packet sent successfully to the server was 10 milliseconds ago.
+; SQL []; Communications link failure
+
+The last packet successfully received from the server was 38,877 milliseconds ago.  The last packet sent successfully to the server was 10 milliseconds ago.; nested exception is com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 38,877 milliseconds ago.  The last packet sent successfully to the server was 10 milliseconds ago., dubbo version: service, current host: 127.0.0.1
+org.springframework.dao.RecoverableDataAccessException: 
+### Error querying database.  Cause: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 38,877 milliseconds ago.  The last packet sent successfully to the server was 10 milliseconds ago.
+### The error may exist in class path resource [mybatis/mapper/UserMapping.xml]
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: select                   id, name, age               from user
+### Cause: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 38,877 milliseconds ago.  The last packet sent successfully to the server was 10 milliseconds ago.
+; SQL []; Communications link failure
+
+The last packet successfully received from the server was 38,877 milliseconds ago.  The last packet sent successfully to the server was 10 milliseconds ago.; nested exception is com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 38,877 milliseconds ago.  The last packet sent successfully to the server was 10 milliseconds ago.
+	at org.springframework.jdbc.support.SQLExceptionSubclassTranslator.doTranslate(SQLExceptionSubclassTranslator.java:98)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:73)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:81)
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:73)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:371)
+	at com.sun.proxy.$Proxy16.selectList(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:198)
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:119)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:63)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:52)
+	at com.sun.proxy.$Proxy18.selectAll(Unknown Source)
+	at com.mg.demo.service.UserServiceImpl.selectAll(UserServiceImpl.java:56)
+	at com.alibaba.dubbo.common.bytecode.Wrapper1.invokeMethod(Wrapper1.java)
+	at com.alibaba.dubbo.rpc.proxy.javassist.JavassistProxyFactory$1.doInvoke(JavassistProxyFactory.java:46)
+	at com.alibaba.dubbo.rpc.proxy.AbstractProxyInvoker.invoke(AbstractProxyInvoker.java:72)
+	at com.alibaba.dubbo.rpc.protocol.InvokerWrapper.invoke(InvokerWrapper.java:53)
+	at com.alibaba.dubbo.rpc.filter.ExceptionFilter.invoke(ExceptionFilter.java:64)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.monitor.support.MonitorFilter.invoke(MonitorFilter.java:75)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.TimeoutFilter.invoke(TimeoutFilter.java:42)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.protocol.dubbo.filter.TraceFilter.invoke(TraceFilter.java:78)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.ContextFilter.invoke(ContextFilter.java:60)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.GenericFilter.invoke(GenericFilter.java:112)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.ClassLoaderFilter.invoke(ClassLoaderFilter.java:38)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.EchoFilter.invoke(EchoFilter.java:38)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.protocol.dubbo.DubboProtocol$1.reply(DubboProtocol.java:108)
+	at com.alibaba.dubbo.remoting.exchange.support.header.HeaderExchangeHandler.handleRequest(HeaderExchangeHandler.java:84)
+	at com.alibaba.dubbo.remoting.exchange.support.header.HeaderExchangeHandler.received(HeaderExchangeHandler.java:170)
+	at com.alibaba.dubbo.remoting.transport.DecodeHandler.received(DecodeHandler.java:52)
+	at com.alibaba.dubbo.remoting.transport.dispatcher.ChannelEventRunnable.run(ChannelEventRunnable.java:82)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 38,877 milliseconds ago.  The last packet sent successfully to the server was 10 milliseconds ago.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:377)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1036)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3427)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3327)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3814)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2435)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2582)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2530)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1907)
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1199)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:2931)
+	at com.alibaba.druid.filter.FilterEventAdapter.preparedStatement_execute(FilterEventAdapter.java:440)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:2929)
+	at com.alibaba.druid.proxy.jdbc.PreparedStatementProxyImpl.execute(PreparedStatementProxyImpl.java:118)
+	at com.alibaba.druid.pool.DruidPooledPreparedStatement.execute(DruidPooledPreparedStatement.java:493)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:59)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:73)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:60)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:267)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:137)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:96)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:77)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:108)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:102)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:358)
+	... 35 more
+Caused by: java.io.EOFException: Can not read response from server. Expected to read 4 bytes, read 0 bytes before connection was unexpectedly lost.
+	at com.mysql.jdbc.MysqlIO.readFully(MysqlIO.java:2914)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3337)
+	... 61 more
+[WARN] [2016-12-28 17:46:57] com.alibaba.dubbo.remoting.transport.AbstractServer.disconnected(197) |  [DUBBO] All clients has discontected from /10.14.133.162:20880. You can graceful shutdown now., dubbo version: service, current host: 127.0.0.1
+[INFO] [2016-12-28 17:46:57] com.alibaba.dubbo.rpc.protocol.dubbo.DubboProtocol$1.disconnected(130) |  [DUBBO] disconected from /10.14.133.162:54941,url:dubbo://10.14.133.162:20880/com.mg.demo.api.UserService?anyhost=true&application=ivan-dubbo-server&channel.readonly.sent=true&codec=dubbo&dubbo=service&heartbeat=60000&interface=com.mg.demo.api.UserService&methods=selectAll,selectByPrimaryKey,insertSelective,updateByPrimaryKeySelective,updateByPrimaryKey,insert,deleteByPrimaryKey&pid=17267&revision=service&side=provider&timestamp=1482917936053, dubbo version: service, current host: 127.0.0.1
+[WARN] [2016-12-28 17:55:28] com.alibaba.dubbo.remoting.transport.AbstractServer.disconnected(197) |  [DUBBO] All clients has discontected from /10.14.133.162:20880. You can graceful shutdown now., dubbo version: service, current host: 127.0.0.1
+[INFO] [2016-12-28 17:55:28] com.alibaba.dubbo.rpc.protocol.dubbo.DubboProtocol$1.disconnected(130) |  [DUBBO] disconected from /10.14.133.162:55254,url:dubbo://10.14.133.162:20880/com.mg.demo.api.UserService?anyhost=true&application=ivan-dubbo-server&channel.readonly.sent=true&codec=dubbo&dubbo=service&heartbeat=60000&interface=com.mg.demo.api.UserService&methods=selectAll,selectByPrimaryKey,insertSelective,updateByPrimaryKeySelective,updateByPrimaryKey,insert,deleteByPrimaryKey&pid=17267&revision=service&side=provider&timestamp=1482917936053, dubbo version: service, current host: 127.0.0.1
+[INFO] [2016-12-28 17:55:46] com.alibaba.dubbo.config.AbstractConfig$1.run(450) |  [DUBBO] Run shutdown hook now., dubbo version: service, current host: 127.0.0.1
+[INFO] [2016-12-28 17:55:46] com.alibaba.dubbo.registry.support.AbstractRegistryFactory.destroyAll(63) |  [DUBBO] Close all registries [zookeeper://172.16.155.201:2181/com.alibaba.dubbo.registry.RegistryService?application=ivan-dubbo-server&dubbo=service&interface=com.alibaba.dubbo.registry.RegistryService&pid=17267&timestamp=1482917936048], dubbo version: service, current host: 127.0.0.1
+[INFO] [2016-12-28 17:55:46] com.alibaba.dubbo.registry.support.AbstractRegistry.destroy(485) |  [DUBBO] Destroy registry:zookeeper://172.16.155.201:2181/com.alibaba.dubbo.registry.RegistryService?application=ivan-dubbo-server&dubbo=service&interface=com.alibaba.dubbo.registry.RegistryService&pid=17267&timestamp=1482917936048, dubbo version: service, current host: 127.0.0.1
+[INFO] [2016-12-28 17:55:46] com.alibaba.dubbo.registry.support.AbstractRegistry.unregister(312) |  [DUBBO] Unregister: dubbo://10.14.133.162:20880/com.mg.demo.api.UserService?anyhost=true&application=ivan-dubbo-server&dubbo=service&interface=com.mg.demo.api.UserService&methods=selectAll,selectByPrimaryKey,insertSelective,updateByPrimaryKeySelective,updateByPrimaryKey,insert,deleteByPrimaryKey&pid=17267&revision=service&side=provider&timestamp=1482917936053, dubbo version: service, current host: 127.0.0.1
+[INFO] [2016-12-28 17:55:46] com.alibaba.dubbo.registry.support.AbstractRegistry.destroy(494) |  [DUBBO] Destroy unregister url dubbo://10.14.133.162:20880/com.mg.demo.api.UserService?anyhost=true&application=ivan-dubbo-server&dubbo=service&interface=com.mg.demo.api.UserService&methods=selectAll,selectByPrimaryKey,insertSelective,updateByPrimaryKeySelective,updateByPrimaryKey,insert,deleteByPrimaryKey&pid=17267&revision=service&side=provider&timestamp=1482917936053, dubbo version: service, current host: 127.0.0.1
+[INFO] [2016-12-28 17:55:46] com.alibaba.dubbo.registry.support.AbstractRegistry.unsubscribe(343) |  [DUBBO] Unsubscribe: provider://10.14.133.162:20880/com.mg.demo.api.UserService?anyhost=true&application=ivan-dubbo-server&category=configurators&check=false&dubbo=service&interface=com.mg.demo.api.UserService&methods=selectAll,selectByPrimaryKey,insertSelective,updateByPrimaryKeySelective,updateByPrimaryKey,insert,deleteByPrimaryKey&pid=17267&revision=service&side=provider&timestamp=1482917936053, dubbo version: service, current host: 127.0.0.1
+[INFO] [2016-12-28 17:55:46] com.alibaba.dubbo.registry.support.AbstractRegistry.destroy(510) |  [DUBBO] Destroy unsubscribe url provider://10.14.133.162:20880/com.mg.demo.api.UserService?anyhost=true&application=ivan-dubbo-server&category=configurators&check=false&dubbo=service&interface=com.mg.demo.api.UserService&methods=selectAll,selectByPrimaryKey,insertSelective,updateByPrimaryKeySelective,updateByPrimaryKey,insert,deleteByPrimaryKey&pid=17267&revision=service&side=provider&timestamp=1482917936053, dubbo version: service, current host: 127.0.0.1
+[INFO] [2016-12-28 17:55:46] org.I0Itec.zkclient.ZkEventThread.run(82) | Terminate ZkClient event thread.
+[INFO] [2016-12-28 17:55:46] org.apache.zookeeper.ZooKeeper.close(684) | Session: 0x1594356ae12000b closed
+[INFO] [2016-12-28 17:55:46] org.apache.zookeeper.ClientCnxn$EventThread.run(512) | EventThread shut down
+[INFO] [2016-12-28 17:55:46] com.alibaba.dubbo.rpc.protocol.dubbo.DubboProtocol.destroy(393) |  [DUBBO] Close dubbo server: /10.14.133.162:20880, dubbo version: service, current host: 127.0.0.1
+[INFO] [2016-12-28 17:55:46] com.alibaba.dubbo.remoting.transport.AbstractServer.close(146) |  [DUBBO] Close NettyServer bind /0.0.0.0:20880, export /10.14.133.162:20880, dubbo version: service, current host: 127.0.0.1
+[INFO] [2016-12-28 17:55:46] com.alibaba.dubbo.rpc.protocol.AbstractProtocol.destroy(76) |  [DUBBO] Unexport service: dubbo://10.14.133.162:20880/com.mg.demo.api.UserService?anyhost=true&application=ivan-dubbo-server&dubbo=service&interface=com.mg.demo.api.UserService&methods=selectAll,selectByPrimaryKey,insertSelective,updateByPrimaryKeySelective,updateByPrimaryKey,insert,deleteByPrimaryKey&pid=17267&revision=service&side=provider&timestamp=1482917936053, dubbo version: service, current host: 127.0.0.1
+[INFO] [2016-12-28 17:55:46] com.alibaba.dubbo.rpc.protocol.AbstractProtocol.destroy(76) |  [DUBBO] Unexport service: injvm://127.0.0.1/com.mg.demo.api.UserService?anyhost=true&application=ivan-dubbo-server&dubbo=service&interface=com.mg.demo.api.UserService&methods=selectAll,selectByPrimaryKey,insertSelective,updateByPrimaryKeySelective,updateByPrimaryKey,insert,deleteByPrimaryKey&pid=17267&revision=service&side=provider&timestamp=1482917936053, dubbo version: service, current host: 127.0.0.1
+[INFO] [2016-12-28 17:56:43] ?.?(?) | using logger: com.alibaba.dubbo.common.logger.log4j.Log4jLoggerAdapter
+[INFO] [2016-12-28 17:56:43] com.alibaba.dubbo.container.Main.main(58) |  [DUBBO] Use container type([spring]) to run dubbo serivce., dubbo version: service, current host: 127.0.0.1
+[INFO] [2016-12-28 17:56:43] org.springframework.context.support.AbstractApplicationContext.prepareRefresh(510) | Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@1175e2db: startup date [Wed Dec 28 17:56:43 CST 2016]; root of context hierarchy
+[INFO] [2016-12-28 17:56:43] org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(317) | Loading XML bean definitions from URL [jar:file:/Users/magang/Documents/citicIdea/myDubboDemo/demo-service/target/demo-service.jar!/META-INF/spring/spring-context.xml]
+[INFO] [2016-12-28 17:57:11] org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(317) | Loading XML bean definitions from class path resource [spring-registry.xml]
+[INFO] [2016-12-28 17:57:11] org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(317) | Loading XML bean definitions from class path resource [spring-mybatis.xml]
+[INFO] [2016-12-28 17:57:11] org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(172) | Loading properties file from class path resource [zookeeper.properties]
+[INFO] [2016-12-28 17:57:11] org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(172) | Loading properties file from class path resource [jdbc.properties]
+[INFO] [2016-12-28 17:57:12] com.alibaba.druid.pool.DruidDataSource.init(669) | {dataSource-1} inited
+[INFO] [2016-12-28 17:57:13] com.alibaba.dubbo.config.ServiceConfig.exportLocal(510) |  [DUBBO] Export dubbo service com.mg.demo.api.UserService to local registry, dubbo version: service, current host: 127.0.0.1
+[INFO] [2016-12-28 17:57:13] com.alibaba.dubbo.config.ServiceConfig.doExportUrlsFor1Protocol(470) |  [DUBBO] Export dubbo service com.mg.demo.api.UserService to url dubbo://10.14.133.162:20880/com.mg.demo.api.UserService?anyhost=true&application=ivan-dubbo-server&dubbo=service&interface=com.mg.demo.api.UserService&methods=selectAll,selectByPrimaryKey,insertSelective,updateByPrimaryKeySelective,updateByPrimaryKey,insert,deleteByPrimaryKey&pid=18226&revision=service&side=provider&timestamp=1482919033140, dubbo version: service, current host: 127.0.0.1
+[INFO] [2016-12-28 17:57:13] com.alibaba.dubbo.config.ServiceConfig.doExportUrlsFor1Protocol(481) |  [DUBBO] Register dubbo service com.mg.demo.api.UserService url dubbo://10.14.133.162:20880/com.mg.demo.api.UserService?anyhost=true&application=ivan-dubbo-server&dubbo=service&interface=com.mg.demo.api.UserService&methods=selectAll,selectByPrimaryKey,insertSelective,updateByPrimaryKeySelective,updateByPrimaryKey,insert,deleteByPrimaryKey&pid=18226&revision=service&side=provider&timestamp=1482919033140 to registry registry://172.16.155.201:2181/com.alibaba.dubbo.registry.RegistryService?application=ivan-dubbo-server&dubbo=service&pid=18226&registry=zookeeper&timestamp=1482919033135, dubbo version: service, current host: 127.0.0.1
+[INFO] [2016-12-28 17:57:13] com.alibaba.dubbo.remoting.transport.AbstractServer.<init>(69) |  [DUBBO] Start NettyServer bind /0.0.0.0:20880, export /10.14.133.162:20880, dubbo version: service, current host: 127.0.0.1
+[INFO] [2016-12-28 17:57:13] com.alibaba.dubbo.registry.support.AbstractRegistry.loadProperties(232) |  [DUBBO] Load registry store file /Users/magang/.dubbo/dubbo-registry-172.16.155.201.cache, data: {com.mg.demo.api.UserService=empty://10.14.133.162/com.mg.demo.api.UserService?application=ivan-dubbo-web&category=configurators&dubbo=2.5.3&interface=com.mg.demo.api.UserService&methods=selectAll,selectByPrimaryKey,insertSelective,updateByPrimaryKeySelective,updateByPrimaryKey,insert,deleteByPrimaryKey&pid=17772&revision=1.0-SNAPSHOT&side=consumer&timestamp=1482918523714 empty://10.14.133.162/com.mg.demo.api.UserService?application=ivan-dubbo-web&category=routers&dubbo=2.5.3&interface=com.mg.demo.api.UserService&methods=selectAll,selectByPrimaryKey,insertSelective,updateByPrimaryKeySelective,updateByPrimaryKey,insert,deleteByPrimaryKey&pid=17772&revision=1.0-SNAPSHOT&side=consumer&timestamp=1482918523714 dubbo://10.14.133.162:20880/com.mg.demo.api.UserService?anyhost=true&application=ivan-dubbo-server&dubbo=service&interface=com.mg.demo.api.UserService&methods=selectAll,selectByPrimaryKey,insertSelective,updateByPrimaryKeySelective,updateByPrimaryKey,insert,deleteByPrimaryKey&pid=17267&revision=service&side=provider&timestamp=1482917936053, com.mg.service.MyService=empty://10.14.133.162:20880/com.mg.service.MyService?anyhost=true&application=hello-world-app&category=configurators&check=false&dubbo=myService&interface=com.mg.service.MyService&methods=viewMessage&pid=10799&revision=myService&side=provider&timestamp=1482909964734}, dubbo version: service, current host: 127.0.0.1
+[INFO] [2016-12-28 17:57:13] org.I0Itec.zkclient.ZkEventThread.run(64) | Starting ZkClient event thread.
+[INFO] [2016-12-28 17:57:13] org.apache.zookeeper.Environment.logEnv(100) | Client environment:zookeeper.version=3.4.6-1569965, built on 02/20/2014 09:09 GMT
+[INFO] [2016-12-28 17:57:13] org.apache.zookeeper.Environment.logEnv(100) | Client environment:host.name=10.14.133.162
+[INFO] [2016-12-28 17:57:13] org.apache.zookeeper.Environment.logEnv(100) | Client environment:java.version=1.8.0_51
+[INFO] [2016-12-28 17:57:13] org.apache.zookeeper.Environment.logEnv(100) | Client environment:java.vendor=Oracle Corporation
+[INFO] [2016-12-28 17:57:13] org.apache.zookeeper.Environment.logEnv(100) | Client environment:java.home=/Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home/jre
+[INFO] [2016-12-28 17:57:13] org.apache.zookeeper.Environment.logEnv(100) | Client environment:java.class.path=demo-service.jar
+[INFO] [2016-12-28 17:57:13] org.apache.zookeeper.Environment.logEnv(100) | Client environment:java.library.path=/Users/magang/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.
+[INFO] [2016-12-28 17:57:13] org.apache.zookeeper.Environment.logEnv(100) | Client environment:java.io.tmpdir=/var/folders/k2/rs0gcf691b96b1j2qg92dqbm0000gn/T/
+[INFO] [2016-12-28 17:57:13] org.apache.zookeeper.Environment.logEnv(100) | Client environment:java.compiler=<NA>
+[INFO] [2016-12-28 17:57:13] org.apache.zookeeper.Environment.logEnv(100) | Client environment:os.name=Mac OS X
+[INFO] [2016-12-28 17:57:13] org.apache.zookeeper.Environment.logEnv(100) | Client environment:os.arch=x86_64
+[INFO] [2016-12-28 17:57:13] org.apache.zookeeper.Environment.logEnv(100) | Client environment:os.version=10.12.1
+[INFO] [2016-12-28 17:57:13] org.apache.zookeeper.Environment.logEnv(100) | Client environment:user.name=magang
+[INFO] [2016-12-28 17:57:13] org.apache.zookeeper.Environment.logEnv(100) | Client environment:user.home=/Users/magang
+[INFO] [2016-12-28 17:57:13] org.apache.zookeeper.Environment.logEnv(100) | Client environment:user.dir=/Users/magang/Documents/citicIdea/myDubboDemo/demo-service/target
+[INFO] [2016-12-28 17:57:13] org.apache.zookeeper.ZooKeeper.<init>(438) | Initiating client connection, connectString=172.16.155.201:2181 sessionTimeout=30000 watcher=org.I0Itec.zkclient.ZkClient@33ebe4f0
+[INFO] [2016-12-28 17:57:13] org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(975) | Opening socket connection to server 172.16.155.201/172.16.155.201:2181. Will not attempt to authenticate using SASL (unknown error)
+[INFO] [2016-12-28 17:57:13] org.apache.zookeeper.ClientCnxn$SendThread.primeConnection(852) | Socket connection established to 172.16.155.201/172.16.155.201:2181, initiating session
+[INFO] [2016-12-28 17:57:13] org.apache.zookeeper.ClientCnxn$SendThread.onConnected(1235) | Session establishment complete on server 172.16.155.201/172.16.155.201:2181, sessionid = 0x1594356ae12000e, negotiated timeout = 30000
+[INFO] [2016-12-28 17:57:13] org.I0Itec.zkclient.ZkClient.processStateChanged(704) | zookeeper state changed (SyncConnected)
+[INFO] [2016-12-28 17:57:13] com.alibaba.dubbo.registry.support.AbstractRegistry.register(302) |  [DUBBO] Register: dubbo://10.14.133.162:20880/com.mg.demo.api.UserService?anyhost=true&application=ivan-dubbo-server&dubbo=service&interface=com.mg.demo.api.UserService&methods=selectAll,selectByPrimaryKey,insertSelective,updateByPrimaryKeySelective,updateByPrimaryKey,insert,deleteByPrimaryKey&pid=18226&revision=service&side=provider&timestamp=1482919033140, dubbo version: service, current host: 127.0.0.1
+[INFO] [2016-12-28 17:57:13] com.alibaba.dubbo.registry.support.AbstractRegistry.subscribe(325) |  [DUBBO] Subscribe: provider://10.14.133.162:20880/com.mg.demo.api.UserService?anyhost=true&application=ivan-dubbo-server&category=configurators&check=false&dubbo=service&interface=com.mg.demo.api.UserService&methods=selectAll,selectByPrimaryKey,insertSelective,updateByPrimaryKeySelective,updateByPrimaryKey,insert,deleteByPrimaryKey&pid=18226&revision=service&side=provider&timestamp=1482919033140, dubbo version: service, current host: 127.0.0.1
+[INFO] [2016-12-28 17:57:13] com.alibaba.dubbo.registry.support.AbstractRegistry.notify(422) |  [DUBBO] Notify urls for subscribe url provider://10.14.133.162:20880/com.mg.demo.api.UserService?anyhost=true&application=ivan-dubbo-server&category=configurators&check=false&dubbo=service&interface=com.mg.demo.api.UserService&methods=selectAll,selectByPrimaryKey,insertSelective,updateByPrimaryKeySelective,updateByPrimaryKey,insert,deleteByPrimaryKey&pid=18226&revision=service&side=provider&timestamp=1482919033140, urls: [empty://10.14.133.162:20880/com.mg.demo.api.UserService?anyhost=true&application=ivan-dubbo-server&category=configurators&check=false&dubbo=service&interface=com.mg.demo.api.UserService&methods=selectAll,selectByPrimaryKey,insertSelective,updateByPrimaryKeySelective,updateByPrimaryKey,insert,deleteByPrimaryKey&pid=18226&revision=service&side=provider&timestamp=1482919033140], dubbo version: service, current host: 127.0.0.1
+[INFO] [2016-12-28 17:57:13] com.alibaba.dubbo.container.Main.main(81) |  [DUBBO] Dubbo SpringContainer started!, dubbo version: service, current host: 127.0.0.1
+[ERROR] [2016-12-28 17:59:05] com.alibaba.druid.filter.logging.Log4jFilter.statementLogError(152) | {conn-10001, pstmt-20000} execute error. select
+         
+        id, name, age
+     
+        from user
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 40,493 milliseconds ago.  The last packet sent successfully to the server was 6 milliseconds ago.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:377)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1036)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3427)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3327)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3814)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2435)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2582)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2530)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1907)
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1199)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:2931)
+	at com.alibaba.druid.filter.FilterEventAdapter.preparedStatement_execute(FilterEventAdapter.java:440)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:2929)
+	at com.alibaba.druid.filter.FilterEventAdapter.preparedStatement_execute(FilterEventAdapter.java:440)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:2929)
+	at com.alibaba.druid.proxy.jdbc.PreparedStatementProxyImpl.execute(PreparedStatementProxyImpl.java:118)
+	at com.alibaba.druid.pool.DruidPooledPreparedStatement.execute(DruidPooledPreparedStatement.java:493)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:59)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:73)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:60)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:267)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:137)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:96)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:77)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:108)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:102)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:358)
+	at com.sun.proxy.$Proxy16.selectList(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:198)
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:119)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:63)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:52)
+	at com.sun.proxy.$Proxy18.selectAll(Unknown Source)
+	at com.mg.demo.service.UserServiceImpl.selectAll(UserServiceImpl.java:56)
+	at com.alibaba.dubbo.common.bytecode.Wrapper1.invokeMethod(Wrapper1.java)
+	at com.alibaba.dubbo.rpc.proxy.javassist.JavassistProxyFactory$1.doInvoke(JavassistProxyFactory.java:46)
+	at com.alibaba.dubbo.rpc.proxy.AbstractProxyInvoker.invoke(AbstractProxyInvoker.java:72)
+	at com.alibaba.dubbo.rpc.protocol.InvokerWrapper.invoke(InvokerWrapper.java:53)
+	at com.alibaba.dubbo.rpc.filter.ExceptionFilter.invoke(ExceptionFilter.java:64)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.monitor.support.MonitorFilter.invoke(MonitorFilter.java:75)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.TimeoutFilter.invoke(TimeoutFilter.java:42)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.protocol.dubbo.filter.TraceFilter.invoke(TraceFilter.java:78)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.ContextFilter.invoke(ContextFilter.java:60)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.GenericFilter.invoke(GenericFilter.java:112)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.ClassLoaderFilter.invoke(ClassLoaderFilter.java:38)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.EchoFilter.invoke(EchoFilter.java:38)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.protocol.dubbo.DubboProtocol$1.reply(DubboProtocol.java:108)
+	at com.alibaba.dubbo.remoting.exchange.support.header.HeaderExchangeHandler.handleRequest(HeaderExchangeHandler.java:84)
+	at com.alibaba.dubbo.remoting.exchange.support.header.HeaderExchangeHandler.received(HeaderExchangeHandler.java:170)
+	at com.alibaba.dubbo.remoting.transport.DecodeHandler.received(DecodeHandler.java:52)
+	at com.alibaba.dubbo.remoting.transport.dispatcher.ChannelEventRunnable.run(ChannelEventRunnable.java:82)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.io.EOFException: Can not read response from server. Expected to read 4 bytes, read 0 bytes before connection was unexpectedly lost.
+	at com.mysql.jdbc.MysqlIO.readFully(MysqlIO.java:2914)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3337)
+	... 63 more
+[ERROR] [2016-12-28 17:59:05] com.alibaba.druid.pool.DruidDataSource.handleConnectionException(1190) | discard connection
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 40,493 milliseconds ago.  The last packet sent successfully to the server was 6 milliseconds ago.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:377)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1036)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3427)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3327)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3814)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2435)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2582)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2530)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1907)
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1199)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:2931)
+	at com.alibaba.druid.filter.FilterEventAdapter.preparedStatement_execute(FilterEventAdapter.java:440)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:2929)
+	at com.alibaba.druid.filter.FilterEventAdapter.preparedStatement_execute(FilterEventAdapter.java:440)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:2929)
+	at com.alibaba.druid.proxy.jdbc.PreparedStatementProxyImpl.execute(PreparedStatementProxyImpl.java:118)
+	at com.alibaba.druid.pool.DruidPooledPreparedStatement.execute(DruidPooledPreparedStatement.java:493)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:59)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:73)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:60)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:267)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:137)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:96)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:77)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:108)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:102)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:358)
+	at com.sun.proxy.$Proxy16.selectList(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:198)
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:119)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:63)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:52)
+	at com.sun.proxy.$Proxy18.selectAll(Unknown Source)
+	at com.mg.demo.service.UserServiceImpl.selectAll(UserServiceImpl.java:56)
+	at com.alibaba.dubbo.common.bytecode.Wrapper1.invokeMethod(Wrapper1.java)
+	at com.alibaba.dubbo.rpc.proxy.javassist.JavassistProxyFactory$1.doInvoke(JavassistProxyFactory.java:46)
+	at com.alibaba.dubbo.rpc.proxy.AbstractProxyInvoker.invoke(AbstractProxyInvoker.java:72)
+	at com.alibaba.dubbo.rpc.protocol.InvokerWrapper.invoke(InvokerWrapper.java:53)
+	at com.alibaba.dubbo.rpc.filter.ExceptionFilter.invoke(ExceptionFilter.java:64)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.monitor.support.MonitorFilter.invoke(MonitorFilter.java:75)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.TimeoutFilter.invoke(TimeoutFilter.java:42)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.protocol.dubbo.filter.TraceFilter.invoke(TraceFilter.java:78)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.ContextFilter.invoke(ContextFilter.java:60)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.GenericFilter.invoke(GenericFilter.java:112)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.ClassLoaderFilter.invoke(ClassLoaderFilter.java:38)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.EchoFilter.invoke(EchoFilter.java:38)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.protocol.dubbo.DubboProtocol$1.reply(DubboProtocol.java:108)
+	at com.alibaba.dubbo.remoting.exchange.support.header.HeaderExchangeHandler.handleRequest(HeaderExchangeHandler.java:84)
+	at com.alibaba.dubbo.remoting.exchange.support.header.HeaderExchangeHandler.received(HeaderExchangeHandler.java:170)
+	at com.alibaba.dubbo.remoting.transport.DecodeHandler.received(DecodeHandler.java:52)
+	at com.alibaba.dubbo.remoting.transport.dispatcher.ChannelEventRunnable.run(ChannelEventRunnable.java:82)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.io.EOFException: Can not read response from server. Expected to read 4 bytes, read 0 bytes before connection was unexpectedly lost.
+	at com.mysql.jdbc.MysqlIO.readFully(MysqlIO.java:2914)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3337)
+	... 63 more
+[INFO] [2016-12-28 17:59:05] org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(317) | Loading XML bean definitions from class path resource [org/springframework/jdbc/support/sql-error-codes.xml]
+[INFO] [2016-12-28 17:59:05] org.springframework.jdbc.support.SQLErrorCodesFactory.<init>(126) | SQLErrorCodes loaded: [DB2, Derby, H2, HSQL, Informix, MS-SQL, MySQL, Oracle, PostgreSQL, Sybase, Hana]
+[ERROR] [2016-12-28 17:59:05] com.alibaba.dubbo.rpc.filter.ExceptionFilter.invoke(87) |  [DUBBO] Got unchecked and undeclared exception which called by 10.14.133.162. service: com.mg.demo.api.UserService, method: selectAll, exception: org.springframework.dao.RecoverableDataAccessException: 
+### Error querying database.  Cause: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 40,493 milliseconds ago.  The last packet sent successfully to the server was 6 milliseconds ago.
+### The error may exist in class path resource [mybatis/mapper/UserMapping.xml]
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: select                   id, name, age               from user
+### Cause: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 40,493 milliseconds ago.  The last packet sent successfully to the server was 6 milliseconds ago.
+; SQL []; Communications link failure
+
+The last packet successfully received from the server was 40,493 milliseconds ago.  The last packet sent successfully to the server was 6 milliseconds ago.; nested exception is com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 40,493 milliseconds ago.  The last packet sent successfully to the server was 6 milliseconds ago., dubbo version: service, current host: 127.0.0.1
+org.springframework.dao.RecoverableDataAccessException: 
+### Error querying database.  Cause: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 40,493 milliseconds ago.  The last packet sent successfully to the server was 6 milliseconds ago.
+### The error may exist in class path resource [mybatis/mapper/UserMapping.xml]
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: select                   id, name, age               from user
+### Cause: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 40,493 milliseconds ago.  The last packet sent successfully to the server was 6 milliseconds ago.
+; SQL []; Communications link failure
+
+The last packet successfully received from the server was 40,493 milliseconds ago.  The last packet sent successfully to the server was 6 milliseconds ago.; nested exception is com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 40,493 milliseconds ago.  The last packet sent successfully to the server was 6 milliseconds ago.
+	at org.springframework.jdbc.support.SQLExceptionSubclassTranslator.doTranslate(SQLExceptionSubclassTranslator.java:98)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:73)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:81)
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:73)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:371)
+	at com.sun.proxy.$Proxy16.selectList(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:198)
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:119)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:63)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:52)
+	at com.sun.proxy.$Proxy18.selectAll(Unknown Source)
+	at com.mg.demo.service.UserServiceImpl.selectAll(UserServiceImpl.java:56)
+	at com.alibaba.dubbo.common.bytecode.Wrapper1.invokeMethod(Wrapper1.java)
+	at com.alibaba.dubbo.rpc.proxy.javassist.JavassistProxyFactory$1.doInvoke(JavassistProxyFactory.java:46)
+	at com.alibaba.dubbo.rpc.proxy.AbstractProxyInvoker.invoke(AbstractProxyInvoker.java:72)
+	at com.alibaba.dubbo.rpc.protocol.InvokerWrapper.invoke(InvokerWrapper.java:53)
+	at com.alibaba.dubbo.rpc.filter.ExceptionFilter.invoke(ExceptionFilter.java:64)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.monitor.support.MonitorFilter.invoke(MonitorFilter.java:75)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.TimeoutFilter.invoke(TimeoutFilter.java:42)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.protocol.dubbo.filter.TraceFilter.invoke(TraceFilter.java:78)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.ContextFilter.invoke(ContextFilter.java:60)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.GenericFilter.invoke(GenericFilter.java:112)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.ClassLoaderFilter.invoke(ClassLoaderFilter.java:38)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.EchoFilter.invoke(EchoFilter.java:38)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.protocol.dubbo.DubboProtocol$1.reply(DubboProtocol.java:108)
+	at com.alibaba.dubbo.remoting.exchange.support.header.HeaderExchangeHandler.handleRequest(HeaderExchangeHandler.java:84)
+	at com.alibaba.dubbo.remoting.exchange.support.header.HeaderExchangeHandler.received(HeaderExchangeHandler.java:170)
+	at com.alibaba.dubbo.remoting.transport.DecodeHandler.received(DecodeHandler.java:52)
+	at com.alibaba.dubbo.remoting.transport.dispatcher.ChannelEventRunnable.run(ChannelEventRunnable.java:82)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 40,493 milliseconds ago.  The last packet sent successfully to the server was 6 milliseconds ago.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:377)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1036)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3427)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3327)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3814)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2435)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2582)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2530)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1907)
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1199)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:2931)
+	at com.alibaba.druid.filter.FilterEventAdapter.preparedStatement_execute(FilterEventAdapter.java:440)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:2929)
+	at com.alibaba.druid.filter.FilterEventAdapter.preparedStatement_execute(FilterEventAdapter.java:440)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:2929)
+	at com.alibaba.druid.proxy.jdbc.PreparedStatementProxyImpl.execute(PreparedStatementProxyImpl.java:118)
+	at com.alibaba.druid.pool.DruidPooledPreparedStatement.execute(DruidPooledPreparedStatement.java:493)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:59)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:73)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:60)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:267)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:137)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:96)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:77)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:108)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:102)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:358)
+	... 35 more
+Caused by: java.io.EOFException: Can not read response from server. Expected to read 4 bytes, read 0 bytes before connection was unexpectedly lost.
+	at com.mysql.jdbc.MysqlIO.readFully(MysqlIO.java:2914)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3337)
+	... 63 more
+[ERROR] [2016-12-28 18:01:05] com.alibaba.druid.filter.logging.Log4jFilter.statementLogError(152) | {conn-10003, pstmt-20002} execute error. insert into user
+         ( id,
+            
+            
+                name,
+            
+            
+                age ) 
+         values ( ?,
+            
+            
+                ?,
+            
+            
+                ? )
+com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '2' for key 'PRIMARY'
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:377)
+	at com.mysql.jdbc.Util.getInstance(Util.java:360)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:971)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3887)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3823)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2435)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2582)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2530)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1907)
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1199)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:2931)
+	at com.alibaba.druid.filter.FilterEventAdapter.preparedStatement_execute(FilterEventAdapter.java:440)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:2929)
+	at com.alibaba.druid.filter.FilterEventAdapter.preparedStatement_execute(FilterEventAdapter.java:440)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:2929)
+	at com.alibaba.druid.proxy.jdbc.PreparedStatementProxyImpl.execute(PreparedStatementProxyImpl.java:118)
+	at com.alibaba.druid.pool.DruidPooledPreparedStatement.execute(DruidPooledPreparedStatement.java:493)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:44)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.update(RoutingStatementHandler.java:69)
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:48)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:105)
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:71)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:152)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.insert(DefaultSqlSession.java:141)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:358)
+	at com.sun.proxy.$Proxy16.insert(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.insert(SqlSessionTemplate.java:240)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:51)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:52)
+	at com.sun.proxy.$Proxy18.insertSelective(Unknown Source)
+	at com.mg.demo.service.UserServiceImpl.insertSelective(UserServiceImpl.java:29)
+	at com.alibaba.dubbo.common.bytecode.Wrapper1.invokeMethod(Wrapper1.java)
+	at com.alibaba.dubbo.rpc.proxy.javassist.JavassistProxyFactory$1.doInvoke(JavassistProxyFactory.java:46)
+	at com.alibaba.dubbo.rpc.proxy.AbstractProxyInvoker.invoke(AbstractProxyInvoker.java:72)
+	at com.alibaba.dubbo.rpc.protocol.InvokerWrapper.invoke(InvokerWrapper.java:53)
+	at com.alibaba.dubbo.rpc.filter.ExceptionFilter.invoke(ExceptionFilter.java:64)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.monitor.support.MonitorFilter.invoke(MonitorFilter.java:75)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.TimeoutFilter.invoke(TimeoutFilter.java:42)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.protocol.dubbo.filter.TraceFilter.invoke(TraceFilter.java:78)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.ContextFilter.invoke(ContextFilter.java:60)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.GenericFilter.invoke(GenericFilter.java:112)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.ClassLoaderFilter.invoke(ClassLoaderFilter.java:38)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.EchoFilter.invoke(EchoFilter.java:38)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.protocol.dubbo.DubboProtocol$1.reply(DubboProtocol.java:108)
+	at com.alibaba.dubbo.remoting.exchange.support.header.HeaderExchangeHandler.handleRequest(HeaderExchangeHandler.java:84)
+	at com.alibaba.dubbo.remoting.exchange.support.header.HeaderExchangeHandler.received(HeaderExchangeHandler.java:170)
+	at com.alibaba.dubbo.remoting.transport.DecodeHandler.received(DecodeHandler.java:52)
+	at com.alibaba.dubbo.remoting.transport.dispatcher.ChannelEventRunnable.run(ChannelEventRunnable.java:82)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[ERROR] [2016-12-28 18:01:05] com.alibaba.dubbo.rpc.filter.ExceptionFilter.invoke(87) |  [DUBBO] Got unchecked and undeclared exception which called by 10.14.133.162. service: com.mg.demo.api.UserService, method: insertSelective, exception: org.springframework.dao.DuplicateKeyException: 
+### Error updating database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '2' for key 'PRIMARY'
+### The error may involve com.mg.demo.dao.UserMapper.insertSelective-Inline
+### The error occurred while setting parameters
+### SQL: insert into user          ( id,                                           name,                                           age )           values ( ?,                                           ?,                                           ? )
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '2' for key 'PRIMARY'
+; SQL []; Duplicate entry '2' for key 'PRIMARY'; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '2' for key 'PRIMARY', dubbo version: service, current host: 127.0.0.1
+org.springframework.dao.DuplicateKeyException: 
+### Error updating database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '2' for key 'PRIMARY'
+### The error may involve com.mg.demo.dao.UserMapper.insertSelective-Inline
+### The error occurred while setting parameters
+### SQL: insert into user          ( id,                                           name,                                           age )           values ( ?,                                           ?,                                           ? )
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '2' for key 'PRIMARY'
+; SQL []; Duplicate entry '2' for key 'PRIMARY'; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '2' for key 'PRIMARY'
+	at org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator.doTranslate(SQLErrorCodeSQLExceptionTranslator.java:239)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:73)
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:73)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:371)
+	at com.sun.proxy.$Proxy16.insert(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.insert(SqlSessionTemplate.java:240)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:51)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:52)
+	at com.sun.proxy.$Proxy18.insertSelective(Unknown Source)
+	at com.mg.demo.service.UserServiceImpl.insertSelective(UserServiceImpl.java:29)
+	at com.alibaba.dubbo.common.bytecode.Wrapper1.invokeMethod(Wrapper1.java)
+	at com.alibaba.dubbo.rpc.proxy.javassist.JavassistProxyFactory$1.doInvoke(JavassistProxyFactory.java:46)
+	at com.alibaba.dubbo.rpc.proxy.AbstractProxyInvoker.invoke(AbstractProxyInvoker.java:72)
+	at com.alibaba.dubbo.rpc.protocol.InvokerWrapper.invoke(InvokerWrapper.java:53)
+	at com.alibaba.dubbo.rpc.filter.ExceptionFilter.invoke(ExceptionFilter.java:64)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.monitor.support.MonitorFilter.invoke(MonitorFilter.java:75)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.TimeoutFilter.invoke(TimeoutFilter.java:42)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.protocol.dubbo.filter.TraceFilter.invoke(TraceFilter.java:78)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.ContextFilter.invoke(ContextFilter.java:60)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.GenericFilter.invoke(GenericFilter.java:112)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.ClassLoaderFilter.invoke(ClassLoaderFilter.java:38)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.EchoFilter.invoke(EchoFilter.java:38)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.protocol.dubbo.DubboProtocol$1.reply(DubboProtocol.java:108)
+	at com.alibaba.dubbo.remoting.exchange.support.header.HeaderExchangeHandler.handleRequest(HeaderExchangeHandler.java:84)
+	at com.alibaba.dubbo.remoting.exchange.support.header.HeaderExchangeHandler.received(HeaderExchangeHandler.java:170)
+	at com.alibaba.dubbo.remoting.transport.DecodeHandler.received(DecodeHandler.java:52)
+	at com.alibaba.dubbo.remoting.transport.dispatcher.ChannelEventRunnable.run(ChannelEventRunnable.java:82)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '2' for key 'PRIMARY'
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:377)
+	at com.mysql.jdbc.Util.getInstance(Util.java:360)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:971)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3887)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3823)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2435)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2582)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2530)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1907)
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1199)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:2931)
+	at com.alibaba.druid.filter.FilterEventAdapter.preparedStatement_execute(FilterEventAdapter.java:440)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:2929)
+	at com.alibaba.druid.filter.FilterEventAdapter.preparedStatement_execute(FilterEventAdapter.java:440)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:2929)
+	at com.alibaba.druid.proxy.jdbc.PreparedStatementProxyImpl.execute(PreparedStatementProxyImpl.java:118)
+	at com.alibaba.druid.pool.DruidPooledPreparedStatement.execute(DruidPooledPreparedStatement.java:493)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:44)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.update(RoutingStatementHandler.java:69)
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:48)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:105)
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:71)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:152)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.insert(DefaultSqlSession.java:141)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:358)
+	... 34 more
+[ERROR] [2016-12-28 18:04:06] com.alibaba.druid.filter.logging.Log4jFilter.statementLogError(152) | {conn-10004, pstmt-20004} execute error. insert into user
+         ( id,
+            
+            
+                name,
+            
+            
+                age ) 
+         values ( ?,
+            
+            
+                ?,
+            
+            
+                ? )
+com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '2' for key 'PRIMARY'
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:377)
+	at com.mysql.jdbc.Util.getInstance(Util.java:360)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:971)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3887)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3823)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2435)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2582)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2530)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1907)
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1199)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:2931)
+	at com.alibaba.druid.filter.FilterEventAdapter.preparedStatement_execute(FilterEventAdapter.java:440)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:2929)
+	at com.alibaba.druid.filter.FilterEventAdapter.preparedStatement_execute(FilterEventAdapter.java:440)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:2929)
+	at com.alibaba.druid.proxy.jdbc.PreparedStatementProxyImpl.execute(PreparedStatementProxyImpl.java:118)
+	at com.alibaba.druid.pool.DruidPooledPreparedStatement.execute(DruidPooledPreparedStatement.java:493)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:44)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.update(RoutingStatementHandler.java:69)
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:48)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:105)
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:71)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:152)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.insert(DefaultSqlSession.java:141)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:358)
+	at com.sun.proxy.$Proxy16.insert(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.insert(SqlSessionTemplate.java:240)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:51)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:52)
+	at com.sun.proxy.$Proxy18.insertSelective(Unknown Source)
+	at com.mg.demo.service.UserServiceImpl.insertSelective(UserServiceImpl.java:29)
+	at com.alibaba.dubbo.common.bytecode.Wrapper1.invokeMethod(Wrapper1.java)
+	at com.alibaba.dubbo.rpc.proxy.javassist.JavassistProxyFactory$1.doInvoke(JavassistProxyFactory.java:46)
+	at com.alibaba.dubbo.rpc.proxy.AbstractProxyInvoker.invoke(AbstractProxyInvoker.java:72)
+	at com.alibaba.dubbo.rpc.protocol.InvokerWrapper.invoke(InvokerWrapper.java:53)
+	at com.alibaba.dubbo.rpc.filter.ExceptionFilter.invoke(ExceptionFilter.java:64)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.monitor.support.MonitorFilter.invoke(MonitorFilter.java:75)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.TimeoutFilter.invoke(TimeoutFilter.java:42)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.protocol.dubbo.filter.TraceFilter.invoke(TraceFilter.java:78)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.ContextFilter.invoke(ContextFilter.java:60)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.GenericFilter.invoke(GenericFilter.java:112)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.ClassLoaderFilter.invoke(ClassLoaderFilter.java:38)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.EchoFilter.invoke(EchoFilter.java:38)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.protocol.dubbo.DubboProtocol$1.reply(DubboProtocol.java:108)
+	at com.alibaba.dubbo.remoting.exchange.support.header.HeaderExchangeHandler.handleRequest(HeaderExchangeHandler.java:84)
+	at com.alibaba.dubbo.remoting.exchange.support.header.HeaderExchangeHandler.received(HeaderExchangeHandler.java:170)
+	at com.alibaba.dubbo.remoting.transport.DecodeHandler.received(DecodeHandler.java:52)
+	at com.alibaba.dubbo.remoting.transport.dispatcher.ChannelEventRunnable.run(ChannelEventRunnable.java:82)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[ERROR] [2016-12-28 18:04:06] com.alibaba.dubbo.rpc.filter.ExceptionFilter.invoke(87) |  [DUBBO] Got unchecked and undeclared exception which called by 10.14.133.162. service: com.mg.demo.api.UserService, method: insertSelective, exception: org.springframework.dao.DuplicateKeyException: 
+### Error updating database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '2' for key 'PRIMARY'
+### The error may involve com.mg.demo.dao.UserMapper.insertSelective-Inline
+### The error occurred while setting parameters
+### SQL: insert into user          ( id,                                           name,                                           age )           values ( ?,                                           ?,                                           ? )
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '2' for key 'PRIMARY'
+; SQL []; Duplicate entry '2' for key 'PRIMARY'; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '2' for key 'PRIMARY', dubbo version: service, current host: 127.0.0.1
+org.springframework.dao.DuplicateKeyException: 
+### Error updating database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '2' for key 'PRIMARY'
+### The error may involve com.mg.demo.dao.UserMapper.insertSelective-Inline
+### The error occurred while setting parameters
+### SQL: insert into user          ( id,                                           name,                                           age )           values ( ?,                                           ?,                                           ? )
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '2' for key 'PRIMARY'
+; SQL []; Duplicate entry '2' for key 'PRIMARY'; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '2' for key 'PRIMARY'
+	at org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator.doTranslate(SQLErrorCodeSQLExceptionTranslator.java:239)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:73)
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:73)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:371)
+	at com.sun.proxy.$Proxy16.insert(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.insert(SqlSessionTemplate.java:240)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:51)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:52)
+	at com.sun.proxy.$Proxy18.insertSelective(Unknown Source)
+	at com.mg.demo.service.UserServiceImpl.insertSelective(UserServiceImpl.java:29)
+	at com.alibaba.dubbo.common.bytecode.Wrapper1.invokeMethod(Wrapper1.java)
+	at com.alibaba.dubbo.rpc.proxy.javassist.JavassistProxyFactory$1.doInvoke(JavassistProxyFactory.java:46)
+	at com.alibaba.dubbo.rpc.proxy.AbstractProxyInvoker.invoke(AbstractProxyInvoker.java:72)
+	at com.alibaba.dubbo.rpc.protocol.InvokerWrapper.invoke(InvokerWrapper.java:53)
+	at com.alibaba.dubbo.rpc.filter.ExceptionFilter.invoke(ExceptionFilter.java:64)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.monitor.support.MonitorFilter.invoke(MonitorFilter.java:75)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.TimeoutFilter.invoke(TimeoutFilter.java:42)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.protocol.dubbo.filter.TraceFilter.invoke(TraceFilter.java:78)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.ContextFilter.invoke(ContextFilter.java:60)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.GenericFilter.invoke(GenericFilter.java:112)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.ClassLoaderFilter.invoke(ClassLoaderFilter.java:38)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.EchoFilter.invoke(EchoFilter.java:38)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.protocol.dubbo.DubboProtocol$1.reply(DubboProtocol.java:108)
+	at com.alibaba.dubbo.remoting.exchange.support.header.HeaderExchangeHandler.handleRequest(HeaderExchangeHandler.java:84)
+	at com.alibaba.dubbo.remoting.exchange.support.header.HeaderExchangeHandler.received(HeaderExchangeHandler.java:170)
+	at com.alibaba.dubbo.remoting.transport.DecodeHandler.received(DecodeHandler.java:52)
+	at com.alibaba.dubbo.remoting.transport.dispatcher.ChannelEventRunnable.run(ChannelEventRunnable.java:82)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '2' for key 'PRIMARY'
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:377)
+	at com.mysql.jdbc.Util.getInstance(Util.java:360)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:971)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3887)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3823)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2435)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2582)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2530)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1907)
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1199)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:2931)
+	at com.alibaba.druid.filter.FilterEventAdapter.preparedStatement_execute(FilterEventAdapter.java:440)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:2929)
+	at com.alibaba.druid.filter.FilterEventAdapter.preparedStatement_execute(FilterEventAdapter.java:440)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:2929)
+	at com.alibaba.druid.proxy.jdbc.PreparedStatementProxyImpl.execute(PreparedStatementProxyImpl.java:118)
+	at com.alibaba.druid.pool.DruidPooledPreparedStatement.execute(DruidPooledPreparedStatement.java:493)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:44)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.update(RoutingStatementHandler.java:69)
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:48)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:105)
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:71)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:152)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.insert(DefaultSqlSession.java:141)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:358)
+	... 34 more
+[INFO] [2016-12-28 18:06:06] com.alibaba.dubbo.config.AbstractConfig$1.run(450) |  [DUBBO] Run shutdown hook now., dubbo version: service, current host: 127.0.0.1
+[INFO] [2016-12-28 18:06:06] com.alibaba.dubbo.registry.support.AbstractRegistryFactory.destroyAll(63) |  [DUBBO] Close all registries [zookeeper://172.16.155.201:2181/com.alibaba.dubbo.registry.RegistryService?application=ivan-dubbo-server&dubbo=service&interface=com.alibaba.dubbo.registry.RegistryService&pid=18226&timestamp=1482919033135], dubbo version: service, current host: 127.0.0.1
+[INFO] [2016-12-28 18:06:06] com.alibaba.dubbo.registry.support.AbstractRegistry.destroy(485) |  [DUBBO] Destroy registry:zookeeper://172.16.155.201:2181/com.alibaba.dubbo.registry.RegistryService?application=ivan-dubbo-server&dubbo=service&interface=com.alibaba.dubbo.registry.RegistryService&pid=18226&timestamp=1482919033135, dubbo version: service, current host: 127.0.0.1
+[INFO] [2016-12-28 18:06:06] com.alibaba.dubbo.registry.support.AbstractRegistry.unregister(312) |  [DUBBO] Unregister: dubbo://10.14.133.162:20880/com.mg.demo.api.UserService?anyhost=true&application=ivan-dubbo-server&dubbo=service&interface=com.mg.demo.api.UserService&methods=selectAll,selectByPrimaryKey,insertSelective,updateByPrimaryKeySelective,updateByPrimaryKey,insert,deleteByPrimaryKey&pid=18226&revision=service&side=provider&timestamp=1482919033140, dubbo version: service, current host: 127.0.0.1
+[INFO] [2016-12-28 18:06:06] com.alibaba.dubbo.registry.support.AbstractRegistry.destroy(494) |  [DUBBO] Destroy unregister url dubbo://10.14.133.162:20880/com.mg.demo.api.UserService?anyhost=true&application=ivan-dubbo-server&dubbo=service&interface=com.mg.demo.api.UserService&methods=selectAll,selectByPrimaryKey,insertSelective,updateByPrimaryKeySelective,updateByPrimaryKey,insert,deleteByPrimaryKey&pid=18226&revision=service&side=provider&timestamp=1482919033140, dubbo version: service, current host: 127.0.0.1
+[INFO] [2016-12-28 18:06:06] com.alibaba.dubbo.registry.support.AbstractRegistry.unsubscribe(343) |  [DUBBO] Unsubscribe: provider://10.14.133.162:20880/com.mg.demo.api.UserService?anyhost=true&application=ivan-dubbo-server&category=configurators&check=false&dubbo=service&interface=com.mg.demo.api.UserService&methods=selectAll,selectByPrimaryKey,insertSelective,updateByPrimaryKeySelective,updateByPrimaryKey,insert,deleteByPrimaryKey&pid=18226&revision=service&side=provider&timestamp=1482919033140, dubbo version: service, current host: 127.0.0.1
+[INFO] [2016-12-28 18:06:06] com.alibaba.dubbo.registry.support.AbstractRegistry.destroy(510) |  [DUBBO] Destroy unsubscribe url provider://10.14.133.162:20880/com.mg.demo.api.UserService?anyhost=true&application=ivan-dubbo-server&category=configurators&check=false&dubbo=service&interface=com.mg.demo.api.UserService&methods=selectAll,selectByPrimaryKey,insertSelective,updateByPrimaryKeySelective,updateByPrimaryKey,insert,deleteByPrimaryKey&pid=18226&revision=service&side=provider&timestamp=1482919033140, dubbo version: service, current host: 127.0.0.1
+[INFO] [2016-12-28 18:06:06] org.I0Itec.zkclient.ZkEventThread.run(82) | Terminate ZkClient event thread.
+[INFO] [2016-12-28 18:06:06] org.apache.zookeeper.ZooKeeper.close(684) | Session: 0x1594356ae12000e closed
+[INFO] [2016-12-28 18:06:06] org.apache.zookeeper.ClientCnxn$EventThread.run(512) | EventThread shut down
+[INFO] [2016-12-28 18:06:06] com.alibaba.dubbo.rpc.protocol.dubbo.DubboProtocol.destroy(393) |  [DUBBO] Close dubbo server: /10.14.133.162:20880, dubbo version: service, current host: 127.0.0.1
+[INFO] [2016-12-28 18:06:06] com.alibaba.dubbo.remoting.transport.AbstractServer.close(146) |  [DUBBO] Close NettyServer bind /0.0.0.0:20880, export /10.14.133.162:20880, dubbo version: service, current host: 127.0.0.1
+[INFO] [2016-12-28 18:06:06] com.alibaba.dubbo.remoting.transport.netty.NettyChannel.close(135) |  [DUBBO] Close netty channel [id: 0x12ff8dfc, /10.14.133.162:55546 => /10.14.133.162:20880], dubbo version: service, current host: 127.0.0.1
+[WARN] [2016-12-28 18:06:06] com.alibaba.dubbo.remoting.transport.AbstractServer.disconnected(197) |  [DUBBO] All clients has discontected from /10.14.133.162:20880. You can graceful shutdown now., dubbo version: service, current host: 127.0.0.1
+[INFO] [2016-12-28 18:06:06] com.alibaba.dubbo.rpc.protocol.dubbo.DubboProtocol$1.disconnected(130) |  [DUBBO] disconected from /10.14.133.162:55546,url:dubbo://10.14.133.162:20880/com.mg.demo.api.UserService?anyhost=true&application=ivan-dubbo-server&channel.readonly.sent=true&codec=dubbo&dubbo=service&heartbeat=60000&interface=com.mg.demo.api.UserService&methods=selectAll,selectByPrimaryKey,insertSelective,updateByPrimaryKeySelective,updateByPrimaryKey,insert,deleteByPrimaryKey&pid=18226&revision=service&side=provider&timestamp=1482919033140, dubbo version: service, current host: 127.0.0.1
+[INFO] [2016-12-28 18:06:06] com.alibaba.dubbo.rpc.protocol.AbstractProtocol.destroy(76) |  [DUBBO] Unexport service: dubbo://10.14.133.162:20880/com.mg.demo.api.UserService?anyhost=true&application=ivan-dubbo-server&dubbo=service&interface=com.mg.demo.api.UserService&methods=selectAll,selectByPrimaryKey,insertSelective,updateByPrimaryKeySelective,updateByPrimaryKey,insert,deleteByPrimaryKey&pid=18226&revision=service&side=provider&timestamp=1482919033140, dubbo version: service, current host: 127.0.0.1
+[INFO] [2016-12-28 18:06:06] com.alibaba.dubbo.rpc.protocol.AbstractProtocol.destroy(76) |  [DUBBO] Unexport service: injvm://127.0.0.1/com.mg.demo.api.UserService?anyhost=true&application=ivan-dubbo-server&dubbo=service&interface=com.mg.demo.api.UserService&methods=selectAll,selectByPrimaryKey,insertSelective,updateByPrimaryKeySelective,updateByPrimaryKey,insert,deleteByPrimaryKey&pid=18226&revision=service&side=provider&timestamp=1482919033140, dubbo version: service, current host: 127.0.0.1

@@ -1,0 +1,5 @@
+[ERROR] [2017-01-19 16:30:37] org.apache.zookeeper.ClientCnxnSocketNIO.connect(289) | Unable to open socket to 172.16.155.230/172.16.155.230:2181
+[ERROR] [2017-01-19 16:30:39] org.apache.zookeeper.ClientCnxnSocketNIO.connect(289) | Unable to open socket to 172.16.155.230/172.16.155.230:2181
+[ERROR] [2017-01-19 16:30:40] org.apache.zookeeper.ClientCnxnSocketNIO.connect(289) | Unable to open socket to 172.16.155.230/172.16.155.230:2181
+[ERROR] [2017-01-19 16:30:41] org.apache.zookeeper.ClientCnxnSocketNIO.connect(289) | Unable to open socket to 172.16.155.230/172.16.155.230:2181
+[ERROR] [2017-01-19 16:30:43] org.apache.zookeeper.ClientCnxnSocketNIO.connect(289) | Unable to open socket to 172.16.155.230/172.16.155.230:2181

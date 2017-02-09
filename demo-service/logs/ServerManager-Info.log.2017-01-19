@@ -1,0 +1,217 @@
+[INFO] [2017-01-19 14:01:33] ?.?(?) | using logger: com.alibaba.dubbo.common.logger.log4j.Log4jLoggerAdapter
+[INFO] [2017-01-19 14:01:33] com.alibaba.dubbo.container.Main.main(58) |  [DUBBO] Use container type([spring]) to run dubbo serivce., dubbo version: service, current host: 127.0.0.1
+[INFO] [2017-01-19 14:01:33] org.springframework.context.support.AbstractApplicationContext.prepareRefresh(510) | Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@1175e2db: startup date [Thu Jan 19 14:01:33 CST 2017]; root of context hierarchy
+[INFO] [2017-01-19 14:01:33] org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(317) | Loading XML bean definitions from URL [jar:file:/Users/magang/Documents/citicIdea/myDubboDemo/demo-service/target/demo-service.jar!/META-INF/spring/spring-context.xml]
+[INFO] [2017-01-19 14:01:34] org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(317) | Loading XML bean definitions from class path resource [spring-registry.xml]
+[INFO] [2017-01-19 14:01:34] org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(317) | Loading XML bean definitions from class path resource [spring-mybatis.xml]
+[INFO] [2017-01-19 14:01:34] org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(172) | Loading properties file from class path resource [zookeeper.properties]
+[INFO] [2017-01-19 14:01:34] org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(172) | Loading properties file from class path resource [jdbc.properties]
+[INFO] [2017-01-19 14:01:36] com.alibaba.druid.pool.DruidDataSource.init(669) | {dataSource-1} inited
+[INFO] [2017-01-19 14:01:36] com.alibaba.dubbo.config.ServiceConfig.exportLocal(510) |  [DUBBO] Export dubbo service com.mg.demo.api.UserService to local registry, dubbo version: service, current host: 127.0.0.1
+[INFO] [2017-01-19 14:01:36] com.alibaba.dubbo.config.ServiceConfig.doExportUrlsFor1Protocol(470) |  [DUBBO] Export dubbo service com.mg.demo.api.UserService to url dubbo://192.168.8.108:20880/com.mg.demo.api.UserService?anyhost=true&application=ivan-dubbo-server&dubbo=service&interface=com.mg.demo.api.UserService&methods=selectAll,selectByPrimaryKey,insertSelective,updateByPrimaryKeySelective,updateByPrimaryKey,insert,deleteByPrimaryKey&pid=1437&revision=service&side=provider&timestamp=1484805696378, dubbo version: service, current host: 127.0.0.1
+[INFO] [2017-01-19 14:01:36] com.alibaba.dubbo.config.ServiceConfig.doExportUrlsFor1Protocol(481) |  [DUBBO] Register dubbo service com.mg.demo.api.UserService url dubbo://192.168.8.108:20880/com.mg.demo.api.UserService?anyhost=true&application=ivan-dubbo-server&dubbo=service&interface=com.mg.demo.api.UserService&methods=selectAll,selectByPrimaryKey,insertSelective,updateByPrimaryKeySelective,updateByPrimaryKey,insert,deleteByPrimaryKey&pid=1437&revision=service&side=provider&timestamp=1484805696378 to registry registry://172.16.155.230:2181/com.alibaba.dubbo.registry.RegistryService?application=ivan-dubbo-server&dubbo=service&pid=1437&registry=zookeeper&timestamp=1484805696372, dubbo version: service, current host: 127.0.0.1
+[INFO] [2017-01-19 14:01:36] com.alibaba.dubbo.remoting.transport.AbstractServer.<init>(69) |  [DUBBO] Start NettyServer bind /0.0.0.0:20880, export /192.168.8.108:20880, dubbo version: service, current host: 127.0.0.1
+[INFO] [2017-01-19 14:01:36] org.I0Itec.zkclient.ZkEventThread.run(64) | Starting ZkClient event thread.
+[INFO] [2017-01-19 14:01:36] org.apache.zookeeper.Environment.logEnv(100) | Client environment:zookeeper.version=3.4.6-1569965, built on 02/20/2014 09:09 GMT
+[INFO] [2017-01-19 14:01:36] org.apache.zookeeper.Environment.logEnv(100) | Client environment:host.name=192.168.8.108
+[INFO] [2017-01-19 14:01:36] org.apache.zookeeper.Environment.logEnv(100) | Client environment:java.version=1.8.0_51
+[INFO] [2017-01-19 14:01:36] org.apache.zookeeper.Environment.logEnv(100) | Client environment:java.vendor=Oracle Corporation
+[INFO] [2017-01-19 14:01:36] org.apache.zookeeper.Environment.logEnv(100) | Client environment:java.home=/Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home/jre
+[INFO] [2017-01-19 14:01:36] org.apache.zookeeper.Environment.logEnv(100) | Client environment:java.class.path=demo-service.jar
+[INFO] [2017-01-19 14:01:36] org.apache.zookeeper.Environment.logEnv(100) | Client environment:java.library.path=/Users/magang/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.
+[INFO] [2017-01-19 14:01:36] org.apache.zookeeper.Environment.logEnv(100) | Client environment:java.io.tmpdir=/var/folders/k2/rs0gcf691b96b1j2qg92dqbm0000gn/T/
+[INFO] [2017-01-19 14:01:36] org.apache.zookeeper.Environment.logEnv(100) | Client environment:java.compiler=<NA>
+[INFO] [2017-01-19 14:01:36] org.apache.zookeeper.Environment.logEnv(100) | Client environment:os.name=Mac OS X
+[INFO] [2017-01-19 14:01:36] org.apache.zookeeper.Environment.logEnv(100) | Client environment:os.arch=x86_64
+[INFO] [2017-01-19 14:01:36] org.apache.zookeeper.Environment.logEnv(100) | Client environment:os.version=10.12.1
+[INFO] [2017-01-19 14:01:36] org.apache.zookeeper.Environment.logEnv(100) | Client environment:user.name=magang
+[INFO] [2017-01-19 14:01:36] org.apache.zookeeper.Environment.logEnv(100) | Client environment:user.home=/Users/magang
+[INFO] [2017-01-19 14:01:36] org.apache.zookeeper.Environment.logEnv(100) | Client environment:user.dir=/Users/magang/Documents/citicIdea/myDubboDemo/demo-service/target
+[INFO] [2017-01-19 14:01:36] org.apache.zookeeper.ZooKeeper.<init>(438) | Initiating client connection, connectString=172.16.155.230:2181 sessionTimeout=30000 watcher=org.I0Itec.zkclient.ZkClient@75ed7512
+[INFO] [2017-01-19 14:01:36] org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(975) | Opening socket connection to server 172.16.155.230/172.16.155.230:2181. Will not attempt to authenticate using SASL (unknown error)
+[INFO] [2017-01-19 14:01:36] org.apache.zookeeper.ClientCnxn$SendThread.primeConnection(852) | Socket connection established to 172.16.155.230/172.16.155.230:2181, initiating session
+[INFO] [2017-01-19 14:01:36] org.apache.zookeeper.ClientCnxn$SendThread.onConnected(1235) | Session establishment complete on server 172.16.155.230/172.16.155.230:2181, sessionid = 0x159b54fb08e0000, negotiated timeout = 30000
+[INFO] [2017-01-19 14:01:36] org.I0Itec.zkclient.ZkClient.processStateChanged(704) | zookeeper state changed (SyncConnected)
+[INFO] [2017-01-19 14:01:36] com.alibaba.dubbo.registry.support.AbstractRegistry.register(302) |  [DUBBO] Register: dubbo://192.168.8.108:20880/com.mg.demo.api.UserService?anyhost=true&application=ivan-dubbo-server&dubbo=service&interface=com.mg.demo.api.UserService&methods=selectAll,selectByPrimaryKey,insertSelective,updateByPrimaryKeySelective,updateByPrimaryKey,insert,deleteByPrimaryKey&pid=1437&revision=service&side=provider&timestamp=1484805696378, dubbo version: service, current host: 127.0.0.1
+[INFO] [2017-01-19 14:01:36] com.alibaba.dubbo.registry.support.AbstractRegistry.subscribe(325) |  [DUBBO] Subscribe: provider://192.168.8.108:20880/com.mg.demo.api.UserService?anyhost=true&application=ivan-dubbo-server&category=configurators&check=false&dubbo=service&interface=com.mg.demo.api.UserService&methods=selectAll,selectByPrimaryKey,insertSelective,updateByPrimaryKeySelective,updateByPrimaryKey,insert,deleteByPrimaryKey&pid=1437&revision=service&side=provider&timestamp=1484805696378, dubbo version: service, current host: 127.0.0.1
+[INFO] [2017-01-19 14:01:36] com.alibaba.dubbo.registry.support.AbstractRegistry.notify(422) |  [DUBBO] Notify urls for subscribe url provider://192.168.8.108:20880/com.mg.demo.api.UserService?anyhost=true&application=ivan-dubbo-server&category=configurators&check=false&dubbo=service&interface=com.mg.demo.api.UserService&methods=selectAll,selectByPrimaryKey,insertSelective,updateByPrimaryKeySelective,updateByPrimaryKey,insert,deleteByPrimaryKey&pid=1437&revision=service&side=provider&timestamp=1484805696378, urls: [empty://192.168.8.108:20880/com.mg.demo.api.UserService?anyhost=true&application=ivan-dubbo-server&category=configurators&check=false&dubbo=service&interface=com.mg.demo.api.UserService&methods=selectAll,selectByPrimaryKey,insertSelective,updateByPrimaryKeySelective,updateByPrimaryKey,insert,deleteByPrimaryKey&pid=1437&revision=service&side=provider&timestamp=1484805696378], dubbo version: service, current host: 127.0.0.1
+[INFO] [2017-01-19 14:01:36] com.alibaba.dubbo.container.Main.main(81) |  [DUBBO] Dubbo SpringContainer started!, dubbo version: service, current host: 127.0.0.1
+[WARN] [2017-01-19 14:32:19] com.alibaba.dubbo.remoting.transport.AbstractServer.disconnected(197) |  [DUBBO] All clients has discontected from /192.168.8.108:20880. You can graceful shutdown now., dubbo version: service, current host: 127.0.0.1
+[INFO] [2017-01-19 14:32:19] com.alibaba.dubbo.rpc.protocol.dubbo.DubboProtocol$1.disconnected(130) |  [DUBBO] disconected from /192.168.8.108:49569,url:dubbo://192.168.8.108:20880/com.mg.demo.api.UserService?anyhost=true&application=ivan-dubbo-server&channel.readonly.sent=true&codec=dubbo&dubbo=service&heartbeat=60000&interface=com.mg.demo.api.UserService&methods=selectAll,selectByPrimaryKey,insertSelective,updateByPrimaryKeySelective,updateByPrimaryKey,insert,deleteByPrimaryKey&pid=1437&revision=service&side=provider&timestamp=1484805696378, dubbo version: service, current host: 127.0.0.1
+[INFO] [2017-01-19 15:42:58] org.apache.zookeeper.ClientCnxn$SendThread.run(1096) | Client session timed out, have not heard from server in 3491157ms for sessionid 0x159b54fb08e0000, closing socket connection and attempting reconnect
+[INFO] [2017-01-19 15:42:58] org.I0Itec.zkclient.ZkClient.processStateChanged(704) | zookeeper state changed (Disconnected)
+[INFO] [2017-01-19 15:42:59] org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(975) | Opening socket connection to server 172.16.155.230/172.16.155.230:2181. Will not attempt to authenticate using SASL (unknown error)
+[INFO] [2017-01-19 15:42:59] org.apache.zookeeper.ClientCnxn$SendThread.primeConnection(852) | Socket connection established to 172.16.155.230/172.16.155.230:2181, initiating session
+[INFO] [2017-01-19 15:42:59] org.apache.zookeeper.ClientCnxn$SendThread.onConnected(1235) | Session establishment complete on server 172.16.155.230/172.16.155.230:2181, sessionid = 0x159b54fb08e0000, negotiated timeout = 30000
+[INFO] [2017-01-19 15:42:59] org.I0Itec.zkclient.ZkClient.processStateChanged(704) | zookeeper state changed (SyncConnected)
+[INFO] [2017-01-19 16:18:54] org.apache.zookeeper.ClientCnxn$SendThread.run(1096) | Client session timed out, have not heard from server in 1535706ms for sessionid 0x159b54fb08e0000, closing socket connection and attempting reconnect
+[INFO] [2017-01-19 16:18:54] org.I0Itec.zkclient.ZkClient.processStateChanged(704) | zookeeper state changed (Disconnected)
+[INFO] [2017-01-19 16:18:56] org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(975) | Opening socket connection to server 172.16.155.230/172.16.155.230:2181. Will not attempt to authenticate using SASL (unknown error)
+[INFO] [2017-01-19 16:18:56] org.apache.zookeeper.ClientCnxn$SendThread.primeConnection(852) | Socket connection established to 172.16.155.230/172.16.155.230:2181, initiating session
+[INFO] [2017-01-19 16:18:56] org.apache.zookeeper.ClientCnxn$SendThread.onConnected(1235) | Session establishment complete on server 172.16.155.230/172.16.155.230:2181, sessionid = 0x159b54fb08e0000, negotiated timeout = 30000
+[INFO] [2017-01-19 16:18:56] org.I0Itec.zkclient.ZkClient.processStateChanged(704) | zookeeper state changed (SyncConnected)
+[INFO] [2017-01-19 16:22:25] org.apache.zookeeper.ClientCnxn$SendThread.run(1096) | Client session timed out, have not heard from server in 58672ms for sessionid 0x159b54fb08e0000, closing socket connection and attempting reconnect
+[INFO] [2017-01-19 16:22:25] org.I0Itec.zkclient.ZkClient.processStateChanged(704) | zookeeper state changed (Disconnected)
+[INFO] [2017-01-19 16:22:27] org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(975) | Opening socket connection to server 172.16.155.230/172.16.155.230:2181. Will not attempt to authenticate using SASL (unknown error)
+[INFO] [2017-01-19 16:22:27] org.apache.zookeeper.ClientCnxn$SendThread.primeConnection(852) | Socket connection established to 172.16.155.230/172.16.155.230:2181, initiating session
+[INFO] [2017-01-19 16:22:27] org.apache.zookeeper.ClientCnxn$SendThread.onConnected(1235) | Session establishment complete on server 172.16.155.230/172.16.155.230:2181, sessionid = 0x159b54fb08e0000, negotiated timeout = 30000
+[INFO] [2017-01-19 16:22:27] org.I0Itec.zkclient.ZkClient.processStateChanged(704) | zookeeper state changed (SyncConnected)
+[INFO] [2017-01-19 16:24:57] org.apache.zookeeper.ClientCnxn$SendThread.run(1096) | Client session timed out, have not heard from server in 20001ms for sessionid 0x159b54fb08e0000, closing socket connection and attempting reconnect
+[INFO] [2017-01-19 16:24:57] org.I0Itec.zkclient.ZkClient.processStateChanged(704) | zookeeper state changed (Disconnected)
+[INFO] [2017-01-19 16:24:59] org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(975) | Opening socket connection to server 172.16.155.230/172.16.155.230:2181. Will not attempt to authenticate using SASL (unknown error)
+[WARN] [2017-01-19 16:25:25] org.apache.zookeeper.ClientCnxn$SendThread.run(1102) | Session 0x159b54fb08e0000 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Operation timed out
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1081)
+[INFO] [2017-01-19 16:25:26] org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(975) | Opening socket connection to server 172.16.155.230/172.16.155.230:2181. Will not attempt to authenticate using SASL (unknown error)
+[WARN] [2017-01-19 16:25:52] org.apache.zookeeper.ClientCnxn$SendThread.run(1102) | Session 0x159b54fb08e0000 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Operation timed out
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1081)
+[INFO] [2017-01-19 16:25:54] org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(975) | Opening socket connection to server 172.16.155.230/172.16.155.230:2181. Will not attempt to authenticate using SASL (unknown error)
+[INFO] [2017-01-19 16:26:24] org.apache.zookeeper.ClientCnxn$SendThread.run(1096) | Client session timed out, have not heard from server in 31498ms for sessionid 0x159b54fb08e0000, closing socket connection and attempting reconnect
+[INFO] [2017-01-19 16:26:25] org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(975) | Opening socket connection to server 172.16.155.230/172.16.155.230:2181. Will not attempt to authenticate using SASL (unknown error)
+[INFO] [2017-01-19 16:26:55] org.apache.zookeeper.ClientCnxn$SendThread.run(1096) | Client session timed out, have not heard from server in 31280ms for sessionid 0x159b54fb08e0000, closing socket connection and attempting reconnect
+[INFO] [2017-01-19 16:26:56] org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(975) | Opening socket connection to server 172.16.155.230/172.16.155.230:2181. Will not attempt to authenticate using SASL (unknown error)
+[INFO] [2017-01-19 16:27:26] org.apache.zookeeper.ClientCnxn$SendThread.run(1096) | Client session timed out, have not heard from server in 31054ms for sessionid 0x159b54fb08e0000, closing socket connection and attempting reconnect
+[INFO] [2017-01-19 16:27:28] org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(975) | Opening socket connection to server 172.16.155.230/172.16.155.230:2181. Will not attempt to authenticate using SASL (unknown error)
+[INFO] [2017-01-19 16:27:58] org.apache.zookeeper.ClientCnxn$SendThread.run(1096) | Client session timed out, have not heard from server in 31802ms for sessionid 0x159b54fb08e0000, closing socket connection and attempting reconnect
+[INFO] [2017-01-19 16:27:59] org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(975) | Opening socket connection to server 172.16.155.230/172.16.155.230:2181. Will not attempt to authenticate using SASL (unknown error)
+[INFO] [2017-01-19 16:28:29] org.apache.zookeeper.ClientCnxn$SendThread.run(1096) | Client session timed out, have not heard from server in 31093ms for sessionid 0x159b54fb08e0000, closing socket connection and attempting reconnect
+[INFO] [2017-01-19 16:28:31] org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(975) | Opening socket connection to server 172.16.155.230/172.16.155.230:2181. Will not attempt to authenticate using SASL (unknown error)
+[INFO] [2017-01-19 16:29:01] org.apache.zookeeper.ClientCnxn$SendThread.run(1096) | Client session timed out, have not heard from server in 31022ms for sessionid 0x159b54fb08e0000, closing socket connection and attempting reconnect
+[INFO] [2017-01-19 16:29:02] org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(975) | Opening socket connection to server 172.16.155.230/172.16.155.230:2181. Will not attempt to authenticate using SASL (unknown error)
+[INFO] [2017-01-19 16:29:32] org.apache.zookeeper.ClientCnxn$SendThread.run(1096) | Client session timed out, have not heard from server in 31559ms for sessionid 0x159b54fb08e0000, closing socket connection and attempting reconnect
+[INFO] [2017-01-19 16:29:34] org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(975) | Opening socket connection to server 172.16.155.230/172.16.155.230:2181. Will not attempt to authenticate using SASL (unknown error)
+[INFO] [2017-01-19 16:30:04] org.apache.zookeeper.ClientCnxn$SendThread.run(1096) | Client session timed out, have not heard from server in 31723ms for sessionid 0x159b54fb08e0000, closing socket connection and attempting reconnect
+[INFO] [2017-01-19 16:30:06] org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(975) | Opening socket connection to server 172.16.155.230/172.16.155.230:2181. Will not attempt to authenticate using SASL (unknown error)
+[INFO] [2017-01-19 16:30:36] org.apache.zookeeper.ClientCnxn$SendThread.run(1096) | Client session timed out, have not heard from server in 31962ms for sessionid 0x159b54fb08e0000, closing socket connection and attempting reconnect
+[INFO] [2017-01-19 16:30:37] org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(975) | Opening socket connection to server 172.16.155.230/172.16.155.230:2181. Will not attempt to authenticate using SASL (unknown error)
+[ERROR] [2017-01-19 16:30:37] org.apache.zookeeper.ClientCnxnSocketNIO.connect(289) | Unable to open socket to 172.16.155.230/172.16.155.230:2181
+[WARN] [2017-01-19 16:30:37] org.apache.zookeeper.ClientCnxn$SendThread.run(1102) | Session 0x159b54fb08e0000 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.SocketException: Host is down
+	at sun.nio.ch.Net.connect0(Native Method)
+	at sun.nio.ch.Net.connect(Net.java:458)
+	at sun.nio.ch.Net.connect(Net.java:450)
+	at sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:648)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.registerAndConnect(ClientCnxnSocketNIO.java:277)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.connect(ClientCnxnSocketNIO.java:287)
+	at org.apache.zookeeper.ClientCnxn$SendThread.startConnect(ClientCnxn.java:967)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1003)
+[INFO] [2017-01-19 16:30:39] org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(975) | Opening socket connection to server 172.16.155.230/172.16.155.230:2181. Will not attempt to authenticate using SASL (unknown error)
+[ERROR] [2017-01-19 16:30:39] org.apache.zookeeper.ClientCnxnSocketNIO.connect(289) | Unable to open socket to 172.16.155.230/172.16.155.230:2181
+[WARN] [2017-01-19 16:30:39] org.apache.zookeeper.ClientCnxn$SendThread.run(1102) | Session 0x159b54fb08e0000 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.SocketException: Host is down
+	at sun.nio.ch.Net.connect0(Native Method)
+	at sun.nio.ch.Net.connect(Net.java:458)
+	at sun.nio.ch.Net.connect(Net.java:450)
+	at sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:648)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.registerAndConnect(ClientCnxnSocketNIO.java:277)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.connect(ClientCnxnSocketNIO.java:287)
+	at org.apache.zookeeper.ClientCnxn$SendThread.startConnect(ClientCnxn.java:967)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1003)
+[INFO] [2017-01-19 16:30:40] org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(975) | Opening socket connection to server 172.16.155.230/172.16.155.230:2181. Will not attempt to authenticate using SASL (unknown error)
+[ERROR] [2017-01-19 16:30:40] org.apache.zookeeper.ClientCnxnSocketNIO.connect(289) | Unable to open socket to 172.16.155.230/172.16.155.230:2181
+[WARN] [2017-01-19 16:30:40] org.apache.zookeeper.ClientCnxn$SendThread.run(1102) | Session 0x159b54fb08e0000 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.SocketException: Host is down
+	at sun.nio.ch.Net.connect0(Native Method)
+	at sun.nio.ch.Net.connect(Net.java:458)
+	at sun.nio.ch.Net.connect(Net.java:450)
+	at sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:648)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.registerAndConnect(ClientCnxnSocketNIO.java:277)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.connect(ClientCnxnSocketNIO.java:287)
+	at org.apache.zookeeper.ClientCnxn$SendThread.startConnect(ClientCnxn.java:967)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1003)
+[INFO] [2017-01-19 16:30:41] org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(975) | Opening socket connection to server 172.16.155.230/172.16.155.230:2181. Will not attempt to authenticate using SASL (unknown error)
+[ERROR] [2017-01-19 16:30:41] org.apache.zookeeper.ClientCnxnSocketNIO.connect(289) | Unable to open socket to 172.16.155.230/172.16.155.230:2181
+[WARN] [2017-01-19 16:30:41] org.apache.zookeeper.ClientCnxn$SendThread.run(1102) | Session 0x159b54fb08e0000 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.SocketException: Host is down
+	at sun.nio.ch.Net.connect0(Native Method)
+	at sun.nio.ch.Net.connect(Net.java:458)
+	at sun.nio.ch.Net.connect(Net.java:450)
+	at sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:648)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.registerAndConnect(ClientCnxnSocketNIO.java:277)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.connect(ClientCnxnSocketNIO.java:287)
+	at org.apache.zookeeper.ClientCnxn$SendThread.startConnect(ClientCnxn.java:967)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1003)
+[INFO] [2017-01-19 16:30:43] org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(975) | Opening socket connection to server 172.16.155.230/172.16.155.230:2181. Will not attempt to authenticate using SASL (unknown error)
+[ERROR] [2017-01-19 16:30:43] org.apache.zookeeper.ClientCnxnSocketNIO.connect(289) | Unable to open socket to 172.16.155.230/172.16.155.230:2181
+[WARN] [2017-01-19 16:30:43] org.apache.zookeeper.ClientCnxn$SendThread.run(1102) | Session 0x159b54fb08e0000 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.SocketException: Host is down
+	at sun.nio.ch.Net.connect0(Native Method)
+	at sun.nio.ch.Net.connect(Net.java:458)
+	at sun.nio.ch.Net.connect(Net.java:450)
+	at sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:648)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.registerAndConnect(ClientCnxnSocketNIO.java:277)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.connect(ClientCnxnSocketNIO.java:287)
+	at org.apache.zookeeper.ClientCnxn$SendThread.startConnect(ClientCnxn.java:967)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1003)
+[INFO] [2017-01-19 16:30:45] org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(975) | Opening socket connection to server 172.16.155.230/172.16.155.230:2181. Will not attempt to authenticate using SASL (unknown error)
+[INFO] [2017-01-19 16:31:15] org.apache.zookeeper.ClientCnxn$SendThread.run(1096) | Client session timed out, have not heard from server in 31975ms for sessionid 0x159b54fb08e0000, closing socket connection and attempting reconnect
+[INFO] [2017-01-19 16:31:16] org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(975) | Opening socket connection to server 172.16.155.230/172.16.155.230:2181. Will not attempt to authenticate using SASL (unknown error)
+[INFO] [2017-01-19 16:31:46] org.apache.zookeeper.ClientCnxn$SendThread.run(1096) | Client session timed out, have not heard from server in 31098ms for sessionid 0x159b54fb08e0000, closing socket connection and attempting reconnect
+[INFO] [2017-01-19 16:31:48] org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(975) | Opening socket connection to server 172.16.155.230/172.16.155.230:2181. Will not attempt to authenticate using SASL (unknown error)
+[INFO] [2017-01-19 16:32:18] org.apache.zookeeper.ClientCnxn$SendThread.run(1096) | Client session timed out, have not heard from server in 31872ms for sessionid 0x159b54fb08e0000, closing socket connection and attempting reconnect
+[INFO] [2017-01-19 16:32:20] org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(975) | Opening socket connection to server 172.16.155.230/172.16.155.230:2181. Will not attempt to authenticate using SASL (unknown error)
+[INFO] [2017-01-19 16:32:50] org.apache.zookeeper.ClientCnxn$SendThread.run(1096) | Client session timed out, have not heard from server in 31785ms for sessionid 0x159b54fb08e0000, closing socket connection and attempting reconnect
+[INFO] [2017-01-19 16:32:51] org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(975) | Opening socket connection to server 172.16.155.230/172.16.155.230:2181. Will not attempt to authenticate using SASL (unknown error)
+[INFO] [2017-01-19 16:33:21] org.apache.zookeeper.ClientCnxn$SendThread.run(1096) | Client session timed out, have not heard from server in 31523ms for sessionid 0x159b54fb08e0000, closing socket connection and attempting reconnect
+[INFO] [2017-01-19 16:33:23] org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(975) | Opening socket connection to server 172.16.155.230/172.16.155.230:2181. Will not attempt to authenticate using SASL (unknown error)
+[INFO] [2017-01-19 16:33:53] org.apache.zookeeper.ClientCnxn$SendThread.run(1096) | Client session timed out, have not heard from server in 31260ms for sessionid 0x159b54fb08e0000, closing socket connection and attempting reconnect
+[INFO] [2017-01-19 16:33:54] org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(975) | Opening socket connection to server 172.16.155.230/172.16.155.230:2181. Will not attempt to authenticate using SASL (unknown error)
+[INFO] [2017-01-19 16:34:24] org.apache.zookeeper.ClientCnxn$SendThread.run(1096) | Client session timed out, have not heard from server in 31255ms for sessionid 0x159b54fb08e0000, closing socket connection and attempting reconnect
+[INFO] [2017-01-19 16:34:26] org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(975) | Opening socket connection to server 172.16.155.230/172.16.155.230:2181. Will not attempt to authenticate using SASL (unknown error)
+[INFO] [2017-01-19 16:34:56] org.apache.zookeeper.ClientCnxn$SendThread.run(1096) | Client session timed out, have not heard from server in 31701ms for sessionid 0x159b54fb08e0000, closing socket connection and attempting reconnect
+[INFO] [2017-01-19 16:34:58] org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(975) | Opening socket connection to server 172.16.155.230/172.16.155.230:2181. Will not attempt to authenticate using SASL (unknown error)
+[INFO] [2017-01-19 16:35:28] org.apache.zookeeper.ClientCnxn$SendThread.run(1096) | Client session timed out, have not heard from server in 31473ms for sessionid 0x159b54fb08e0000, closing socket connection and attempting reconnect
+[INFO] [2017-01-19 16:35:29] org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(975) | Opening socket connection to server 172.16.155.230/172.16.155.230:2181. Will not attempt to authenticate using SASL (unknown error)
+[INFO] [2017-01-19 16:35:59] org.apache.zookeeper.ClientCnxn$SendThread.run(1096) | Client session timed out, have not heard from server in 31647ms for sessionid 0x159b54fb08e0000, closing socket connection and attempting reconnect
+[INFO] [2017-01-19 16:36:01] org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(975) | Opening socket connection to server 172.16.155.230/172.16.155.230:2181. Will not attempt to authenticate using SASL (unknown error)
+[INFO] [2017-01-19 16:36:31] org.apache.zookeeper.ClientCnxn$SendThread.run(1096) | Client session timed out, have not heard from server in 31320ms for sessionid 0x159b54fb08e0000, closing socket connection and attempting reconnect
+[INFO] [2017-01-19 16:36:32] org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(975) | Opening socket connection to server 172.16.155.230/172.16.155.230:2181. Will not attempt to authenticate using SASL (unknown error)
+[INFO] [2017-01-19 16:37:02] org.apache.zookeeper.ClientCnxn$SendThread.run(1096) | Client session timed out, have not heard from server in 31414ms for sessionid 0x159b54fb08e0000, closing socket connection and attempting reconnect
+[INFO] [2017-01-19 16:37:04] org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(975) | Opening socket connection to server 172.16.155.230/172.16.155.230:2181. Will not attempt to authenticate using SASL (unknown error)
+[INFO] [2017-01-19 16:37:34] org.apache.zookeeper.ClientCnxn$SendThread.run(1096) | Client session timed out, have not heard from server in 31480ms for sessionid 0x159b54fb08e0000, closing socket connection and attempting reconnect
+[INFO] [2017-01-19 16:37:35] org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(975) | Opening socket connection to server 172.16.155.230/172.16.155.230:2181. Will not attempt to authenticate using SASL (unknown error)
+[INFO] [2017-01-19 16:38:05] org.apache.zookeeper.ClientCnxn$SendThread.run(1096) | Client session timed out, have not heard from server in 31464ms for sessionid 0x159b54fb08e0000, closing socket connection and attempting reconnect
+[INFO] [2017-01-19 16:38:07] org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(975) | Opening socket connection to server 172.16.155.230/172.16.155.230:2181. Will not attempt to authenticate using SASL (unknown error)
+[INFO] [2017-01-19 16:38:37] org.apache.zookeeper.ClientCnxn$SendThread.run(1096) | Client session timed out, have not heard from server in 32004ms for sessionid 0x159b54fb08e0000, closing socket connection and attempting reconnect
+[INFO] [2017-01-19 16:38:39] org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(975) | Opening socket connection to server 172.16.155.230/172.16.155.230:2181. Will not attempt to authenticate using SASL (unknown error)
+[INFO] [2017-01-19 16:39:09] org.apache.zookeeper.ClientCnxn$SendThread.run(1096) | Client session timed out, have not heard from server in 31513ms for sessionid 0x159b54fb08e0000, closing socket connection and attempting reconnect
+[INFO] [2017-01-19 16:39:11] org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(975) | Opening socket connection to server 172.16.155.230/172.16.155.230:2181. Will not attempt to authenticate using SASL (unknown error)
+[INFO] [2017-01-19 16:39:41] org.apache.zookeeper.ClientCnxn$SendThread.run(1096) | Client session timed out, have not heard from server in 31476ms for sessionid 0x159b54fb08e0000, closing socket connection and attempting reconnect
+[INFO] [2017-01-19 16:39:43] org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(975) | Opening socket connection to server 172.16.155.230/172.16.155.230:2181. Will not attempt to authenticate using SASL (unknown error)
+[INFO] [2017-01-19 16:41:12] org.apache.zookeeper.ClientCnxn$SendThread.run(1096) | Client session timed out, have not heard from server in 91608ms for sessionid 0x159b54fb08e0000, closing socket connection and attempting reconnect
+[INFO] [2017-01-19 16:41:14] org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(975) | Opening socket connection to server 172.16.155.230/172.16.155.230:2181. Will not attempt to authenticate using SASL (unknown error)
+[INFO] [2017-01-19 16:41:44] org.apache.zookeeper.ClientCnxn$SendThread.run(1096) | Client session timed out, have not heard from server in 31324ms for sessionid 0x159b54fb08e0000, closing socket connection and attempting reconnect
+[INFO] [2017-01-19 16:41:45] org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(975) | Opening socket connection to server 172.16.155.230/172.16.155.230:2181. Will not attempt to authenticate using SASL (unknown error)
+[INFO] [2017-01-19 16:42:15] org.apache.zookeeper.ClientCnxn$SendThread.run(1096) | Client session timed out, have not heard from server in 31545ms for sessionid 0x159b54fb08e0000, closing socket connection and attempting reconnect
+[INFO] [2017-01-19 16:42:17] org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(975) | Opening socket connection to server 172.16.155.230/172.16.155.230:2181. Will not attempt to authenticate using SASL (unknown error)
+[INFO] [2017-01-19 16:42:47] org.apache.zookeeper.ClientCnxn$SendThread.run(1096) | Client session timed out, have not heard from server in 31205ms for sessionid 0x159b54fb08e0000, closing socket connection and attempting reconnect
+[INFO] [2017-01-19 16:42:48] org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(975) | Opening socket connection to server 172.16.155.230/172.16.155.230:2181. Will not attempt to authenticate using SASL (unknown error)
+[INFO] [2017-01-19 16:43:18] org.apache.zookeeper.ClientCnxn$SendThread.run(1096) | Client session timed out, have not heard from server in 31632ms for sessionid 0x159b54fb08e0000, closing socket connection and attempting reconnect
+[INFO] [2017-01-19 16:43:20] org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(975) | Opening socket connection to server 172.16.155.230/172.16.155.230:2181. Will not attempt to authenticate using SASL (unknown error)
+[INFO] [2017-01-19 16:47:03] org.apache.zookeeper.ClientCnxn$SendThread.run(1096) | Client session timed out, have not heard from server in 224110ms for sessionid 0x159b54fb08e0000, closing socket connection and attempting reconnect
+[INFO] [2017-01-19 16:47:04] org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(975) | Opening socket connection to server 172.16.155.230/172.16.155.230:2181. Will not attempt to authenticate using SASL (unknown error)
+[INFO] [2017-01-19 16:47:34] org.apache.zookeeper.ClientCnxn$SendThread.run(1096) | Client session timed out, have not heard from server in 31039ms for sessionid 0x159b54fb08e0000, closing socket connection and attempting reconnect
+[INFO] [2017-01-19 16:47:35] org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(975) | Opening socket connection to server 172.16.155.230/172.16.155.230:2181. Will not attempt to authenticate using SASL (unknown error)
+[INFO] [2017-01-19 16:48:05] org.apache.zookeeper.ClientCnxn$SendThread.run(1096) | Client session timed out, have not heard from server in 31105ms for sessionid 0x159b54fb08e0000, closing socket connection and attempting reconnect
+[INFO] [2017-01-19 16:48:07] org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(975) | Opening socket connection to server 172.16.155.230/172.16.155.230:2181. Will not attempt to authenticate using SASL (unknown error)
+[INFO] [2017-01-19 16:48:37] org.apache.zookeeper.ClientCnxn$SendThread.run(1096) | Client session timed out, have not heard from server in 31737ms for sessionid 0x159b54fb08e0000, closing socket connection and attempting reconnect
+[INFO] [2017-01-19 16:48:39] org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(975) | Opening socket connection to server 172.16.155.230/172.16.155.230:2181. Will not attempt to authenticate using SASL (unknown error)
+[INFO] [2017-01-19 16:49:09] org.apache.zookeeper.ClientCnxn$SendThread.run(1096) | Client session timed out, have not heard from server in 31966ms for sessionid 0x159b54fb08e0000, closing socket connection and attempting reconnect
+[INFO] [2017-01-19 16:49:11] org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(975) | Opening socket connection to server 172.16.155.230/172.16.155.230:2181. Will not attempt to authenticate using SASL (unknown error)
+[INFO] [2017-01-19 17:02:09] org.apache.zookeeper.ClientCnxn$SendThread.run(1096) | Client session timed out, have not heard from server in 780401ms for sessionid 0x159b54fb08e0000, closing socket connection and attempting reconnect
+[INFO] [2017-01-19 17:02:11] org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(975) | Opening socket connection to server 172.16.155.230/172.16.155.230:2181. Will not attempt to authenticate using SASL (unknown error)
+[INFO] [2017-01-19 17:02:20] com.alibaba.dubbo.config.AbstractConfig$1.run(450) |  [DUBBO] Run shutdown hook now., dubbo version: service, current host: 127.0.0.1
+[INFO] [2017-01-19 17:02:20] com.alibaba.dubbo.registry.support.AbstractRegistryFactory.destroyAll(63) |  [DUBBO] Close all registries [zookeeper://172.16.155.230:2181/com.alibaba.dubbo.registry.RegistryService?application=ivan-dubbo-server&dubbo=service&interface=com.alibaba.dubbo.registry.RegistryService&pid=1437&timestamp=1484805696372], dubbo version: service, current host: 127.0.0.1
+[INFO] [2017-01-19 17:02:20] com.alibaba.dubbo.registry.support.AbstractRegistry.destroy(485) |  [DUBBO] Destroy registry:zookeeper://172.16.155.230:2181/com.alibaba.dubbo.registry.RegistryService?application=ivan-dubbo-server&dubbo=service&interface=com.alibaba.dubbo.registry.RegistryService&pid=1437&timestamp=1484805696372, dubbo version: service, current host: 127.0.0.1
+[INFO] [2017-01-19 17:02:20] com.alibaba.dubbo.registry.support.AbstractRegistry.unregister(312) |  [DUBBO] Unregister: dubbo://192.168.8.108:20880/com.mg.demo.api.UserService?anyhost=true&application=ivan-dubbo-server&dubbo=service&interface=com.mg.demo.api.UserService&methods=selectAll,selectByPrimaryKey,insertSelective,updateByPrimaryKeySelective,updateByPrimaryKey,insert,deleteByPrimaryKey&pid=1437&revision=service&side=provider&timestamp=1484805696378, dubbo version: service, current host: 127.0.0.1
+[INFO] [2017-01-19 17:02:40] org.apache.zookeeper.ClientCnxn$SendThread.run(1096) | Client session timed out, have not heard from server in 30002ms for sessionid 0x159b54fb08e0000, closing socket connection and attempting reconnect
+[INFO] [2017-01-19 17:02:41] org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(975) | Opening socket connection to server 172.16.155.230/172.16.155.230:2181. Will not attempt to authenticate using SASL (unknown error)
+[INFO] [2017-01-19 17:03:11] org.apache.zookeeper.ClientCnxn$SendThread.run(1096) | Client session timed out, have not heard from server in 31266ms for sessionid 0x159b54fb08e0000, closing socket connection and attempting reconnect
+[INFO] [2017-01-19 17:03:13] org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(975) | Opening socket connection to server 172.16.155.230/172.16.155.230:2181. Will not attempt to authenticate using SASL (unknown error)
