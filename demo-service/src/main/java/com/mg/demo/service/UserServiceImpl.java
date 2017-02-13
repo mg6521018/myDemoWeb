@@ -1,11 +1,16 @@
 package com.mg.demo.service;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import com.github.pagehelper.Page;
+import com.github.pagehelper.PageHelper;
 import com.mg.demo.api.UserService;
+import com.mg.demo.core.DataGridPage;
 import com.mg.demo.model.User;
 import com.mg.demo.dao.UserMapper;
+import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -46,7 +51,16 @@ public class UserServiceImpl implements UserService {
         return userMapper.updateByPrimaryKey(record);
     }
 
-    public List<User> selectAll() {
-        return userMapper.selectAll();
+    public DataGridPage<User> selectAll(Integer page,Integer rows,String userName,String account) {
+        Map <String,Object> params = new HashMap();
+        if(StringUtils.isNotBlank(userName)){
+            params.put("userName",userName);
+        }
+        if(StringUtils.isNotBlank(account)){
+            params.put("account",account);
+        }
+        PageHelper.startPage(page,rows);
+        List list = userMapper.selectAll(params);
+        return DataGridPage.create(list);
     }
 }

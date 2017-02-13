@@ -1,6 +1,7 @@
 package com.mg.demo.api;
 
 import com.github.pagehelper.Page;
+import com.mg.demo.core.DataGridPage;
 import com.mg.demo.model.User;
 
 import java.util.List;
@@ -21,5 +22,5 @@ public interface UserService {
 
     int updateByPrimaryKey(User record);
 
-    List<User> selectAll();
+    DataGridPage<User> selectAll(Integer page, Integer rows,String userName,String account);
 }

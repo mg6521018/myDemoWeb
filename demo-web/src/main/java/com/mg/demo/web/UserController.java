@@ -1,14 +1,11 @@
 package com.mg.demo.web;
 
-import java.util.List;
-
-import com.github.pagehelper.Page;
-import com.github.pagehelper.PageHelper;
-import com.github.pagehelper.PageInfo;
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONObject;
 import com.mg.demo.api.UserService;
 import com.mg.demo.core.DataGridPage;
-import com.mg.demo.core.ServletRequest;
 import com.mg.demo.model.User;
+import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
@@ -43,7 +40,7 @@ public class UserController {
     public DataGridPage<User> insert(HttpServletRequest request){
         User user = new User(1,"jack",18);
         userService.insert(user);
-        return getUsers(request,1,10);
+        return getUsers(request,1,10,"");
     }
 
     /**
@@ -54,7 +51,7 @@ public class UserController {
     public DataGridPage<User> insertSelective(HttpServletRequest request){
         User user = new User(2,"ivan",25);
         userService.insertSelective(user);
-        return getUsers(request,1,10);
+        return getUsers(request,1,10,"");
     }
 
     /**
@@ -64,10 +61,17 @@ public class UserController {
     @ResponseBody
     public DataGridPage<User> getUsers(HttpServletRequest request,
                                        @RequestParam(required=false,defaultValue="1") Integer page,
-                                       @RequestParam(required=false,defaultValue="10") Integer rows){
-        PageHelper.startPage(page,rows);
-        List<User> list = userService.selectAll();
-        return DataGridPage.create(list);
+                                       @RequestParam(required=false,defaultValue="10") Integer rows,
+                                       String filters){
+        String userName = "";
+        String account = "";
+        if(StringUtils.isNotBlank(filters)){
+            JSONObject json = JSON.parseObject(filters);
+            userName = json.getString("userName");
+            account = json.getString("account");
+        }
+        logger.info("分页查询用户信息列表请求入参：pageNumber{},pageSize{}", page,rows);
+        return userService.selectAll(page,rows,userName,account);
     }
 
     /**
@@ -88,7 +92,7 @@ public class UserController {
     @ResponseBody
     public DataGridPage<User> deleteUserById(String id,HttpServletRequest request){
         userService.deleteByPrimaryKey(Integer.valueOf(id));
-        return getUsers(request,1,10);
+        return getUsers(request,1,10,"");
     }
 
     /**

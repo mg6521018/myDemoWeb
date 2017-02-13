@@ -2,11 +2,12 @@ package com.mg.demo.core;
 
 import com.github.pagehelper.PageInfo;
 
+import java.io.Serializable;
 import java.util.List;
 /**
  * Created by magang on 2017/2/8.
  */
-public class DataGridPage<T> {
+public class DataGridPage<T> implements Serializable {
     private final List<T> rows;
     private final Long total;
 

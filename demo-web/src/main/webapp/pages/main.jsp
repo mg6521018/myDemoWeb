@@ -46,13 +46,13 @@
                             </a>
                         </li>
                         <li class="pf-modify-pwd">
-                            <a href="http://www.uimaker.com">
+                            <a href="javascript:;">
                                 <i class="iconfont">&#xe634;</i>
                                 <span class="pf-opt-name">修改密码</span>
                             </a>
                         </li>
                         <li class="pf-logout">
-                            <a href="login.html">
+                            <a href="login.jsp">
                                 <i class="iconfont">&#xe60e;</i>
                                 <span class="pf-opt-name">退出</span>
                             </a>
@@ -70,16 +70,7 @@
             </div>
         </div>
 
-        <div id="pf-ft">
-            <div class="system-name">
-                <i class="iconfont">&#xe6fe;</i>
-                <span>信息管理系统&nbsp;v1.0</span>
-            </div>
-            <div class="copyright-name">
-                <span>CopyRight&nbsp;2016&nbsp;&nbsp;uimaker.com&nbsp;版权所有</span>
-                <i class="iconfont" >&#xe6ff;</i>
-            </div>
-        </div>
+        <jsp:include page="/commons/include/footer.jsp" flush="true"/>
     </div>
 
     <div id="mm" class="easyui-menu tabs-menu" style="width:120px;">

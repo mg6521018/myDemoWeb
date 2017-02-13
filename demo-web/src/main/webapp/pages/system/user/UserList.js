@@ -4,27 +4,24 @@
 var EL = EL || {}, GV = GV || {}, FN = FN || {}, Urls = Urls || {};
 
 Urls.pageQuery = '/demo/user/list.do';
-Urls.remove = '/demo/user/remove';
-Urls.editDlg = '/demo/user/demo/demoUser/DemoUserEditDlg.jsp';
+Urls.remove = '/demo/user/remove.do';
+Urls.editDlg = '/demo/user/userEditDlg.jsp';
 
 $(function() {
     //搜索面板
-    EL.searchLink = $('#searchLink');
-    EL.searchPanel = $('#searchPanel');
-    //
     EL.oBtnReset = $('#oBtnReset');//重置
     EL.oBtnQuery = $('#oBtnQuery');//查询
-    //
     EL.oBtnAdd = $('#oBtnAdd');//添加
     EL.oBtnEdit = $('#oBtnEdit');//修改
     EL.oBtnDel = $('#oBtnDel');//删除
-    //
-    EL.Q_ID = $('#Q_ID');//人员编号
-    EL.Q_VALUE = $('#Q_VALUE');//中文名
-    EL.Q_NAME = $('#Q_NAME');//性别
+
+    //搜索字段
+    EL.Q_USERNAME = $('#userName');//人员编号
+    EL.Q_ACCOUNT = $('#account');//中文名
 
     //列表控件
     EL.oGrid = $('#oGrid');
+
     //列表加载
     EL.oGrid.datagrid({//
         url : Urls.pageQuery,
@@ -84,41 +81,30 @@ $(function() {
             }
         }]]
     });
-    EL.searchLink.on('click', function() {
-        if (EL.searchPanel.hasClass('hidden')) {
-            EL.searchPanel.removeClass('hidden').show();
-            EL.searchLink.addClass('x-arrow-up');
-        } else {
-            EL.searchPanel.addClass('hidden').hide();
-            EL.searchLink.removeClass('x-arrow-up');
-        }
-        window.parent.doLayoutFrame();
-    });
 
     //点击查询按钮
     EL.oBtnQuery.on('click', function() {
         var filters = {};
-        filters.ID = EL.Q_ID.val();//人员编号
-        filters.NAME = EL.Q_NAME.val();//中文名
-        filters.VALUE = EL.Q_VALUE.val();//性别
+        filters.userName = EL.Q_USERNAME.val();
+        filters.account = EL.Q_ACCOUNT.val();
         EL.oGrid.datagrid('load', {
-            filters : __.encode(filters)
-        });
+            filters : JSON.stringify(filters)
+    });
     });
 
     //点击重置按钮
     EL.oBtnReset.on('click', function() {
-        EL.Q_ID.val('');//人员编号
-        EL.Q_NAME.val('');//中文名
-        EL.Q_VALUE.val('');//性别
+        EL.Q_USERNAME.val('');
+        EL.Q_ACCOUNT.val('');
     });
-    //点击添加按钮
-    EL.oBtnAdd.bind('click', function() {
+
+    //新增
+    EL.oBtnAdd.on('click', function() {
         FN.onEdit();
     });
 
-    //点击编辑按钮
-    EL.oBtnEdit.bind('click', function() {
+    //修改
+    EL.oBtnEdit.on('click', function() {
         var records = EL.oGrid.datagrid('getSelections');
         var idList = [];
         $.each(records, function(i, record) {
@@ -133,6 +119,21 @@ $(function() {
             ID : id
         });
     });
+
+    //编辑数据
+    FN.onEdit = function(params) {
+        __.openDialog({
+            title : '测试(用户)管理',
+            url : Urls.editDlg,
+            width : 630,
+            height : 375,
+            params : params,
+            callback : function(value) {
+                $('#oPrompt').showPrompt('保存成功', 'info');
+                EL.oGrid.datagrid('reload');
+            }
+        });
+    }
 
     //点击删除按钮
     EL.oBtnDel.bind('click', function() {
@@ -162,21 +163,6 @@ $(function() {
             } else {
                 $('#oPrompt').showPrompt('删除成功!', 'info');
                 EL.oGrid.datagrid('reload');//刷新列表
-            }
-        });
-    }
-
-    //编辑数据
-    FN.onEdit = function(params) {
-        __.openDialog({
-            title : '测试(用户)管理',
-            url : Urls.editDlg,
-            width : 630,
-            height : 375,
-            params : params,
-            callback : function(value) {
-                $('#oPrompt').showPrompt('保存成功', 'info');
-                EL.oGrid.datagrid('reload');
             }
         });
     }

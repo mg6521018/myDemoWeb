@@ -5,6 +5,7 @@ import com.github.pagehelper.Page;
 import com.mg.demo.model.User;
 
 import java.util.List;
+import java.util.Map;
 
 public interface UserMapper {
     int deleteByPrimaryKey(Integer id);
@@ -19,5 +20,5 @@ public interface UserMapper {
 
     int updateByPrimaryKey(User record);
 
-    List<User> selectAll();
+    List<User> selectAll(Map<String,Object> params);
 }

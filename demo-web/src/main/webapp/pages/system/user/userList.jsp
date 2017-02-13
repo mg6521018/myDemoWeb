@@ -16,10 +16,14 @@
         <script type="text/javascript" src="${path}/custom/jquery.easyui.min.js"></script>
         <script type="text/javascript" src="${path}/custom/easyui-lang-zh_CN.js"></script>
         <script type="text/javascript" src="${path}/pages/system/user/UserList.js"></script>
+        <script type="text/javascript" src="${path}/custom/JSON2.js"></script>
+        <script type="text/javascript" src="${path}/pages/js/__/__.js"></script>
+        <script type="text/javascript" src="${path}/custom/jquery-patch.js"></script>
+        <script type="text/javascript">$ctx = "${path}";</script>
     </head>
     <body>
         <div class="container">
-            <table id="oGrid" style="width:100%;height:554px" title="全体供应商列表" data-options="
+            <table id="oGrid" style="width:100%;height:554px" title="用户列表" data-options="
                         rownumbers:true,
                         singleSelect:false,
                         autoRowHeight:false,
@@ -33,12 +37,14 @@
                         pageSize:10">
             </table>
             <div id="tb" style="padding:0 30px;">
-                用户名:
-                <input class="easyui-textbox" type="text" name="code" style="width:166px;height:35px;line-height:35px;"></input>
-                登录名:
-                <input class="easyui-textbox" type="text" name="name" style="width:166px;height:35px;line-height:35px;"></input>
-                <a href="#" class="easyui-linkbutton" iconCls="icon-search" data-options="selected:true">查询</a>
-                <a href="#" class="easyui-linkbutton" iconCls="icon-reload">重置</a>
+            <form>
+                用户名:<input class="easyui-validatebox" name="userName" id="userName" />
+                登录名:<input class="easyui-validatebox" name="account" id="account" />
+                <a href="#" class="easyui-linkbutton" iconCls="icon-search" id="oBtnQuery" data-options="selected:true">查询</a>
+                <a href="#" class="easyui-linkbutton" iconCls="icon-reload" id="oBtnReset">重置</a>
+                <a href="#" class="easyui-linkbutton" iconCls="icon-mini-add" id="oBtnAdd">添加</a>
+                <a href="#" class="easyui-linkbutton" iconCls="icon-mini-edit" id="oBtnEdit">修改</a>
+            </form>
             </div>
         </div>
     </body>
