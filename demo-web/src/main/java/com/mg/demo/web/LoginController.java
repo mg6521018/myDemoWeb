@@ -1,8 +1,7 @@
 package com.mg.demo.web;
 
 import com.alibaba.dubbo.config.annotation.Reference;
-import com.mg.demo.api.UserService;
-import com.mg.demo.model.User;
+import com.mg.demo.api.SysUserService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
@@ -21,10 +20,10 @@ public class LoginController {
     /**
      * 日志
      */
-    private static final Logger logger = LoggerFactory.getLogger(UserController.class);
+    private static final Logger logger = LoggerFactory.getLogger(LoginController.class);
 
     @Reference
-    private UserService userService;
+    private SysUserService sysUserService;
 
     /**
      * 新增user

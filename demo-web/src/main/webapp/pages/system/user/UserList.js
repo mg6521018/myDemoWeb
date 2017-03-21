@@ -5,7 +5,7 @@ var EL = EL || {}, GV = GV || {}, FN = FN || {}, Urls = Urls || {};
 
 Urls.pageQuery = '/demo/user/list.do';
 Urls.remove = '/demo/user/remove.do';
-Urls.editDlg = '/demo/user/userEditDlg.jsp';
+Urls.editDlg = '/demo/pages/system/user/UserEditDlg.jsp';
 
 $(function() {
     //搜索面板
@@ -30,7 +30,7 @@ $(function() {
         pagination : true,
         fitColumns : true,
         columns : [[{
-            field : '-ck',
+            field : 'userId',
             checkbox : true
         }, {
             field : 'userName',
@@ -53,7 +53,7 @@ $(function() {
                 if(value == 2){return "已锁定";}
             }
         }, {
-            field : 'createTime',
+            field : 'createtime',
             title : '创建时间',
             width : 150,
             sortable : false,
@@ -62,7 +62,7 @@ $(function() {
                 return unixTimestamp.toLocaleString();
             }
         }, {
-            field : 'isExpired',
+            field : 'isexpired',
             title : '是否过期',
             width : 150,
             sortable : false,
@@ -71,7 +71,7 @@ $(function() {
                 if(value == 1){return "已过期";}
             }
         }, {
-            field : 'isLock',
+            field : 'islock',
             title : '是否可用',
             width : 150,
             sortable : false,
@@ -89,7 +89,7 @@ $(function() {
         filters.account = EL.Q_ACCOUNT.val();
         EL.oGrid.datagrid('load', {
             filters : JSON.stringify(filters)
-    });
+        });
     });
 
     //点击重置按钮
@@ -108,15 +108,15 @@ $(function() {
         var records = EL.oGrid.datagrid('getSelections');
         var idList = [];
         $.each(records, function(i, record) {
-            idList.push(record.ID);
+            idList.push(record.userId);
         });
         if (idList.length !== 1) {
-            $('#oPrompt').showPrompt('请选择一条数据进行编辑!', 'alert');
+            alert("未选择数据")
             return;
         }
-        var id = idList[0]
+        var id = idList[0];
         FN.onEdit({
-            ID : id
+            id : id
         });
     });
 
@@ -129,7 +129,7 @@ $(function() {
             height : 375,
             params : params,
             callback : function(value) {
-                $('#oPrompt').showPrompt('保存成功', 'info');
+                alert('保存成功');
                 EL.oGrid.datagrid('reload');
             }
         });
@@ -138,9 +138,11 @@ $(function() {
     //点击删除按钮
     EL.oBtnDel.bind('click', function() {
         var records = EL.oGrid.datagrid('getSelections');
-        var idList = [];
+        var idList = '';
         $.each(records, function(i, record) {
-            idList.push(record.ID);
+            if (idList != '')
+                idList += ',';
+            idList += record.userId;
         });
         if ($.isEmpty(idList)) {
             $('#oPrompt').showPrompt('请选择需要删除的数据!', 'alert');
@@ -156,7 +158,7 @@ $(function() {
     //删除数据
     FN.onRemoveById = function(idList) {
         var params = {};
-        params.idList = __.encode(idList);
+        params.idList = idList;
         __.post(Urls.remove, params, function(data) {
             if (__.err(data)) {
                 $('#oPrompt').showPrompt(data.message, 'error');

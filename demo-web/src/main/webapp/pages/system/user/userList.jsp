@@ -30,8 +30,6 @@
                         pagination:true,
                         fitColumns:true,
                         striped:true,
-                        checkOnSelect:false,
-                        selectOnCheck:false,
                         collapsible:true,
                         toolbar:'#tb',
                         pageSize:10">
@@ -42,8 +40,9 @@
                 登录名:<input class="easyui-validatebox" name="account" id="account" />
                 <a href="#" class="easyui-linkbutton" iconCls="icon-search" id="oBtnQuery" data-options="selected:true">查询</a>
                 <a href="#" class="easyui-linkbutton" iconCls="icon-reload" id="oBtnReset">重置</a>
-                <a href="#" class="easyui-linkbutton" iconCls="icon-mini-add" id="oBtnAdd">添加</a>
-                <a href="#" class="easyui-linkbutton" iconCls="icon-mini-edit" id="oBtnEdit">修改</a>
+                <a href="#" class="easyui-linkbutton" iconCls="icon-add" id="oBtnAdd">添加</a>
+                <a href="#" class="easyui-linkbutton" iconCls="icon-edit" id="oBtnEdit">修改</a>
+                <a href="#" class="easyui-linkbutton" iconCls="icon-remove" id="oBtnDel">删除</a>
             </form>
             </div>
         </div>

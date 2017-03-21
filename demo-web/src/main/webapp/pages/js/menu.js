@@ -16,12 +16,12 @@ var SystemMenu = [{
 	},{
 		title: '凭证字号',
 		icon: '&#xe625;',
-		href: 'basic_info.html',
+		href: 'system/vouche/voucheMain.jsp',
 		children: []
 	},{
 		title: '会计科目',
 		icon: '&#xe625;',
-		href: 'providers.html',
+		href: 'system/accSub/accSubMain.jsp',
 		children: []
 	},{
 		title: '核算项目',

@@ -1,11 +1,13 @@
 <%@page contentType="text/html; charset=utf-8" pageEncoding="utf-8" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<c:set var="path" scope="session" value="${pageContext.request.contextPath}"/>
 <html>
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>uimaker信息管理系统</title>
-        <link href="css/base.css" rel="stylesheet">
-        <link href="css/login/login.css" rel="stylesheet">
+        <link href="${path}/pages/css/base.css" rel="stylesheet">
+        <link href="${path}/pages/css/login/login.css" rel="stylesheet">
     </head>
     <body class="default">
         <div class="login-hd">
@@ -75,6 +77,6 @@
 
 <script type="text/javascript">
     function login(){
-        window.location='main.jsp';
+        window.location='${path}/pages/main.jsp';
     }
 </script>

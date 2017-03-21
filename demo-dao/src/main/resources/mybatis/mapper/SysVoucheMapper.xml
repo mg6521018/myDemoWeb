@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.mg.demo.dao.SysVoucheMapper" >
+  <resultMap id="BaseResultMap" type="com.mg.demo.model.SysVouche" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="type_id" property="typeId" jdbcType="INTEGER" />
+    <result column="detail_code" property="detailCode" jdbcType="VARCHAR" />
+    <result column="vouche_no" property="voucheNo" jdbcType="VARCHAR" />
+    <result column="condition1" property="condition1" jdbcType="INTEGER" />
+    <result column="condition2" property="condition2" jdbcType="INTEGER" />
+    <result column="condition3" property="condition3" jdbcType="INTEGER" />
+    <result column="condition4" property="condition4" jdbcType="INTEGER" />
+    <result column="condition5" property="condition5" jdbcType="INTEGER" />
+    <result column="condition6" property="condition6" jdbcType="INTEGER" />
+    <result column="status" property="status" jdbcType="INTEGER" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, name, type_id, detail_code, vouche_no, condition1, condition2, condition3, condition4, 
+    condition5, condition6, status
+  </sql>
+
+  <sql id="dynamicWhere">
+    <where>
+      <if test="@Ognl@isNotEmpty(name)"> AND name  LIKE CONCAT('%',#{name},'%')</if>
+      <if test="@Ognl@isNotEmpty(typeId)"> AND type_id  = #{typeId}</if>
+    </where>
+  </sql>
+
+  <select id="selectAll" parameterType="Map" resultMap="BaseResultMap">
+    select
+      <include refid="Base_Column_List" />
+    from sys_vouche
+      <include refid="dynamicWhere" />
+  </select>
+
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from sys_vouche
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from sys_vouche
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.mg.demo.model.SysVouche" >
+    insert into sys_vouche (id, name, type_id, 
+      detail_code, vouche_no, condition1, 
+      condition2, condition3, condition4, 
+      condition5, condition6, status
+      )
+    values (#{id,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}, #{typeId,jdbcType=INTEGER}, 
+      #{detailCode,jdbcType=VARCHAR}, #{voucheNo,jdbcType=VARCHAR}, #{condition1,jdbcType=INTEGER}, 
+      #{condition2,jdbcType=INTEGER}, #{condition3,jdbcType=INTEGER}, #{condition4,jdbcType=INTEGER}, 
+      #{condition5,jdbcType=INTEGER}, #{condition6,jdbcType=INTEGER}, #{status,jdbcType=INTEGER}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.mg.demo.model.SysVouche" >
+    insert into sys_vouche
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="name != null" >
+        name,
+      </if>
+      <if test="typeId != null" >
+        type_id,
+      </if>
+      <if test="detailCode != null" >
+        detail_code,
+      </if>
+      <if test="voucheNo != null" >
+        vouche_no,
+      </if>
+      <if test="condition1 != null" >
+        condition1,
+      </if>
+      <if test="condition2 != null" >
+        condition2,
+      </if>
+      <if test="condition3 != null" >
+        condition3,
+      </if>
+      <if test="condition4 != null" >
+        condition4,
+      </if>
+      <if test="condition5 != null" >
+        condition5,
+      </if>
+      <if test="condition6 != null" >
+        condition6,
+      </if>
+      <if test="status != null" >
+        status,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="name != null" >
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="typeId != null" >
+        #{typeId,jdbcType=INTEGER},
+      </if>
+      <if test="detailCode != null" >
+        #{detailCode,jdbcType=VARCHAR},
+      </if>
+      <if test="voucheNo != null" >
+        #{voucheNo,jdbcType=VARCHAR},
+      </if>
+      <if test="condition1 != null" >
+        #{condition1,jdbcType=INTEGER},
+      </if>
+      <if test="condition2 != null" >
+        #{condition2,jdbcType=INTEGER},
+      </if>
+      <if test="condition3 != null" >
+        #{condition3,jdbcType=INTEGER},
+      </if>
+      <if test="condition4 != null" >
+        #{condition4,jdbcType=INTEGER},
+      </if>
+      <if test="condition5 != null" >
+        #{condition5,jdbcType=INTEGER},
+      </if>
+      <if test="condition6 != null" >
+        #{condition6,jdbcType=INTEGER},
+      </if>
+      <if test="status != null" >
+        #{status,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.mg.demo.model.SysVouche" >
+    update sys_vouche
+    <set >
+      <if test="name != null" >
+        name = #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="typeId != null" >
+        type_id = #{typeId,jdbcType=INTEGER},
+      </if>
+      <if test="detailCode != null" >
+        detail_code = #{detailCode,jdbcType=VARCHAR},
+      </if>
+      <if test="voucheNo != null" >
+        vouche_no = #{voucheNo,jdbcType=VARCHAR},
+      </if>
+      <if test="condition1 != null" >
+        condition1 = #{condition1,jdbcType=INTEGER},
+      </if>
+      <if test="condition2 != null" >
+        condition2 = #{condition2,jdbcType=INTEGER},
+      </if>
+      <if test="condition3 != null" >
+        condition3 = #{condition3,jdbcType=INTEGER},
+      </if>
+      <if test="condition4 != null" >
+        condition4 = #{condition4,jdbcType=INTEGER},
+      </if>
+      <if test="condition5 != null" >
+        condition5 = #{condition5,jdbcType=INTEGER},
+      </if>
+      <if test="condition6 != null" >
+        condition6 = #{condition6,jdbcType=INTEGER},
+      </if>
+      <if test="status != null" >
+        status = #{status,jdbcType=INTEGER},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.mg.demo.model.SysVouche" >
+    update sys_vouche
+    set name = #{name,jdbcType=VARCHAR},
+      type_id = #{typeId,jdbcType=INTEGER},
+      detail_code = #{detailCode,jdbcType=VARCHAR},
+      vouche_no = #{voucheNo,jdbcType=VARCHAR},
+      condition1 = #{condition1,jdbcType=INTEGER},
+      condition2 = #{condition2,jdbcType=INTEGER},
+      condition3 = #{condition3,jdbcType=INTEGER},
+      condition4 = #{condition4,jdbcType=INTEGER},
+      condition5 = #{condition5,jdbcType=INTEGER},
+      condition6 = #{condition6,jdbcType=INTEGER},
+      status = #{status,jdbcType=INTEGER}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

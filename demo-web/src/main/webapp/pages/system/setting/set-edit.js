@@ -3,28 +3,62 @@
  */
 var EL = EL || {}, GV = GV || {}, FN = FN || {}, Urls = Urls || {};
 
-Urls.pageQuery = '/demo/user/list.do';
-Urls.remove = '/demo/user/remove.do';
-Urls.editDlg = '/demo/user/userEditDlg.jsp';
-
+Urls.load = '/demo/set/loadEditData.do';
+Urls.save = '/demo/set/save.do';
 $(function() {
     //搜索面板
 
     EL.oBtnSave = $('#oBtnSave');//添加
     EL.oBtnCancel = $('#oBtnCancel');//取消
 
+    GV.vOriginalData = {};//初始的表单数据
+    EL.oForm = $('#oForm');
+    var params = {};
+    //初始化页面数据
+    __.post(Urls.load, params, function(vo) {
+        GV.vOriginalData = vo;
+        EL.oForm.form('load', vo);
+    });
+
     //保存
     EL.oBtnSave.on('click', function() {
-        alert('保存');
+        EL.oForm.submit();
+    });
+
+    $('#oForm').form({
+        url : Urls.save ,
+        onSubmit : function() {
+            var isValid = $(this).form('validate');
+            if (!isValid) {}
+            return isValid;
+        },
+        success : function(result) {
+            result = $.parseJSON(result);
+            if (result.success) {
+                window.location.href='/demo/pages/system/setting/set-details.jsp';
+            } else {
+                $('#oDialogPrompt').showPrompt(result.msg, 'error');
+            }
+        }
     });
 
     //取消
     EL.oBtnCancel.on('click', function() {
-        alert('取消');
+        window.location.href='/demo/pages/system/setting/set-details.jsp';
     });
 
-    $('#bigFileSplit').combobox({
-        url : '/demo/select/opinion.do?type=1',
+    $('#accountingSystem').combobox({
+        url : '/demo/select/opinionAccountingSystem.do?type=1',
+        valueField : 'dicValue',
+        textField : 'dicName',
+        editable : false,
+        panelHeight : 'auto',
+        onLoadSuccess : function(data) {
+        }
+    });
+
+    $('#fiscalYear').combobox({
+        url : '/demo/select/opinionFiscalYear.do',
         valueField : 'dicValue',
         textField : 'dicName',
         editable : false,

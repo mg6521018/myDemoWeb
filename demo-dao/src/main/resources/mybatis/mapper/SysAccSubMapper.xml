@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.mg.demo.dao.SysAccSubMapper" >
+  <resultMap id="BaseResultMap" type="com.mg.demo.model.SysAccSub" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="code" property="code" jdbcType="VARCHAR" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="pId" property="pid" jdbcType="INTEGER" />
+    <result column="mnemonic_code" property="mnemonicCode" jdbcType="VARCHAR" />
+    <result column="type_id" property="typeId" jdbcType="INTEGER" />
+    <result column="direction" property="direction" jdbcType="VARCHAR" />
+    <result column="cash_account_class" property="cashAccountClass" jdbcType="VARCHAR" />
+    <result column="bank_account_class" property="bankAccountClass" jdbcType="VARCHAR" />
+    <result column="cash_equivalents" property="cashEquivalents" jdbcType="VARCHAR" />
+    <result column="foreign_currency_accounting" property="foreignCurrencyAccounting" jdbcType="VARCHAR" />
+    <result column="quantity_accounting" property="quantityAccounting" jdbcType="VARCHAR" />
+    <result column="company" property="company" jdbcType="INTEGER" />
+    <result column="current_account" property="currentAccount" jdbcType="VARCHAR" />
+    <result column="bill_accounting" property="billAccounting" jdbcType="VARCHAR" />
+    <result column="auxiliary_accounting" property="auxiliaryAccounting" jdbcType="VARCHAR" />
+    <result column="subject_index" property="subjectIndex" jdbcType="VARCHAR" />
+    <result column="report_attributes" property="reportAttributes" jdbcType="VARCHAR" />
+    <result column="specification_model" property="specificationModel" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, code, name, pId, mnemonic_code, type_id, direction, cash_account_class, bank_account_class, 
+    cash_equivalents, foreign_currency_accounting, quantity_accounting, company, current_account, 
+    bill_accounting, auxiliary_accounting, subject_index, report_attributes, specification_model
+  </sql>
+
+  <sql id="dynamicWhere">
+    <where>
+      <if test="@Ognl@isNotEmpty(typeId)"> AND type_id = #{typeId}</if>
+      <if test="@Ognl@isNotEmpty(pId)"> AND pId = #{pId}</if>
+      <if test="@Ognl@isNotEmpty(code)"> AND code  LIKE CONCAT(#{code},'%')</if>
+    </where>
+  </sql>
+
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from sys_accounting_subject
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from sys_accounting_subject
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.mg.demo.model.SysAccSub" >
+    insert into sys_accounting_subject (id, code, name, 
+      pId, mnemonic_code, type_id, 
+      direction, cash_account_class, bank_account_class, 
+      cash_equivalents, foreign_currency_accounting, 
+      quantity_accounting, company, current_account, 
+      bill_accounting, auxiliary_accounting, subject_index, 
+      report_attributes, specification_model)
+    values (#{id,jdbcType=INTEGER}, #{code,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR}, 
+      #{pid,jdbcType=INTEGER}, #{mnemonicCode,jdbcType=VARCHAR}, #{typeId,jdbcType=INTEGER}, 
+      #{direction,jdbcType=VARCHAR}, #{cashAccountClass,jdbcType=VARCHAR}, #{bankAccountClass,jdbcType=VARCHAR}, 
+      #{cashEquivalents,jdbcType=VARCHAR}, #{foreignCurrencyAccounting,jdbcType=VARCHAR}, 
+      #{quantityAccounting,jdbcType=VARCHAR}, #{company,jdbcType=INTEGER}, #{currentAccount,jdbcType=VARCHAR}, 
+      #{billAccounting,jdbcType=VARCHAR}, #{auxiliaryAccounting,jdbcType=VARCHAR}, #{subjectIndex,jdbcType=VARCHAR}, 
+      #{reportAttributes,jdbcType=VARCHAR}, #{specificationModel,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.mg.demo.model.SysAccSub" >
+    insert into sys_accounting_subject
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="code != null" >
+        code,
+      </if>
+      <if test="name != null" >
+        name,
+      </if>
+      <if test="pid != null" >
+        pId,
+      </if>
+      <if test="mnemonicCode != null" >
+        mnemonic_code,
+      </if>
+      <if test="typeId != null" >
+        type_id,
+      </if>
+      <if test="direction != null" >
+        direction,
+      </if>
+      <if test="cashAccountClass != null" >
+        cash_account_class,
+      </if>
+      <if test="bankAccountClass != null" >
+        bank_account_class,
+      </if>
+      <if test="cashEquivalents != null" >
+        cash_equivalents,
+      </if>
+      <if test="foreignCurrencyAccounting != null" >
+        foreign_currency_accounting,
+      </if>
+      <if test="quantityAccounting != null" >
+        quantity_accounting,
+      </if>
+      <if test="company != null" >
+        company,
+      </if>
+      <if test="currentAccount != null" >
+        current_account,
+      </if>
+      <if test="billAccounting != null" >
+        bill_accounting,
+      </if>
+      <if test="auxiliaryAccounting != null" >
+        auxiliary_accounting,
+      </if>
+      <if test="subjectIndex != null" >
+        subject_index,
+      </if>
+      <if test="reportAttributes != null" >
+        report_attributes,
+      </if>
+      <if test="specificationModel != null" >
+        specification_model,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="code != null" >
+        #{code,jdbcType=VARCHAR},
+      </if>
+      <if test="name != null" >
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="pid != null" >
+        #{pid,jdbcType=INTEGER},
+      </if>
+      <if test="mnemonicCode != null" >
+        #{mnemonicCode,jdbcType=VARCHAR},
+      </if>
+      <if test="typeId != null" >
+        #{typeId,jdbcType=INTEGER},
+      </if>
+      <if test="direction != null" >
+        #{direction,jdbcType=VARCHAR},
+      </if>
+      <if test="cashAccountClass != null" >
+        #{cashAccountClass,jdbcType=VARCHAR},
+      </if>
+      <if test="bankAccountClass != null" >
+        #{bankAccountClass,jdbcType=VARCHAR},
+      </if>
+      <if test="cashEquivalents != null" >
+        #{cashEquivalents,jdbcType=VARCHAR},
+      </if>
+      <if test="foreignCurrencyAccounting != null" >
+        #{foreignCurrencyAccounting,jdbcType=VARCHAR},
+      </if>
+      <if test="quantityAccounting != null" >
+        #{quantityAccounting,jdbcType=VARCHAR},
+      </if>
+      <if test="company != null" >
+        #{company,jdbcType=INTEGER},
+      </if>
+      <if test="currentAccount != null" >
+        #{currentAccount,jdbcType=VARCHAR},
+      </if>
+      <if test="billAccounting != null" >
+        #{billAccounting,jdbcType=VARCHAR},
+      </if>
+      <if test="auxiliaryAccounting != null" >
+        #{auxiliaryAccounting,jdbcType=VARCHAR},
+      </if>
+      <if test="subjectIndex != null" >
+        #{subjectIndex,jdbcType=VARCHAR},
+      </if>
+      <if test="reportAttributes != null" >
+        #{reportAttributes,jdbcType=VARCHAR},
+      </if>
+      <if test="specificationModel != null" >
+        #{specificationModel,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.mg.demo.model.SysAccSub" >
+    update sys_accounting_subject
+    <set >
+      <if test="code != null" >
+        code = #{code,jdbcType=VARCHAR},
+      </if>
+      <if test="name != null" >
+        name = #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="pid != null" >
+        pId = #{pid,jdbcType=INTEGER},
+      </if>
+      <if test="mnemonicCode != null" >
+        mnemonic_code = #{mnemonicCode,jdbcType=VARCHAR},
+      </if>
+      <if test="typeId != null" >
+        type_id = #{typeId,jdbcType=INTEGER},
+      </if>
+      <if test="direction != null" >
+        direction = #{direction,jdbcType=VARCHAR},
+      </if>
+      <if test="cashAccountClass != null" >
+        cash_account_class = #{cashAccountClass,jdbcType=VARCHAR},
+      </if>
+      <if test="bankAccountClass != null" >
+        bank_account_class = #{bankAccountClass,jdbcType=VARCHAR},
+      </if>
+      <if test="cashEquivalents != null" >
+        cash_equivalents = #{cashEquivalents,jdbcType=VARCHAR},
+      </if>
+      <if test="foreignCurrencyAccounting != null" >
+        foreign_currency_accounting = #{foreignCurrencyAccounting,jdbcType=VARCHAR},
+      </if>
+      <if test="quantityAccounting != null" >
+        quantity_accounting = #{quantityAccounting,jdbcType=VARCHAR},
+      </if>
+      <if test="company != null" >
+        company = #{company,jdbcType=INTEGER},
+      </if>
+      <if test="currentAccount != null" >
+        current_account = #{currentAccount,jdbcType=VARCHAR},
+      </if>
+      <if test="billAccounting != null" >
+        bill_accounting = #{billAccounting,jdbcType=VARCHAR},
+      </if>
+      <if test="auxiliaryAccounting != null" >
+        auxiliary_accounting = #{auxiliaryAccounting,jdbcType=VARCHAR},
+      </if>
+      <if test="subjectIndex != null" >
+        subject_index = #{subjectIndex,jdbcType=VARCHAR},
+      </if>
+      <if test="reportAttributes != null" >
+        report_attributes = #{reportAttributes,jdbcType=VARCHAR},
+      </if>
+      <if test="specificationModel != null" >
+        specification_model = #{specificationModel,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.mg.demo.model.SysAccSub" >
+    update sys_accounting_subject
+    set code = #{code,jdbcType=VARCHAR},
+      name = #{name,jdbcType=VARCHAR},
+      pId = #{pid,jdbcType=INTEGER},
+      mnemonic_code = #{mnemonicCode,jdbcType=VARCHAR},
+      type_id = #{typeId,jdbcType=INTEGER},
+      direction = #{direction,jdbcType=VARCHAR},
+      cash_account_class = #{cashAccountClass,jdbcType=VARCHAR},
+      bank_account_class = #{bankAccountClass,jdbcType=VARCHAR},
+      cash_equivalents = #{cashEquivalents,jdbcType=VARCHAR},
+      foreign_currency_accounting = #{foreignCurrencyAccounting,jdbcType=VARCHAR},
+      quantity_accounting = #{quantityAccounting,jdbcType=VARCHAR},
+      company = #{company,jdbcType=INTEGER},
+      current_account = #{currentAccount,jdbcType=VARCHAR},
+      bill_accounting = #{billAccounting,jdbcType=VARCHAR},
+      auxiliary_accounting = #{auxiliaryAccounting,jdbcType=VARCHAR},
+      subject_index = #{subjectIndex,jdbcType=VARCHAR},
+      report_attributes = #{reportAttributes,jdbcType=VARCHAR},
+      specification_model = #{specificationModel,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+
+  <select id="selectByPid" resultMap="BaseResultMap" parameterType="Map" >
+    select
+      <include refid="Base_Column_List" />
+    from sys_accounting_subject
+      <include refid="dynamicWhere" />
+  </select>
+
+    <select id="selectAll" parameterType="Map" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List" />
+        from sys_accounting_subject
+        <include refid="dynamicWhere" />
+    </select>
+</mapper>

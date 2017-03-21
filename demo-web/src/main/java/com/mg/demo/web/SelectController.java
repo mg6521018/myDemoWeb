@@ -1,17 +1,9 @@
 package com.mg.demo.web;
 
-import com.alibaba.dubbo.config.annotation.Reference;
-import com.alibaba.fastjson.JSON;
-import com.alibaba.fastjson.JSONObject;
-import com.mg.demo.api.UserService;
-import com.mg.demo.core.DataGridPage;
-import com.mg.demo.model.User;
-import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
@@ -35,9 +27,9 @@ public class SelectController {
     /**
      * 新增user
      */
-    @RequestMapping("/opinion.do")
+    @RequestMapping("/opinionAccountingSystem.do")
     @ResponseBody
-    public List <Map<String,String>> opinion(HttpServletRequest request){
+    public List <Map<String,String>> opinionaAccountingSystem(HttpServletRequest request){
         List <Map<String,String>> list = new ArrayList();
         Map<String,String> map1 = new HashMap();
         map1.put("dicValue","1");
@@ -46,6 +38,24 @@ public class SelectController {
         Map<String,String> map2 = new HashMap();
         map2.put("dicValue","2");
         map2.put("dicName","中型企业会计制度");
+        list.add(map2);
+        return list;
+    }
+
+    /**
+     * 新增user
+     */
+    @RequestMapping("/opinionFiscalYear.do")
+    @ResponseBody
+    public List <Map<String,String>> opinionaFiscalYear(HttpServletRequest request){
+        List <Map<String,String>> list = new ArrayList();
+        Map<String,String> map1 = new HashMap();
+        map1.put("dicValue","1");
+        map1.put("dicName","公历会计年度");
+        list.add(map1);
+        Map<String,String> map2 = new HashMap();
+        map2.put("dicValue","2");
+        map2.put("dicName","阴历会计年度");
         list.add(map2);
         return list;
     }

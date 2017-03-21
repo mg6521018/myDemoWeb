@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.mg.demo.dao.SysDirMapper" >
+  <resultMap id="BaseResultMap" type="com.mg.demo.model.SysDir" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="pId" property="pid" jdbcType="INTEGER" />
+    <result column="demo" property="demo" jdbcType="VARCHAR" />
+    <result column="code" property="code" jdbcType="VARCHAR" />
+    <result column="havSub" jdbcType="VARCHAR" property="havSub" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, name, pId, demo, code,havSub
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from sys_dir
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from sys_dir
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.mg.demo.model.SysDir" >
+    insert into sys_dir (id, name, pId, 
+      demo, code,havSub)
+    values (#{id,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}, #{pid,jdbcType=INTEGER}, 
+      #{demo,jdbcType=VARCHAR}, #{code,jdbcType=VARCHAR},#{havSub,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.mg.demo.model.SysDir" >
+    insert into sys_dir
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="name != null" >
+        name,
+      </if>
+      <if test="pid != null" >
+        pId,
+      </if>
+      <if test="demo != null" >
+        demo,
+      </if>
+      <if test="code != null" >
+        code,
+      </if>
+      <if test="havSub != null" >
+        havSub,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="name != null" >
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="pid != null" >
+        #{pid,jdbcType=INTEGER},
+      </if>
+      <if test="demo != null" >
+        #{demo,jdbcType=VARCHAR},
+      </if>
+      <if test="code != null" >
+      #{code,jdbcType=VARCHAR},
+    </if>
+      <if test="havSub != null" >
+        #{havSub,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.mg.demo.model.SysDir" >
+    update sys_dir
+    <set >
+      <if test="name != null" >
+        name = #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="pid != null" >
+        pId = #{pid,jdbcType=INTEGER},
+      </if>
+      <if test="demo != null" >
+        demo = #{demo,jdbcType=VARCHAR},
+      </if>
+      <if test="code != null" >
+        code = #{code,jdbcType=VARCHAR},
+      </if>
+      <if test="havSub != null" >
+        havSub = #{havSub,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.mg.demo.model.SysDir" >
+    update sys_dir
+    set name = #{name,jdbcType=VARCHAR},
+      pId = #{pid,jdbcType=INTEGER},
+      demo = #{demo,jdbcType=VARCHAR},
+      code = #{code,jdbcType=VARCHAR},
+      havSub = #{havSub,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+
+  <select id="selectByPid" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select
+    <include refid="Base_Column_List" />
+    from sys_dir
+    where pId = #{pId,jdbcType=INTEGER}
+  </select>
+</mapper>

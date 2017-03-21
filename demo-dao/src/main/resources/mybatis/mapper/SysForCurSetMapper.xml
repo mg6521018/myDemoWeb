@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.mg.demo.dao.SysForCurSetMapper" >
+  <resultMap id="BaseResultMap" type="com.mg.demo.model.SysForCurSet" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="code" property="code" jdbcType="VARCHAR" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="exchange_rate" property="exchangeRate" jdbcType="VARCHAR" />
+    <result column="decimal_digit" property="decimalDigit" jdbcType="INTEGER" />
+    <result column="exchange_rate_conversion" property="exchangeRateConversion" jdbcType="VARCHAR" />
+    <result column="exchange_rate_pattern" property="exchangeRatePattern" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, code, name, exchange_rate, decimal_digit, exchange_rate_conversion, exchange_rate_pattern
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from sys_foreign_currency_settings
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from sys_foreign_currency_settings
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.mg.demo.model.SysForCurSet" >
+    insert into sys_foreign_currency_settings (id, code, name, 
+      exchange_rate, decimal_digit, exchange_rate_conversion, 
+      exchange_rate_pattern)
+    values (#{id,jdbcType=INTEGER}, #{code,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR}, 
+      #{exchangeRate,jdbcType=VARCHAR}, #{decimalDigit,jdbcType=INTEGER}, #{exchangeRateConversion,jdbcType=VARCHAR}, 
+      #{exchangeRatePattern,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.mg.demo.model.SysForCurSet" >
+    insert into sys_foreign_currency_settings
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="code != null" >
+        code,
+      </if>
+      <if test="name != null" >
+        name,
+      </if>
+      <if test="exchangeRate != null" >
+        exchange_rate,
+      </if>
+      <if test="decimalDigit != null" >
+        decimal_digit,
+      </if>
+      <if test="exchangeRateConversion != null" >
+        exchange_rate_conversion,
+      </if>
+      <if test="exchangeRatePattern != null" >
+        exchange_rate_pattern,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="code != null" >
+        #{code,jdbcType=VARCHAR},
+      </if>
+      <if test="name != null" >
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="exchangeRate != null" >
+        #{exchangeRate,jdbcType=VARCHAR},
+      </if>
+      <if test="decimalDigit != null" >
+        #{decimalDigit,jdbcType=INTEGER},
+      </if>
+      <if test="exchangeRateConversion != null" >
+        #{exchangeRateConversion,jdbcType=VARCHAR},
+      </if>
+      <if test="exchangeRatePattern != null" >
+        #{exchangeRatePattern,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.mg.demo.model.SysForCurSet" >
+    update sys_foreign_currency_settings
+    <set >
+      <if test="code != null" >
+        code = #{code,jdbcType=VARCHAR},
+      </if>
+      <if test="name != null" >
+        name = #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="exchangeRate != null" >
+        exchange_rate = #{exchangeRate,jdbcType=VARCHAR},
+      </if>
+      <if test="decimalDigit != null" >
+        decimal_digit = #{decimalDigit,jdbcType=INTEGER},
+      </if>
+      <if test="exchangeRateConversion != null" >
+        exchange_rate_conversion = #{exchangeRateConversion,jdbcType=VARCHAR},
+      </if>
+      <if test="exchangeRatePattern != null" >
+        exchange_rate_pattern = #{exchangeRatePattern,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.mg.demo.model.SysForCurSet" >
+    update sys_foreign_currency_settings
+    set code = #{code,jdbcType=VARCHAR},
+      name = #{name,jdbcType=VARCHAR},
+      exchange_rate = #{exchangeRate,jdbcType=VARCHAR},
+      decimal_digit = #{decimalDigit,jdbcType=INTEGER},
+      exchange_rate_conversion = #{exchangeRateConversion,jdbcType=VARCHAR},
+      exchange_rate_pattern = #{exchangeRatePattern,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>
