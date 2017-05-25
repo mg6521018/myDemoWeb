@@ -27,7 +27,6 @@ import static org.apache.commons.lang.StringUtils.isNotBlank;
 
 /**
  * @author ivan
- *
  */
 @Controller
 @RequestMapping("/accSub")
@@ -46,11 +45,11 @@ public class SysAccSubController {
     @RequestMapping("/list.do")
     @ResponseBody
     public DataGridPage<SysAccSub> getUsers(HttpServletRequest request,
-                                          @RequestParam(required=false,defaultValue="1") Integer page,
-                                          @RequestParam(required=false,defaultValue="10") Integer rows,
-                                          String filters,String code){
-        logger.info("分页查询用户信息列表请求入参：pageNumber{},pageSize{}", page,rows);
-        return sysAccSubService.selectAll(page,rows,code);
+                                            @RequestParam(required = false, defaultValue = "1") Integer page,
+                                            @RequestParam(required = false, defaultValue = "10") Integer rows,
+                                            String filters, String code) {
+        logger.info("分页查询用户信息列表请求入参：pageNumber{},pageSize{}", page, rows);
+        return sysAccSubService.selectAll(page, rows, code);
     }
 
     /**
@@ -58,22 +57,22 @@ public class SysAccSubController {
      */
     @RequestMapping("/loadDirData.do")
     @ResponseBody
-    public List loadOrgData(HttpServletRequest request, @RequestParam(required=false,defaultValue="-1") Integer id,@RequestParam(required=false) String typeId,@RequestParam(required=false) String code){
-        List<SysAccSub> list = sysAccSubService.selectByPid(id,typeId,code);
+    public List loadOrgData(HttpServletRequest request, @RequestParam(required = false, defaultValue = "0") Integer id, @RequestParam(required = false) String typeId, @RequestParam(required = false) String code) {
+        List<SysAccSub> list = sysAccSubService.selectByPid(id, typeId, code);
         return covertTree(list);
     }
 
     private List covertTree(List<SysAccSub> list) {
-        if(null == list || list.size() == 0){
+        if (null == list || list.size() == 0) {
             return null;
         }
-        List<Map<String,Object>> json = new ArrayList();
-        for(SysAccSub sysAccSub : list){
-            Map<String,Object> map = new HashMap();
-            map.put("id",sysAccSub.getId());
-            map.put("text",sysAccSub.getCode()+"-"+sysAccSub.getName());
-            map.put("code",sysAccSub.getCode());
-            map.put("state","closed");
+        List<Map<String, Object>> json = new ArrayList();
+        for (SysAccSub sysAccSub : list) {
+            Map<String, Object> map = new HashMap();
+            map.put("id", sysAccSub.getId());
+            map.put("text", sysAccSub.getCode() + "-" + sysAccSub.getName());
+            map.put("code", sysAccSub.getCode());
+            map.put("state", "closed");
             json.add(map);
         }
         return json;

@@ -7,7 +7,7 @@ Urls.pageQuery = '/demo/user/list.do';
 Urls.remove = '/demo/user/remove.do';
 Urls.editDlg = '/demo/pages/system/user/UserEditDlg.jsp';
 
-$(function() {
+$(function () {
     //搜索面板
     EL.oBtnReset = $('#oBtnReset');//重置
     EL.oBtnQuery = $('#oBtnQuery');//查询
@@ -24,90 +24,104 @@ $(function() {
 
     //列表加载
     EL.oGrid.datagrid({//
-        url : Urls.pageQuery,
-        striped : true,
-        remoteSort : true,
-        pagination : true,
-        fitColumns : true,
-        columns : [[{
-            field : 'userId',
-            checkbox : true
+        url: Urls.pageQuery,
+        striped: true,
+        remoteSort: true,
+        pagination: true,
+        fitColumns: true,
+        columns: [[{
+            field: 'userId',
+            checkbox: true
         }, {
-            field : 'userName',
-            title : '用户名',
-            width : 150,
-            sortable : true
+            field: 'userName',
+            title: '用户名',
+            width: 150,
+            sortable: true
         }, {
-            field : 'account',
-            title : '登录名',
-            width : 150,
-            sortable : true
+            field: 'account',
+            title: '登录名',
+            width: 150,
+            sortable: true
         }, {
-            field : 'status',
-            title : '状态',
-            width : 150,
-            sortable : false,
-            formatter:function(value,row,index){
-                if(value == 0){return "未激活";}
-                if(value == 1){return "已激活";}
-                if(value == 2){return "已锁定";}
+            field: 'status',
+            title: '状态',
+            width: 150,
+            sortable: false,
+            formatter: function (value, row, index) {
+                if (value == 0) {
+                    return "未激活";
+                }
+                if (value == 1) {
+                    return "已激活";
+                }
+                if (value == 2) {
+                    return "已锁定";
+                }
             }
         }, {
-            field : 'createtime',
-            title : '创建时间',
-            width : 150,
-            sortable : false,
-            formatter:function(value,row,index){
+            field: 'createtime',
+            title: '创建时间',
+            width: 150,
+            sortable: false,
+            formatter: function (value, row, index) {
                 var unixTimestamp = new Date(value);
                 return unixTimestamp.toLocaleString();
             }
         }, {
-            field : 'isexpired',
-            title : '是否过期',
-            width : 150,
-            sortable : false,
-            formatter:function(value,row,index){
-                if(value == 0){return "未过期";}
-                if(value == 1){return "已过期";}
+            field: 'isexpired',
+            title: '是否过期',
+            width: 150,
+            sortable: false,
+            formatter: function (value, row, index) {
+                if (value == 0) {
+                    return "未过期";
+                }
+                if (value == 1) {
+                    return "已过期";
+                }
             }
         }, {
-            field : 'islock',
-            title : '是否可用',
-            width : 150,
-            sortable : false,
-            formatter:function(value,row,index){
-                if(value == 0){return "可用";}
-                if(value == 1){return "不可用";}
+            field: 'islock',
+            title: '是否可用',
+            width: 150,
+            sortable: false,
+            formatter: function (value, row, index) {
+                if (value == 0) {
+                    return "可用";
+                }
+                if (value == 1) {
+                    return "不可用";
+                }
             }
         }]]
     });
 
     //点击查询按钮
-    EL.oBtnQuery.on('click', function() {
+    EL.oBtnQuery.on('click', function () {
         var filters = {};
         filters.userName = EL.Q_USERNAME.val();
         filters.account = EL.Q_ACCOUNT.val();
         EL.oGrid.datagrid('load', {
-            filters : JSON.stringify(filters)
+            filters: JSON.stringify(filters)
         });
     });
 
     //点击重置按钮
-    EL.oBtnReset.on('click', function() {
+    EL.oBtnReset.on('click', function () {
         EL.Q_USERNAME.val('');
         EL.Q_ACCOUNT.val('');
     });
 
     //新增
-    EL.oBtnAdd.on('click', function() {
+    EL.oBtnAdd.on('click', function () {
         FN.onEdit();
     });
 
     //修改
-    EL.oBtnEdit.on('click', function() {
+    EL.oBtnEdit.on('click', function () {
         var records = EL.oGrid.datagrid('getSelections');
         var idList = [];
-        $.each(records, function(i, record) {
+        $.each(records, function (i, record) {
             idList.push(record.userId);
         });
         if (idList.length !== 1) {
@@ -116,19 +130,19 @@ $(function() {
         }
         var id = idList[0];
         FN.onEdit({
-            id : id
+            id: id
         });
     });
 
     //编辑数据
-    FN.onEdit = function(params) {
+    FN.onEdit = function (params) {
         __.openDialog({
-            title : '测试(用户)管理',
-            url : Urls.editDlg,
-            width : 630,
-            height : 375,
-            params : params,
-            callback : function(value) {
+            title: '测试(用户)管理',
+            url: Urls.editDlg,
+            width: 630,
+            height: 375,
+            params: params,
+            callback: function (value) {
                 alert('保存成功');
                 EL.oGrid.datagrid('reload');
             }
@@ -136,10 +150,10 @@ $(function() {
     }
 
     //点击删除按钮
-    EL.oBtnDel.bind('click', function() {
+    EL.oBtnDel.bind('click', function () {
         var records = EL.oGrid.datagrid('getSelections');
         var idList = '';
-        $.each(records, function(i, record) {
+        $.each(records, function (i, record) {
             if (idList != '')
                 idList += ',';
             idList += record.userId;
@@ -148,7 +162,7 @@ $(function() {
             $('#oPrompt').showPrompt('请选择需要删除的数据!', 'alert');
             return;
         }
-        __.confirm('提示', '是否删除选中数据,该操作无法被恢复!', function(result) {
+        __.confirm('提示', '是否删除选中数据,该操作无法被恢复!', function (result) {
             if (result) {
                 FN.onRemoveById(idList);
             }
@@ -156,10 +170,10 @@ $(function() {
     });
 
     //删除数据
-    FN.onRemoveById = function(idList) {
+    FN.onRemoveById = function (idList) {
         var params = {};
         params.idList = idList;
-        __.post(Urls.remove, params, function(data) {
+        __.post(Urls.remove, params, function (data) {
             if (__.err(data)) {
                 $('#oPrompt').showPrompt(data.message, 'error');
             } else {

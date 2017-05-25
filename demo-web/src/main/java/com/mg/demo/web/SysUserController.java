@@ -21,7 +21,6 @@ import java.util.Map;
 
 /**
  * @author ivan
- *
  */
 @Controller
 @RequestMapping("/user")
@@ -39,10 +38,10 @@ public class SysUserController {
      */
     @RequestMapping("/insert.do")
     @ResponseBody
-    public DataGridPage<SysUser> insert(HttpServletRequest request){
+    public DataGridPage<SysUser> insert(HttpServletRequest request) {
         SysUser user = new SysUser();
         sysUserService.insert(user);
-        return getUsers(request,1,10,"");
+        return getUsers(request, 1, 10, "");
     }
 
     /**
@@ -50,16 +49,15 @@ public class SysUserController {
      */
     @RequestMapping("/save.do")
     @ResponseBody
-    public Map<String,Object> insertSelective(HttpServletRequest request,SysUser user){
-        Map<String,Object> map = new HashMap();
-        if(null == user.getUserId()){
+    public Map<String, Object> insertSelective(HttpServletRequest request, SysUser user) {
+        Map<String, Object> map = new HashMap();
+        if (null == user.getUserId()) {
             user.setCreatetime(System.currentTimeMillis());
             sysUserService.insertSelective(user);
-        }
-        else{
+        } else {
             sysUserService.updateByPrimaryKeySelective(user);
         }
-        map.put("success",true);
+        map.put("success", true);
         return map;
     }
 
@@ -68,16 +66,15 @@ public class SysUserController {
      */
     @RequestMapping("/remove.do")
     @ResponseBody
-    public Map<String,Object> remove(HttpServletRequest request,String idList){
-        Map<String,Object> map = new HashMap();
-        if(null != idList){
+    public Map<String, Object> remove(HttpServletRequest request, String idList) {
+        Map<String, Object> map = new HashMap();
+        if (null != idList) {
             sysUserService.deleteByPrimaryKeys(idList);
-            map.put("success",true);
-        }
-        else{
+            map.put("success", true);
+        } else {
 
-            map.put("success",false);
-            map.put("msg","失败了");
+            map.put("success", false);
+            map.put("msg", "失败了");
         }
 
         return map;
@@ -89,48 +86,51 @@ public class SysUserController {
     @RequestMapping("/list.do")
     @ResponseBody
     public DataGridPage<SysUser> getUsers(HttpServletRequest request,
-                                       @RequestParam(required=false,defaultValue="1") Integer page,
-                                       @RequestParam(required=false,defaultValue="10") Integer rows,
-                                       String filters){
+                                          @RequestParam(required = false, defaultValue = "1") Integer page,
+                                          @RequestParam(required = false, defaultValue = "10") Integer rows,
+                                          String filters) {
         String userName = "";
         String account = "";
-        if(StringUtils.isNotBlank(filters)){
+        if (StringUtils.isNotBlank(filters)) {
             JSONObject json = JSON.parseObject(filters);
             userName = json.getString("userName");
             account = json.getString("account");
         }
-        logger.info("分页查询用户信息列表请求入参：pageNumber{},pageSize{}", page,rows);
-        return sysUserService.selectAll(page,rows,userName,account);
+        logger.info("分页查询用户信息列表请求入参：pageNumber{},pageSize{}", page, rows);
+        return sysUserService.selectAll(page, rows, userName, account);
     }
 
     /**
-     *根据id获取user
-     *@param id
+     * 根据id获取user
+     *
+     * @param id
      */
     @RequestMapping("/load.do")
     @ResponseBody
-    public SysUser getUserById(String id){
+    public SysUser getUserById(String id) {
         return sysUserService.selectByPrimaryKey(Integer.valueOf(id));
     }
 
     /**
-     *根据id删除user
-     *@param id
+     * 根据id删除user
+     *
+     * @param id
      */
     @RequestMapping("/delete.do")
     @ResponseBody
-    public DataGridPage<SysUser> deleteUserById(String id,HttpServletRequest request){
+    public DataGridPage<SysUser> deleteUserById(String id, HttpServletRequest request) {
         sysUserService.deleteByPrimaryKey(Integer.valueOf(id));
-        return getUsers(request,1,10,"");
+        return getUsers(request, 1, 10, "");
     }
 
     /**
-     *根据id更新user
-     *@param id
+     * 根据id更新user
+     *
+     * @param id
      */
     @RequestMapping("/updateById.do")
     @ResponseBody
-    public SysUser updateUserById(String id){
+    public SysUser updateUserById(String id) {
         SysUser user = new SysUser();
         sysUserService.updateByPrimaryKey(user);
         return sysUserService.selectByPrimaryKey(Integer.valueOf(id));

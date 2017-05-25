@@ -50,24 +50,24 @@ public class SysAccSubServiceImpl implements SysAccSubService {
         return sysAccSubMapper.updateByPrimaryKey(record);
     }
 
-    public List<SysAccSub> selectByPid(Integer pId,String typeId,String code) {
-        Map<String,Object> params = new HashMap();
-        if(StringUtils.isNotBlank(typeId)){
-            params.put("typeId",typeId);
+    public List<SysAccSub> selectByPid(Integer pId, String typeId, String code) {
+        Map<String, Object> params = new HashMap();
+        if (StringUtils.isNotBlank(typeId)) {
+            params.put("typeId", typeId);
         }
-        if(StringUtils.isNotBlank(code)){
-            params.put("code",code);
+        if (StringUtils.isNotBlank(code)) {
+            params.put("code", code);
         }
-        params.put("pId",pId);
+        params.put("pId", pId);
         return sysAccSubMapper.selectByPid(params);
     }
 
     public DataGridPage<SysAccSub> selectAll(Integer page, Integer rows, String code) {
-        Map<String,Object> params = new HashMap();
-        if(StringUtils.isNotBlank(code)){
-            params.put("code",code);
+        Map<String, Object> params = new HashMap();
+        if (StringUtils.isNotBlank(code)) {
+            params.put("code", code);
         }
-        PageHelper.startPage(page,rows);
+        PageHelper.startPage(page, rows);
         List list = sysAccSubMapper.selectAll(params);
         return DataGridPage.create(list);
     }

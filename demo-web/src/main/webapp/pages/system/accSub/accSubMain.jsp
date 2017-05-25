@@ -16,7 +16,7 @@
 <body>
 <div class="container">
 
-    <div class="left-tree">
+    <div class="left-tree" style = "margin-left:10px;overflow-y:scroll; overflow-x:scroll;">
         <ul class="easyui-tree" id="orgTree"></ul>
     </div>
     <div class="content">
@@ -30,7 +30,7 @@
 <script type="text/javascript">
     $(document).ready(function(){
         $('#orgTree').tree({
-            url:'${path}/accSub/loadDirData.do?id=0',
+            url:'${path}/accSub/loadDirData.do',
             onClick: function(node){
                 $('#viewPage').attr("src","${path}/pages/system/accSub/accSubList.jsp?code="+node.code);
             },
